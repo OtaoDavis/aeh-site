@@ -1,0 +1,239 @@
+:root {
+  --aeh-blue: #3998bd;
+  --aeh-green: #8ec86f;
+  --aeh-light-blue: #d6e9ec;
+  --aeh-off-white: #f5f9fb;
+  --text-bright: #dff1e0;
+  --navy: #1a2a3a;
+  --white: #ffffff;
+  --border: #e2e8f0;
+  --text: #334155;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Institutional Typography */
+h1,
+h2,
+h3,
+h4,
+.editorial,
+em {
+  font-family: "EB Garamond", serif;
+  font-weight: 500;
+  color: var(--navy);
+}
+
+.blue-tag {
+  color: var(--aeh-blue);
+  letter-spacing: 4px;
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+section {
+  padding: 20px 0;
+}
+.section-slate {
+  background-color: var(--aeh-off-white);
+}
+
+/* Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-img {
+  height: 50px;
+  width: auto;
+}
+.nav-links {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--navy);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.nav-btn {
+  background: var(--aeh-blue);
+  color: #fff !important;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Premium Buttons */
+.btn-solid {
+  display: inline-block;
+  background: var(--aeh-blue);
+  color: white !important;
+  padding: 18px 45px;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  transition: 0.3s;
+}
+.btn-solid:hover {
+  background: var(--aeh-green);
+  transform: translateY(-3px);
+}
+
+/* --- START: Footer Section Styles --- */
+
+.site-footer {
+  background-color: #0d2c4f; /* A dark, professional blue */
+  color: #a0aec0; /* Light gray text for readability */
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+/* Responsive grid for tablets and desktops */
+@media (min-width: 640px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer-logo {
+  height: 4rem; /* 64px */
+  filter: brightness(0) invert(1); /* Makes the logo white */
+}
+
+.footer-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.25rem;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: #a0aec0;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--aeh-green);
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.contact-item i {
+  color: var(--aeh-green);
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #2d3748; /* Darker separator line */
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column; /* Stack on mobile */
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row; /* Side-by-side on larger screens */
+    justify-content: space-between;
+  }
+}
+
+.copyright-text {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.25rem;
+  transition:
+    color 0.3s,
+    transform 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--aeh-green);
+  transform: translateY(-2px);
+}
+
+/* --- END: Footer Section Styles --- */
+
+@media (max-width: 1024px) {
+  .nav-links {
+    display: none;
+  }
+  section {
+    padding: 60px 0;
+  }
+}

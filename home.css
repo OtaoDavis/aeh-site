@@ -1,0 +1,479 @@
+/* --- HERO SECTION --- */
+.hero-editorial {
+  padding: 0 0 50px 0;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: center;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0% 5%;
+}
+.hero-text h1 {
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 1;
+  margin-bottom: 30px;
+}
+.hero-lead {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  max-width: 550px;
+  margin-bottom: 40px;
+}
+
+.hero-image-stack {
+  position: relative;
+}
+.img-large img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 5% 95%);
+}
+
+.floating-stat {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  background: var(--aeh-green);
+  color: white;
+  padding: 40px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+}
+.stat-num {
+  display: block;
+  font-family: "EB Garamond";
+  font-size: 3rem;
+  line-height: 1;
+}
+.floating-stat p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+/* --- DARK ANCHOR (MANIFESTO) --- */
+.dark-anchor {
+  background: var(--navy);
+  color: white;
+  padding: 120px 0;
+}
+.manifesto-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+.green-tag {
+  color: var(--aeh-green);
+  letter-spacing: 4px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  margin-bottom: 20px;
+  display: block;
+}
+.dark-anchor h2 {
+  color: white;
+  font-size: 4rem;
+  line-height: 1.1;
+}
+.large-garamond {
+  font-size: 1.8rem;
+  font-family: "EB Garamond";
+  line-height: 1.4;
+  margin-bottom: 40px;
+  color: #cbd5e1;
+}
+
+/* --- PILLAR ROWS --- */
+.section-title-center {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.section-title-center h2 {
+  font-size: 4rem;
+}
+
+.pillar-row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 100px;
+  padding: 60px 0;
+  border-top: 1px solid var(--border);
+  align-items: center;
+}
+.pillar-row.reverse {
+  direction: rtl;
+}
+.pillar-row.reverse .p-content {
+  direction: ltr;
+}
+
+.p-num {
+  font-family: "EB Garamond";
+  color: var(--aeh-green);
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 20px;
+}
+.p-content h3 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.p-content p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+.p-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* --- INVESTOR CTA REVAMPED --- */
+.cta-box {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr; /* Adjusted ratio */
+  background: var(--aeh-off-white);
+  overflow: hidden;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.05);
+}
+
+.cta-text {
+  padding: 80px 100px;
+}
+
+.cta-text h2 {
+  font-size: 3.8rem;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  color: var(--navy);
+}
+
+.cta-text p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 35px;
+  max-width: 480px;
+}
+
+/* New Image Styling */
+.cta-visual {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.cta-full-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  /* High-end slight desaturation to look more institutional */
+  filter: brightness(0.9) contrast(1.1);
+}
+
+/* Subtle brand-color overlay to link the image to AEH */
+.cta-overlay-tint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(57, 152, 189, 0.2),
+    rgba(142, 200, 111, 0.1)
+  );
+  pointer-events: none;
+}
+
+/* --- START: University Carousel Section Styles  */
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.wwa {
+  background-color: var(--aeh-light-blue);
+}
+.university-carousel-section {
+  padding-bottom: 0;
+  background-color: var(--aeh-off-white);
+}
+
+.university-swiper {
+  position: relative;
+}
+
+.university-split-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .university-split-container {
+    flex-direction: row;
+  }
+}
+
+.university-half {
+  flex: 1;
+  position: relative;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  min-height: 600px; /* Adjusted for better content fit */
+}
+
+#cuu-half {
+  background-image: url("images/cu1.jpg");
+}
+
+#cuz-half {
+  background-image: url("images/cz1.jpg");
+}
+
+#iam-senegal-half {
+  background-image: url("images/iam1.jpg");
+}
+
+#iam-bamako-half {
+  background-image: url("images/iam2.jpg");
+}
+#impact {
+  height: 600px;
+}
+
+.half-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.5));
+  z-index: 1;
+}
+
+.half-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.university-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--aeh-green);
+  padding-bottom: 0.5rem;
+  max-width: 90%;
+  color: var(--text-bright);
+}
+
+.top-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .top-content-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.details-grid,
+.faculties {
+  flex-basis: 100%;
+}
+
+@media (min-width: 768px) {
+  .details-grid,
+  .faculties {
+    flex-basis: 48%;
+  }
+}
+
+.details-grid p {
+  margin-bottom: 0.5rem;
+}
+
+.faculties h3,
+.mission h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--text-bright);
+}
+
+.faculties ul {
+  list-style: disc;
+  list-style-position: inside;
+  padding-left: 0.5rem;
+}
+
+.faculties ul li {
+  margin-bottom: 0.25rem;
+}
+
+.mission {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.learn-more-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--aeh-blue);
+  color: white;
+  border-radius: 9999px;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  align-self: flex-end;
+}
+
+.learn-more-btn:hover {
+  background-color: var(--aeh-green);
+}
+
+.university-swiper .swiper-pagination {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  z-index: 10;
+}
+
+.university-swiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #a3a3a3;
+  opacity: 1;
+  transition:
+    background-color 0.3s,
+    width 0.3s;
+}
+
+.university-swiper .swiper-pagination-bullet-active {
+  width: 30px;
+  border-radius: 5px;
+  background-color: var(--aeh-green);
+}
+
+/* --- END: University Carousel Section Styles --- */
+
+/* --- START: Investor Section Styles --- */
+
+.investor-section {
+  background-color: white;
+  padding: 0rem 1.5rem;
+  border-top: 1px solid #e5e7eb; /* Separator line */
+}
+
+.investor-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.investor-main-title {
+  font-size: 2.5rem;
+  color: #0d2c4f;
+}
+
+.investor-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* Two columns for larger screens */
+@media (min-width: 768px) {
+  .investor-grid {
+    grid-template-columns: 2fr 1fr; /* Text takes 2/3, logo takes 1/3 */
+    gap: 4rem;
+  }
+}
+
+.investor-name {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: var(--aeh-blue);
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--aeh-green);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.investor-text p {
+  color: #5a6a7b;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.investor-logo-wrapper {
+  text-align: center; /* Center logo on mobile */
+}
+
+.investor-logo {
+  max-width: 250px; /* Control the max size of the logo */
+  width: 100%;
+  height: auto;
+  margin: 0 auto; /* Center the logo within its container */
+}
+
+/* --- END: Investor Section Styles --- */
+
+@media (max-width: 1024px) {
+  .hero-grid,
+  .manifesto-split,
+  .pillar-row,
+  .cta-box {
+    grid-template-columns: 1fr;
+  }
+  .hero-image-stack {
+    order: -1;
+  }
+  .cta-text {
+    padding: 40px 5%;
+  }
+  .p-image {
+    height: 300px;
+  }
+
+  .cta-box {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-text {
+    padding: 60px 5%;
+    text-align: center;
+  }
+
+  .cta-text p {
+    margin: 0 auto 35px auto;
+  }
+
+  .cta-visual {
+    height: 400px;
+  }
+}

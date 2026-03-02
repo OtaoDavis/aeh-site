@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Africa Education Holdings empowers Africa’s youth through accessible, market-relevant tertiary education. Explore top universities in Uganda, Zambia, Senegal, and Mali, innovative learning programs, and pathways to global employment and entrepreneurship." />
+    <title>Maarifa Home</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- font awesome     -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- SwiperJS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- SwiperJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+</head>
+
+<body class="bg-gray-50">
+
+    <div id="loader-overlay">
+        <img src="images/logo_trans.png" alt="Loading..." class="loader-logo">
+    </div>
+
+
+    <header class="bg-white shadow-[0_4px_12px_0_rgba(0,0,0,0.07)] sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div>
+                <a href="#"><img src="images/logo_trans.png" alt="AEH Logo" class="h-12"></a>
+            </div>
+
+            <ul class="hidden md:flex space-x-8 navlist">
+                <li><a href="index.html" class="hover:text-[#8EC86F] text-dark transition-colors duration-300">Home</a>
+                </li>
+                <li><a href="about.html" class="hover:text-[#8EC86F] text-dark transition-colors duration-300">About
+                        Us</a></li>
+                <li><a href="partnerships.html"
+                        class="hover:text-[#8EC86F] text-dark transition-colors duration-300">Partnerships</a>
+                </li>
+                <li><a href="#universities"
+                        class="hover:text-[#8EC86F] text-dark transition-colors duration-300">Universities</a>
+                </li>
+                <!-- <li><a href="#blog" class="hover:text-[#8EC86F] text-dark transition-colors duration-300">Blog</a></li> -->
+                <li><a href="#contact" class="hover:text-[#8EC86F] text-dark transition-colors duration-300">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Menu Button-->
+            <div class="md:hidden">
+                <button id="menu-btn" class="z-50 block hamburger focus:outline-none">
+                    <span class="hamburger-top"></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
+                </button>
+            </div>
+        </nav>
+
+        <div id="menu" class="hidden md:hidden">
+            <ul class="absolute flex flex-col w-auto py-3 space-y-2 bg-white rounded-lg shadow-xl right-6 navlist">
+                <li><a href="index.html" class="block px-6 py-2 hover:text-[#8EC86F]">Home</a></li>
+                <li><a href="about.html" class="block px-6 py-2 hover:text-[#8EC86F]">About Us</a></li>
+                <li><a href="partnerships.html" class="block px-6 py-2 hover:text-[#8EC86F]">Partnerships</a></li>
+                <li><a href="#universities" class="block px-6 py-2 hover:text-[#8EC86F]">Universities</a></li>
+                <!-- <li><a href="#blog" class="block px-6 py-2 hover:text-[#8EC86F]">Blog</a></li> -->
+                <li><a href="#contact" class="block px-6 py-2 hover:text-[#8EC86F]">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="relative">
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+
+                <!-- Slide 1 -->
+                <div class="swiper-slide bg-cover bg-center" style="background-image: url('images/home1.jpg');">
+                    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                    <div class="text-content-container">
+                        <h1 class="text-xl md:text-6xl font-bold mb-4">Shaping the Future <br>
+                            of Education Across Africa</h1>
+                        <p class="text-m md:text-l max-w-2xl mb-8">Education is the key to Africa’s future <br>
+                            and at Africa Education Holdings, we are committed to opening that door for all.</p>
+                        <a href="#impact"
+                            class="bg-[#3998BD] text-white font-bold py-3 px-8 rounded-full hover:bg-[#8EC86F] transition-colors duration-300">Learn
+                            More About our Impact</a>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide bg-cover bg-center" style="background-image: url('images/home2.jpg');">
+                    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                    <div class="text-content-container">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-4">Pioneering a New <br>
+                            Model for African Higher Education</h1>
+                        <p class="text-lg md:text-xl max-w-4xl mb-8">We reimagine education through a scalable, <br>
+                            student-centered university model, driving gainful employment and entrepreneurship.</p>
+                        <a href="#solution"
+                            class="bg-[#3998BD] text-white font-bold py-3 px-8 rounded-full hover:bg-[#8EC86F] transition-colors duration-300">Explore
+                            Our Approach</a>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide bg-cover bg-center" style="background-image: url('images/home4.jpg');">
+                    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                    <div class="text-content-container">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-4">A Growing Network <br>
+                            of Transformative Universities</h1>
+                        <p class="text-lg md:text-xl max-w-4xl mb-8">Through our diverse network of universities, we
+                            deliver <br>
+                            accessible and market-relevant education across Uganda, Zambia, Senegal, and Mali.</p>
+                        <a href="#universities"
+                            class="bg-[#3998BD] text-white font-bold py-3 px-8 rounded-full hover:bg-[#8EC86F] transition-colors duration-300">Find
+                            a University</a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- <div class="swiper-button-next" style="color:#3998BD;"></div>
+            <div class="swiper-button-prev" style="color:#3998BD;"></div> -->
+        </div>
+    </section>
+
+    <!-- <section class="py-4 wwa">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-dark">WHO WE ARE</h2> <br>
+            <p class="text-center text-dark">Africa Education Holding (AEH) is a tertiary education company</p>
+            <p class="text-center text-dark">that provides accessible and transformative education in Sub Saharan Africa
+            </p>
+        </div>
+    </section> -->
+
+    <!-- START: The Problem Section -->
+    <section class="problem-section">
+        <div class="problem-container">
+            <!-- Left Column: Interactive Cards -->
+            <div class="problem-cards-wrapper">
+                <!-- Card 1: Limited Access -->
+                <div class="problem-card active-card" data-title="The Problem We Are Solving"
+                    data-content="The core challenge for Africa’s youth is securing gainful employment or entrepreneurship.">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="card-text">
+                        <h4>Limited Access</h4>
+                        <p>to high quality market-relevant tertiary education</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Constrained Mindset -->
+                <div class="problem-card" data-title="Constrained Mindset"
+                    data-content="A constrained mindset, shaped by adverse social-economic, cultural and political conditions, often limits the potential of young individuals.">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <div class="card-text">
+                        <h4>Constrained Mindset</h4>
+                        <p>shaped by adverse social-economic conditions</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Scarce Opportunities -->
+                <div class="problem-card" data-title="Scarce Opportunities"
+                    data-content="There are scarce opportunities for gainful employment and entrepreneurship in Sub-Saharan Africa, creating a significant barrier to economic progress.">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <div class="card-text">
+                        <h4>Scarce Opportunities</h4>
+                        <p>for gainful employment and entrepreneurship</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Dynamic Content Display -->
+            <div class="problem-content-display">
+                <h2 id="problem-title">The Problem We Are Solving</h2>
+                <p id="problem-content">
+                    The core challenge for Africa’s youth is securing gainful employment or entrepreneurship.
+                </p>
+                <button id="reset-problem-btn" class="reset-button" style="display: none;">
+                    <i class="fa-solid fa-rotate-left"></i> Back to The Core Challenge
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- END: The Problem Section -->
+
+    <!-- START: Floating Solution Sections -->
+
+    <!-- START: Our Solution Title Section -->
+    <section class="solution-title-section" id="solution">
+        <div class="container mx-auto px-6">
+            <h2 class="section-main-title">Our Solution</h2>
+        </div>
+    </section>
+    <!-- END: Our Solution Title Section -->
+    <!-- Solution 1: Holistic Education -->
+    <section class="solution-section-v2">
+        <div class="solution-image-container">
+            <img src="images/edu.jpg" alt="Students collaborating in a modern learning environment">
+
+            <a href="#" class="solution-card-v2 left">
+                <h3>Holistic Education for the African Student</h3>
+                <p>We nurture identity, values, and essential life skills to develop grounded, purpose-driven graduates
+                    who are rooted in African culture, community, and ethical frameworks.</p>
+                <!-- <span class="solution-read-more">See what makes us different</span> -->
+            </a>
+        </div>
+    </section>
+
+    <!-- Solution 2: Apprenticeship-Driven Learning -->
+    <section class="solution-section-v2">
+        <div class="solution-image-container">
+            <img src="images/appre.jpg" alt="Team working on a project with sticky notes">
+
+            <a href="#" class="solution-card-v2 right">
+                <h3>Apprenticeship-Driven, Skills-Based Learning</h3>
+                <p>We emphasize learning by doing through real-world industry experience, innovation, and collaboration,
+                    fostering entrepreneurship through practical problem-solving.</p>
+                <!-- <span class="solution-read-more">See what makes us different</span> -->
+            </a>
+        </div>
+    </section>
+
+    <!-- Solution 3: Pathways to Employment -->
+    <section class="solution-section-v2">
+        <div class="solution-image-container">
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1920&auto-format&fit=crop"
+                alt="Professionals shaking hands in a global business setting">
+
+            <a href="#" class="solution-card-v2 left">
+                <h3>Pathways to Global Employment & Entrepreneurship</h3>
+                <p>We connect students to local and global opportunities, providing access to experiential learning
+                    platforms, internships, and international innovation ecosystems.</p>
+                <!-- <span class="solution-read-more">See what makes us different</span> -->
+            </a>
+        </div>
+    </section>
+
+    <!-- END: Floating Solution Sections -->
+
+    <!-- START: Impact Video Section -->
+    <section class="bg-white py-16 md:py-24 video-sect" id="impact">
+        <div class="container mx-auto px-6">
+            <!-- Grid container for the staggered layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+
+                <!-- Video Column: Will be 2nd on mobile, 1st on desktop -->
+                <div class="order-2 md:order-1">
+                    <!-- Responsive Aspect Ratio Container -->
+                    <div class="aspect-w-16 aspect-h-9 rounded-lg shadow-xl overflow-hidden">
+                        <iframe width="600" height="315"
+                            src="https://www.youtube.com/embed/JMLsHI8aV0g?si=eIq8LKsciZIUa34f"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Text Column: Will be 1st on mobile, 2nd on desktop -->
+                <div class="text-gray-800 order-1 md:order-2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">Our Impact</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed text-center">
+                        Explore the transformative power of Africa Education Holdings. Our videos share compelling
+                        stories of how accessible, quality education empowers youth, drives innovation, and shapes a
+                        brighter future across the continent.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- END: Impact Video Section -->
+
+    <section class="py-4 wwa" id="universities">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-dark">Our Universities</h2> <br>
+            <p class="text-center text-dark">AEH owns and operates four private universities in Uganda and Zambia</p>
+            <p class="text-center text-dark">(Anglophone) and Senegal and Mali (Francophone) with a combined Total</p>
+            <p class="text-center text-dark">Enrolment of 14,500 students</p>
+
+        </div>
+    </section>
+
+    <!-- START: University Carousel Section -->
+    <section class="university-carousel-section bg-light-back">
+        <!-- Swiper -->
+        <div class="swiper university-swiper">
+            <div class="swiper-wrapper">
+
+                <!-- Slide 1: Cavendish Universities -->
+                <div class="swiper-slide">
+                    <div class="university-split-container">
+                        <!-- Left Half: Cavendish University Uganda -->
+                        <div class="university-half" id="cuu-half">
+                            <div class="half-overlay"></div>
+                            <div class="half-content">
+                                <h2 class="university-title text-center text-light">Cavendish University Uganda (CUU)
+                                </h2>
+                                <div class="top-content-wrapper">
+                                    <div class="details-grid">
+                                        <p><strong>Founded:</strong> 2008, Kampala, Uganda</p>
+                                        <p><strong>Students:</strong> 4,700</p>
+                                        <p><strong>Gender Ratio:</strong> 34:66 Female to Male</p>
+                                        <p><strong>International Students:</strong> 54% (39 nationalities)</p>
+                                        <p><strong>Campuses:</strong> Three</p>
+                                        <p><strong>Flagship:</strong> Law School</p>
+                                    </div>
+                                    <div class="faculties">
+                                        <h3>Faculties & Programs:</h3>
+                                        <ul>
+                                            <li>Science and Technology</li>
+                                            <li>Business and Management</li>
+                                            <li>Socio-Economic Sciences</li>
+                                            <li>Law</li>
+                                            <li>School of Post Graduate Studies</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="mission text-center">
+                                    <h3>MISSION</h3>
+                                    <p>To transform and inspire students to reach their full potential in employment,
+                                        entrepreneurship, and ethical leadership.</p>
+                                </div>
+                                <a href="universities/cuu.html" class="learn-more-btn">Learn More</a>
+                            </div>
+                        </div>
+                        <!-- Right Half: Cavendish University Zambia -->
+                        <div class="university-half" id="cuz-half">
+                            <div class="half-overlay"></div>
+                            <div class="half-content">
+                                <h2 class="university-title text-light text-center">Cavendish University Zambia (CUZ)
+                                </h2>
+                                <div class="top-content-wrapper">
+                                    <div class="details-grid">
+                                        <p><strong>Founded:</strong> 2004, Lusaka, Zambia</p>
+                                        <p><strong>Students:</strong> 7,300</p>
+                                        <p><strong>Gender Ratio:</strong> 52:48 Female to Male</p>
+                                        <p><strong>International Students:</strong> 19%</p>
+                                        <p><strong>Campuses:</strong> Two</p>
+                                        <p><strong>Flagship:</strong> Medical School</p>
+                                    </div>
+                                    <div class="faculties">
+                                        <h3>Faculties & Programs:</h3>
+                                        <ul>
+                                            <li>Business & Management</li>
+                                            <li>Law</li>
+                                            <li>Arts, Education & Social Sciences</li>
+                                            <li>Medicine and Health Sciences</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="mission text-center">
+                                    <h3>MISSION</h3>
+                                    <p>To increase access to high-quality education that transforms students into
+                                        responsible, educated, employable, and entrepreneurial citizens.</p>
+                                </div>
+                                <a href="universities/cuz.html" class="learn-more-btn">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: IAM Universities -->
+                <div class="swiper-slide">
+                    <div class="university-split-container">
+                        <!-- Left Half: IAM University Senegal -->
+                        <div class="university-half" id="iam-senegal-half">
+                            <div class="half-overlay"></div>
+                            <div class="half-content">
+                                <h2 class="university-title text-light text-center">IAM University, Senegal</h2>
+                                <div class="top-content-wrapper">
+                                    <div class="details-grid">
+                                        <p><strong>Founded:</strong> 1996, Dakar, Senegal</p>
+                                        <p><strong>Students:</strong> 1,600</p>
+                                        <p><strong>Gender Ratio:</strong> 61:39 Female to Male</p>
+                                        <p><strong>International Students:</strong> 3%</p>
+                                        <p><strong>Campuses:</strong> One</p>
+                                        <p><strong>Flagship:</strong> Business School</p>
+                                    </div>
+                                    <div class="faculties">
+                                        <h3>Key Programs:</h3>
+                                        <ul>
+                                            <li>Management</li>
+                                            <li>Finance & Accounting</li>
+                                            <li>Marketing & Communications</li>
+                                            <li>IT & Digital Management</li>
+                                            <li>Human Resources</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="mission text-center">
+                                    <h3>MISSION</h3>
+                                    <p>To train a new generation of African leaders who are open to the world and
+                                        equipped to meet the challenges of globalization and development.</p>
+                                </div>
+                                <a href="universities/iam-senegal.html" class="learn-more-btn">Learn More</a>
+                            </div>
+                        </div>
+                        <!-- Right Half: IAM University Bamako -->
+                        <div class="university-half" id="iam-bamako-half">
+                            <div class="half-overlay"></div>
+                            <div class="half-content">
+                                <h2 class="university-title text-bright text-center">IAM University, Mali</h2>
+                                <div class="top-content-wrapper">
+                                    <div class="details-grid">
+                                        <p><strong>Founded:</strong> 2005, Bamako, Mali</p>
+                                        <p><strong>Students:</strong> 970</p>
+                                        <p><strong>Gender Ratio:</strong> 57:43 Female to Male</p>
+                                        <p><strong>International Students:</strong> 2%</p>
+                                        <p><strong>Campuses:</strong> One</p>
+                                        <p><strong>Flagship:</strong> Business School</p>
+                                    </div>
+                                    <div class="faculties">
+                                        <h3>Key Programs:</h3>
+                                        <ul>
+                                            <li>Business Administration</li>
+                                            <li>Transport & Logistics</li>
+                                            <li>Banking & Finance</li>
+                                            <li>Marketing</li>
+                                            <li>Project Management</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="mission text-center">
+                                    <h3>MISSION</h3>
+                                    <p>To provide managers with the skills and cross-cultural perspectives needed to
+                                        foster development and competitiveness in the region.</p>
+                                </div>
+                                <a href="universities/iam-mali.html" class="learn-more-btn">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination university-pagination"></div>
+        </div>
+    </section>
+    <!-- END: University Carousel Section -->
+
+    <!-- START: Admissions Section -->
+    <section class="admissions-section">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="admissions-header">
+                <h2 class="admissions-main-title">Apply for Admission</h2>
+                <p class="admissions-intro">
+                    Begin your journey with us. Select a university below to start your application and unlock your
+                    potential.
+                </p>
+            </div>
+
+            <!-- University Choices Grid -->
+            <div class="admissions-grid">
+
+                <!-- Choice 1: Cavendish University Uganda -->
+                <div class="admission-card">
+                    <div class="admission-card-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="admission-uni-name">Cavendish University Uganda</h3>
+                    <p class="admission-uni-location">Kampala, Uganda</p>
+                    <a href="https://www.cavendish.ac.ug/admissions/admission-requirements" class="apply-now-btn">Apply
+                        Now</a>
+                </div>
+
+                <!-- Choice 2: Cavendish University Zambia -->
+                <div class="admission-card">
+                    <div class="admission-card-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="admission-uni-name">Cavendish University Zambia</h3>
+                    <p class="admission-uni-location">Lusaka, Zambia</p>
+                    <a href="https://www.cavendishza.org/application-requirements" class="apply-now-btn">Apply Now</a>
+                </div>
+
+                <!-- Choice 3: IAM University, Senegal -->
+                <div class="admission-card">
+                    <div class="admission-card-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="admission-uni-name">IAM University, Senegal</h3>
+                    <p class="admission-uni-location">Dakar, Senegal</p>
+                    <a href="https://www.groupeiam.com/admission" class="apply-now-btn">Apply Now</a>
+                </div>
+
+                <!-- Choice 4: IAM University, Mali -->
+                <div class="admission-card">
+                    <div class="admission-card-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="admission-uni-name">IAM University, Mali</h3>
+                    <p class="admission-uni-location">Bamako, Mali</p>
+                    <a href="https://www.groupeiam.com/admission" class="apply-now-btn">Apply Now</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- END: Admissions Section -->
+
+    <!-- START: Flagship Projects Section -->
+    <section class="flagship-section">
+        <div class="flagship-background"></div>
+        <div class="flagship-overlay"></div>
+
+        <!-- This container holds all the text content -->
+        <div class="flagship-content-container">
+            <h2 class="flagship-title">Our Flagship Projects</h2>
+
+            <div class="projects-grid">
+                <!-- Column 1: Remote Work Program -->
+                <div class="project-item">
+                    <h3 class="project-title">Remote Work Program</h3>
+                    <div class="project-details">
+                        <p>Skills-based short course designed to prepare students to access global digital workforce
+                            opportunities.</p>
+                        <p>Provides a solid foundation for skills and culture required to succeed in remote work.</p>
+                        <p>Offers specialization tracks in IT, Cybersecurity and digital marketing - equipping learners
+                            with high-demand skills for the global market.</p>
+                    </div>
+                </div>
+
+                <!-- Column 2: Experiential Learning Platform -->
+                <div class="project-item">
+                    <h3 class="project-title">Experiential Learning Platform</h3>
+                    <div class="project-details">
+                        <p>Partnered with Riipen, a Canadian based experiential learning company.</p>
+                        <p>Offering our students flexible remote work-based learning opportunities with real companies
+                            around the world.</p>
+                        <p>Launched in Q4, 2024.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END: Flagship Projects Section -->
+
+    <!-- START: Power of Education Section -->
+    <section class="power-of-education-section">
+        <div class="container mx-auto px-6">
+
+            <!-- Section Header -->
+            <div class="section-header">
+                <h2 class="section-title">Unlock the Power of Education</h2>
+                <p class="section-intro">
+                    At Africa Education Holdings, we are dedicated to providing innovative digital solutions that
+                    empower learners and educators alike. Our comprehensive suite of educational resources is designed
+                    to foster intellectual growth and unlock the full potential of individuals across the African
+                    continent.
+                </p>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="features-grid">
+
+                <!-- Feature 1: Transformative Learning -->
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                        <!-- Rocket Icon -->
+                        <svg class="feature-icon icon-rocket" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.82m5.84-2.56a6 6 0 0 1 6.38 5.84h-4.82m-1.56-5.84a6 6 0 0 1-7.38 5.84m-1.2 2.56a6 6 0 0 1 5.84-7.38m-5.84 2.56a6 6 0 0 1 7.38-5.84m1.2-2.56a6 6 0 0 1-5.84 7.38m5.84-2.56a6 6 0 0 1-7.38-5.84m1.2 2.56a6 6 0 0 1 5.84 7.38" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Transformative Learning Experiences</h3>
+                    <p class="feature-description">
+                        Through our cutting-edge digital goods, we aim to revolutionize the way students engage with
+                        educational content. Our interactive platforms and personalized learning tools ensure that every
+                        individual can maximize their learning outcomes and achieve their academic goals.
+                    </p>
+                </div>
+
+                <!-- Feature 2: Bridging the Digital Divide -->
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                        <!-- Globe Icon -->
+                        <svg class="feature-icon icon-globe" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" />
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z M3.53 9.5h16.94M3.53 14.5h16.94M9.5 3.53v16.94M14.5 3.53v16.94" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Bridging the Digital Divide</h3>
+                    <p class="feature-description">
+                        At Africa Education Holdings, we are committed to bridging the digital divide and ensuring that
+                        learners across Africa have access to high-quality educational content. Our innovative digital
+                        solutions are designed to reach even the most remote regions, empowering individuals to unlock
+                        their full potential.
+                    </p>
+                </div>
+
+                <!-- Feature 3: Empowering Educators -->
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                        <!-- Graduation Cap Icon -->
+                        <svg class="feature-icon icon-educators" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path
+                                d="M12 14.25a2.25 2.25 0 0 0-2.25-2.25H6.375a2.25 2.25 0 0 0-2.25 2.25v5.25a2.25 2.25 0 0 0 2.25 2.25h9.25A2.25 2.25 0 0 0 18 19.5v-5.25a2.25 2.25 0 0 0-2.25-2.25h-3.375Z" />
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 3v8.25m0 0-3-3m3 3 3-3M12 21.75a2.25 2.25 0 0 0 2.25-2.25v-5.25a2.25 2.25 0 0 0-2.25-2.25H6.375a2.25 2.25 0 0 0-2.25 2.25v5.25a2.25 2.25 0 0 0 2.25 2.25h9.25" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Empowering Educators</h3>
+                    <p class="feature-description">
+                        We understand the unique challenges faced by educators in the digital age. That's why we offer a
+                        comprehensive suite of digital resources and professional development opportunities to help
+                        teachers and instructors deliver engaging and effective lessons that inspire their students.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- END: Power of Education Section -->
+
+    <!-- START: Core Values Section -->
+    <section class="core-values-section">
+        <div class="container mx-auto px-6">
+
+            <!-- Section Header -->
+            <h2 class="values-main-title">Our Core Values</h2>
+
+            <!-- Values Grid -->
+            <div class="values-grid">
+
+                <!-- Value 1: Excellence -->
+                <div class="value-item">
+                    <div class="value-icon-wrapper">
+                        <!-- Font Awesome Trophy Icon -->
+                        <i class="fa-solid fa-trophy value-icon"></i>
+                    </div>
+                    <h3 class="value-title">Excellence</h3>
+                    <p class="value-description">
+                        Excellence is our foundation—delivering world-class education that equips every learner to
+                        achieve their highest potential and thrive in an ever-evolving global landscape.
+                    </p>
+                </div>
+
+                <!-- Value 2: Innovation -->
+                <div class="value-item">
+                    <div class="value-icon-wrapper">
+                        <!-- Font Awesome Lightbulb Icon -->
+                        <i class="fa-solid fa-lightbulb value-icon"></i>
+                    </div>
+                    <h3 class="value-title">Innovation</h3>
+                    <p class="value-description">
+                        Innovation is at the heart of what we do—leveraging technology, research, and creativity to
+                        reimagine education and solve real-world challenges with impact.
+                    </p>
+                </div>
+
+                <!-- Value 3: Transformation -->
+                <div class="value-item">
+                    <div class="value-icon-wrapper">
+                        <!-- Font Awesome Seedling Icon -->
+                        <i class="fa-solid fa-seedling value-icon"></i>
+                    </div>
+                    <h3 class="value-title">Transformation</h3>
+                    <p class="value-description">
+                        Transformation is our promise—empowering learners to become ethical leaders, visionary
+                        entrepreneurs, and catalysts for sustainable development in their communities and beyond.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- END: Core Values Section -->
+
+    <!-- START: Latest Insights & News Section 
+    <section class="insights-section" id="blog">
+        <div class="container mx-auto px-6">
+
+            <h2 class="insights-main-title">Latest Insights & News</h2>
+            <div class="insights-grid">
+
+                <!-- Card 1 
+                <div class="insight-card">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=800&auto=format&fit=crop"
+                            alt="Modern classroom" class="card-image">
+                        <div class="card-image-overlay"></div>
+                        <h3 class="card-title-on-image">Revolutionizing the Classroom: Embracing the Digital Future in
+                            Education</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-date">June 15, 2024</p>
+                        <p class="card-excerpt">
+                            Unlock the power of digital learning with Africa Education Holdings. Our comprehensive suite
+                            of educational resources empowers students and teachers alike, revolutionizing the way
+                            knowledge is acquired and shared.
+                        </p>
+                        <a href="#" class="read-more-link">
+                            Read More
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" class="arrow-icon">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2 
+                <div class="insight-card">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800&auto=format&fit=crop"
+                            alt="Students learning together" class="card-image">
+                        <div class="card-image-overlay"></div>
+                        <h3 class="card-title-on-image">Empowering Africa's Future Through Digital Education</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-date">June 15, 2024</p>
+                        <p class="card-excerpt">
+                            Africa Education Holdings is committed to providing high-quality educational resources and
+                            tools to empower learners across the continent. Our mission is to bridge the educational gap
+                            and create opportunities for individuals to thrive.
+                        </p>
+                        <a href="#" class="read-more-link">
+                            Read More
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" class="arrow-icon">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3 
+                <div class="insight-card">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?q=80&w=800&auto=format&fit=crop"
+                            alt="Person using a tablet for learning" class="card-image">
+                        <div class="card-image-overlay"></div>
+                        <h3 class="card-title-on-image">Unlocking the Potential of Digital Education in Africa</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-date">June 15, 2024</p>
+                        <p class="card-excerpt">
+                            At Africa Education Holdings, we are dedicated to providing high-quality educational
+                            resources and tools to empower learners across the continent. Our mission is to create
+                            accessible and engaging content.
+                        </p>
+                        <a href="#" class="read-more-link">
+                            Read More
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" class="arrow-icon">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- END: Latest Insights & News Section -->
+
+    <!-- START: Get In Touch Section -->
+    <section class="contact-section" id="contact" style="background-color: #D6E9EC;">
+        <div class="container mx-auto px-6">
+
+            <!-- Section Header -->
+            <div class="contact-header">
+                <h2 class="contact-main-title">Get In Touch With Us</h2>
+                <p class="contact-intro">
+                    Reach out to our knowledgeable team at Africa Education Holdings for any inquiries or feedback.
+                    We're here to assist you. Whether you have a specific question or would like to discuss potential
+                    partnership opportunities, our dedicated professionals are ready to address your needs.
+                </p>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form">
+                <div class="form-grid">
+                    <!-- Name Field -->
+                    <div class="form-group">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" class="form-input">
+                    </div>
+                    <!-- Email Field -->
+                    <div class="form-group">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                            class="form-input">
+                    </div>
+                    <!-- Subject Field -->
+                    <div class="form-group full-width">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Inquiry about partnership"
+                            class="form-input">
+                    </div>
+                    <!-- Message Field -->
+                    <div class="form-group full-width">
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Type your message here..."
+                            class="form-textarea"></textarea>
+                    </div>
+                </div>
+                <div class="button-wrapper">
+                    <button type="submit" class="submit-button">Send Message</button>
+                </div>
+            </form>
+
+        </div>
+    </section>
+    <!-- END: Get In Touch Section -->
+
+    <!-- START: Footer Section -->
+    <footer class="site-footer">
+        <div class="container mx-auto px-6 py-12">
+            <div class="footer-grid">
+
+                <!-- Column 1: Logo and About -->
+                <div class="footer-col">
+                    <img src="images/logo_trans.png" alt="AEH Logo" class="footer-logo mb-4">
+                    <p class="text-gray-400">
+                        Pioneering transformative and accessible education to unlock the potential of Africa's youth.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="partnerships.html">Partnerships</a></li>
+                        <li><a href="index.html#universities">Universities</a></li>
+                        <!-- <li><a href="#blog">Blog</a></li> -->
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Us -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="contact-info">
+                        <li class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@africaeducationholdings.com</span>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>(+254) (0) 732 188 413</span>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fa-solid fa-map-marker-alt"></i>
+                            <span>Nairobi, Kenya</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Network Development -->
+                <div class="footer-col">
+                    <h3 class="footer-title">AEH Network Development</h3>
+                    <p class="text-gray-400">
+                        AEH is actively looking to add institutions to its portfolio. If you are interested in
+                        discussing possible partnerships, please contact us.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom">
+                <p class="copyright-text">&copy; <span id="copyright-year"></span> Africa Education Holdings. All Rights
+                    Reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END: Footer Section -->
+
+</body>
+<script>
+
+    const loaderOverlay = document.getElementById('loader-overlay');
+
+    window.onload = function () {
+        // Check if the URL has a hash
+        if (window.location.hash) {
+            const targetElement = document.querySelector(window.location.hash);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        setTimeout(() => {
+            // Fade out the loader
+            if (loaderOverlay) {
+                loaderOverlay.classList.add('hidden');
+            }
+            // Fade in the page content
+            document.body.classList.remove('content-hidden');
+        }, 1000); // 1s delay
+    };
+
+    // Fallback to hide loader if page takes too long
+    setTimeout(() => {
+        if (loaderOverlay && !loaderOverlay.classList.contains('hidden')) {
+            loaderOverlay.classList.add('hidden');
+            document.body.classList.remove('content-hidden');
+        }
+    }, 3000);
+    document.addEventListener('DOMContentLoaded', function () {
+        // --- Hero Swiper Initialization ---
+        const heroSwiper = new Swiper('.hero-swiper', {
+            autoHeight: false,
+            direction: 'horizontal',
+            loop: true,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            speed: 1500,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        const slides = document.querySelectorAll('.hero-swiper .swiper-slide');
+        slides.forEach(slide => {
+            slide.classList.add('min-h-[80vh]');
+        });
+        // --- Interactive Problem Section Logic ---
+        const problemCards = document.querySelectorAll('.problem-card');
+        const problemTitle = document.getElementById('problem-title');
+        const problemContent = document.getElementById('problem-content');
+        const resetButton = document.getElementById('reset-problem-btn');
+
+        if (problemCards.length > 0 && problemTitle && problemContent && resetButton) {
+            const initialTitle = problemTitle.textContent;
+            const initialContent = problemContent.textContent;
+
+            problemCards.forEach(card => {
+                card.addEventListener('click', function () {
+                    // Remove active class from all cards
+                    problemCards.forEach(c => c.classList.remove('active-card'));
+                    // Add active class to the clicked card
+                    this.classList.add('active-card');
+
+                    // Get new content from data attributes
+                    const newTitle = this.dataset.title;
+                    const newContent = this.dataset.content;
+
+                    // Update the display area
+                    problemTitle.textContent = newTitle;
+                    problemContent.textContent = newContent;
+
+                    // Show the reset button
+                    resetButton.style.display = 'inline-flex';
+                });
+            });
+
+            // Add click event for the reset button
+            resetButton.addEventListener('click', function () {
+                problemCards.forEach(c => c.classList.remove('active-card'));
+                // Set the first card as active again
+                problemCards[0].classList.add('active-card');
+
+                // Reset to initial content
+                problemTitle.textContent = initialTitle;
+                problemContent.textContent = initialContent;
+
+                // Hide the reset button
+                resetButton.style.display = 'none';
+            });
+        }
+        // --- University Swiper ---
+        const universitySwiper = new Swiper('.university-swiper', {
+            loop: true,
+            autoplay: {
+                delay: 10000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.university-pagination',
+                clickable: true,
+            },
+        });
+        // --- Hamburger Menu for small screens ---
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.classList.toggle('open');
+            menu.classList.toggle('hidden');
+        });
+        document.addEventListener('click', (e) => {
+            if (!menu.contains(e.target) && !btn.contains(e.target)) {
+                btn.classList.remove('open');
+                menu.classList.add('hidden');
+            }
+        });
+
+        function handleSmoothScrollOnLoad() {
+            // Check if the URL has a hash (e.g., #universities)
+            if (window.location.hash) {
+                const hash = window.location.hash;
+                const targetElement = document.querySelector(hash);
+
+                // If the element exists on the current page
+                if (targetElement) {
+                    // We use a small timeout to ensure the page has fully rendered
+                    // before we try to scroll. This makes it more reliable.
+                    setTimeout(() => {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }, 100);
+                }
+            }
+        }
+
+        handleSmoothScrollOnLoad();
+    });
+</script>
+
+</html>
