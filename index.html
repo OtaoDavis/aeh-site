@@ -328,7 +328,150 @@
       </div>
     </section>
 
-    <!-- THE AEH IMPACT SECTION: THE NEW MODEL -->
+    <!-- OUR UNIVERSITY NETWORK: VIEWPORT-FITTING PORTFOLIO -->
+    <section id="network" class="university-network-slider">
+      <div class="container">
+        <div class="section-header-between">
+          <div class="header-left">
+            <p class="blue-tag">OUR UNIVERSITY NETWORK</p>
+            <h2 class="institutional-heading">
+              A Pan-African <em>Academic Alliance.</em>
+            </h2>
+          </div>
+          <div class="swiper-nav-group">
+            <div class="uni-prev"><i class="fa-solid fa-chevron-left"></i></div>
+            <div class="uni-fraction"></div>
+            <div class="uni-next">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper university-portfolio-swiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 01: Uganda -->
+          <div class="swiper-slide">
+            <div class="network-asset-grid">
+              <div class="asset-visual">
+                <img src="images/cz3.jpg" alt="CUU Uganda" class="asset-img" />
+                <div class="asset-geo-label">UGANDA</div>
+              </div>
+              <div class="asset-details">
+                <div class="details-inner">
+                  <p class="asset-eyebrow">FLAGSHIP: LAW SCHOOL</p>
+                  <h3 class="asset-title">
+                    Cavendish University <br />Uganda (CUU)
+                  </h3>
+
+                  <div class="asset-stats-grid">
+                    <div class="a-stat">
+                      <p>Founded</p>
+                      <span>2008</span>
+                    </div>
+                    <div class="a-stat">
+                      <p>Students</p>
+                      <span>4,700</span>
+                    </div>
+                    <div class="a-stat">
+                      <p>Intl Students</p>
+                      <span>54%</span>
+                    </div>
+                    <div class="a-stat">
+                      <p>Campuses</p>
+                      <span>03</span>
+                    </div>
+                  </div>
+
+                  <div class="faculties-wrap">
+                    <h4>Core Faculties</h4>
+                    <ul class="faculty-list">
+                      <li>Science & Technology</li>
+                      <li>Business & Management</li>
+                      <li>Socio-Economic Sciences</li>
+                      <li>Law</li>
+                    </ul>
+                  </div>
+
+                  <div class="asset-mission-box">
+                    <p>
+                      <strong>Mission:</strong> To transform and inspire
+                      students to reach their full potential in employment,
+                      entrepreneurship, and ethical leadership.
+                    </p>
+                  </div>
+
+                  <a href="#" class="btn-text-reveal"
+                    >Enroll Today <i class="fa-solid fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 02: Zambia -->
+          <div class="swiper-slide">
+            <div class="network-asset-grid">
+              <div class="asset-visual">
+                <img src="images/cz1.JPG" alt="CUZ Zambia" class="asset-img" />
+                <div class="asset-geo-label">ZAMBIA</div>
+              </div>
+              <div class="asset-details">
+                <div class="details-inner">
+                  <p class="asset-eyebrow">FLAGSHIP: MEDICAL SCHOOL</p>
+                  <h3 class="asset-title">
+                    Cavendish University <br />Zambia (CUZ)
+                  </h3>
+
+                  <div class="asset-stats-grid">
+                    <div class="a-stat">
+                      <p>Founded</p>
+                      <span>2004</span>
+                    </div>
+                    <div class="a-stat">
+                      <p>Students</p>
+                      <span>7,300</span>
+                    </div>
+                    <div class="a-stat">
+                      <p>Gender Ratio</p>
+                      <span>52:48 F/M</span>
+                    </div>
+                    <div class="a-stat">
+                      <p>Campuses</p>
+                      <span>02</span>
+                    </div>
+                  </div>
+
+                  <div class="faculties-wrap">
+                    <h4>Core Faculties</h4>
+                    <ul class="faculty-list">
+                      <li>Medicine & Health Sciences</li>
+                      <li>Law</li>
+                      <li>Arts & Social Sciences</li>
+                      <li>Business & Management</li>
+                    </ul>
+                  </div>
+
+                  <div class="asset-mission-box">
+                    <p>
+                      <strong>Mission:</strong> To increase access to
+                      high-quality education that transforms students into
+                      responsible, employable, and entrepreneurial citizens.
+                    </p>
+                  </div>
+
+                  <a href="#" class="btn-text-reveal"
+                    >Enroll Today <i class="fa-solid fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE AEH IMPACT SECTION -->
     <section class="aeh-impact">
       <div class="container">
         <div class="impact-grid">
@@ -576,7 +719,7 @@
       <div class="container mx-auto px-6 py-12">
         <div class="footer-grid">
           <!-- Column 1: Logo and About -->
-          <div class="footer-col" style="margin-left: -80px">
+          <div class="footer-col">
             <img
               src="images/logo_trans.png"
               alt="AEH Logo"
@@ -606,11 +749,13 @@
             <ul class="contact-info">
               <li class="contact-item">
                 <i class="fa-solid fa-envelope"></i>
-                <span>info@africaeducationholdings.com</span>
+                <span style="text-transform: none"
+                  >info@africaeducationholdings.com</span
+                >
               </li>
               <li class="contact-item">
                 <i class="fa-solid fa-phone"></i>
-                <span>(+254) (0) 732 188 413</span>
+                <span>(+254) 732 188 413</span>
               </li>
               <li class="contact-item">
                 <i class="fa-solid fa-map-marker-alt"></i>
@@ -656,152 +801,85 @@
 </html>
 
 <script>
-  const loaderOverlay = document.getElementById("loader-overlay");
-
-  window.onload = function () {
-    // Check if the URL has a hash
-    if (window.location.hash) {
-      const targetElement = document.querySelector(window.location.hash);
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-    setTimeout(() => {
-      // Fade out the loader
-      if (loaderOverlay) {
-        loaderOverlay.classList.add("hidden");
-      }
-      // Fade in the page content
-      document.body.classList.remove("content-hidden");
-    }, 1000); // 1s delay
-  };
-
-  // Fallback to hide loader if page takes too long
-  setTimeout(() => {
-    if (loaderOverlay && !loaderOverlay.classList.contains("hidden")) {
-      loaderOverlay.classList.add("hidden");
-      document.body.classList.remove("content-hidden");
-    }
-  }, 3000);
   document.addEventListener("DOMContentLoaded", function () {
-    // --- Hero Swiper Initialization ---
+    // 1. Loader Logic
+    const loaderOverlay = document.getElementById("loader-overlay");
+    window.onload = function () {
+      setTimeout(() => {
+        if (loaderOverlay) loaderOverlay.classList.add("hidden");
+        document.body.classList.remove("content-hidden");
+      }, 1000);
+    };
+
+    // 2. Hero Swiper (Top of page)
     const heroSwiper = new Swiper(".hero-swiper", {
-      autoHeight: false,
-      direction: "horizontal",
       loop: true,
       effect: "fade",
-      fadeEffect: {
-        crossFade: true,
-      },
       speed: 1500,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+      autoplay: { delay: 5000 },
     });
-    const slides = document.querySelectorAll(".hero-swiper .swiper-slide");
-    slides.forEach((slide) => {
-      slide.classList.add("min-h-[80vh]");
-    });
-    // --- Interactive Problem Section Logic ---
+
+    // 3. Problem Section Interactive Logic
     const problemCards = document.querySelectorAll(".problem-card");
     const problemTitle = document.getElementById("problem-title");
     const problemContent = document.getElementById("problem-content");
     const resetButton = document.getElementById("reset-problem-btn");
 
-    if (
-      problemCards.length > 0 &&
-      problemTitle &&
-      problemContent &&
-      resetButton
-    ) {
+    if (problemCards.length > 0 && problemTitle) {
       const initialTitle = problemTitle.textContent;
       const initialContent = problemContent.textContent;
 
       problemCards.forEach((card) => {
         card.addEventListener("click", function () {
-          // Remove active class from all cards
           problemCards.forEach((c) => c.classList.remove("active-card"));
-          // Add active class to the clicked card
           this.classList.add("active-card");
-
-          // Get new content from data attributes
-          const newTitle = this.dataset.title;
-          const newContent = this.dataset.content;
-
-          // Update the display area
-          problemTitle.textContent = newTitle;
-          problemContent.textContent = newContent;
-
-          // Show the reset button
+          problemTitle.textContent = this.dataset.title;
+          problemContent.textContent = this.dataset.content;
           resetButton.style.display = "inline-flex";
         });
       });
 
-      // Add click event for the reset button
       resetButton.addEventListener("click", function () {
         problemCards.forEach((c) => c.classList.remove("active-card"));
-        // Set the first card as active again
         problemCards[0].classList.add("active-card");
-
-        // Reset to initial content
         problemTitle.textContent = initialTitle;
         problemContent.textContent = initialContent;
-
-        // Hide the reset button
-        resetButton.style.display = "none";
+        this.style.display = "none";
       });
     }
-    // --- University Swiper ---
-    const universitySwiper = new Swiper(".university-swiper", {
+
+    // 4. THE PORTFOLIO SWIPER (The section that wasn't working)
+    // Renamed to 'uniPortfolio' to avoid conflict with 'universitySwiper'
+    const uniPortfolio = new Swiper(".university-portfolio-swiper", {
       loop: true,
+      speed: 1200,
+      grabCursor: true,
       autoplay: {
         delay: 10000,
         disableOnInteraction: false,
       },
+      navigation: {
+        nextEl: ".uni-next",
+        prevEl: ".uni-prev",
+      },
       pagination: {
-        el: ".university-pagination",
-        clickable: true,
+        el: ".uni-fraction",
+        type: "fraction",
+        formatFractionCurrent: (number) =>
+          number < 10 ? "0" + number : number,
+        formatFractionTotal: (number) => (number < 10 ? "0" + number : number),
       },
     });
-    // --- Hamburger Menu for small screens ---
+
+    // 6. Hamburger Menu
     const btn = document.getElementById("menu-btn");
     const menu = document.getElementById("menu");
-    btn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      btn.classList.toggle("open");
-      menu.classList.toggle("hidden");
-    });
-    document.addEventListener("click", (e) => {
-      if (!menu.contains(e.target) && !btn.contains(e.target)) {
-        btn.classList.remove("open");
-        menu.classList.add("hidden");
-      }
-    });
-
-    function handleSmoothScrollOnLoad() {
-      // Check if the URL has a hash (e.g., #universities)
-      if (window.location.hash) {
-        const hash = window.location.hash;
-        const targetElement = document.querySelector(hash);
-
-        // If the element exists on the current page
-        if (targetElement) {
-          // We use a small timeout to ensure the page has fully rendered
-          // before we try to scroll. This makes it more reliable.
-          setTimeout(() => {
-            targetElement.scrollIntoView({
-              behavior: "smooth",
-            });
-          }, 100);
-        }
-      }
+    if (btn) {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        btn.classList.toggle("open");
+        menu.classList.toggle("hidden");
+      });
     }
-
-    handleSmoothScrollOnLoad();
   });
 </script>

@@ -713,6 +713,240 @@ em,
 
 /* aeh impact section end */
 
+/* --- UNIVERSITY PORTFOLIO: INSTITUTIONAL REFINEMENT --- */
+
+#network {
+  padding: 20px 5%;
+  background-color: var(--aeh-light-back);
+}
+
+.section-header-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+.institutional-heading {
+  font-size: 2.8rem;
+  color: var(--aeh-navy);
+}
+
+/* Custom Swiper Navigation Alignment */
+.swiper-nav-group {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding-bottom: 10px;
+}
+
+.uni-prev,
+.uni-next {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--aeh-navy);
+  transition: 0.3s;
+  opacity: 0.6;
+}
+
+.uni-prev:hover,
+.uni-next:hover {
+  opacity: 1;
+  color: var(--aeh-blue);
+}
+
+.uni-fraction {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  color: var(--aeh-navy);
+  min-width: 80px;
+  text-align: center;
+}
+
+.network-asset-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  /* CALCULATED HEIGHT: Viewport minus Nav height (assuming 80px) and Header height */
+  min-height: 600px; /* Safety fallback for small screens */
+  border-top: 1px solid var(--aeh-dark-blue);
+}
+
+/* Image Side */
+.asset-visual {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.asset-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.asset-geo-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--aeh-navy);
+  color: white;
+  padding: 15px 30px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  z-index: 10;
+}
+
+/* Content Side */
+.asset-details {
+  background-color: var(--aeh-white);
+  display: flex;
+  align-items: center;
+  padding: 40px 8%;
+}
+
+.details-inner {
+  max-width: 550px;
+}
+
+.asset-eyebrow {
+  color: var(--aeh-green);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.asset-title {
+  font-size: 3.2rem;
+  line-height: 1.1;
+  margin-bottom: 40px;
+  color: var(--aeh-navy);
+}
+
+/* Statistics Grid */
+.asset-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+.a-stat p {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-bottom: 5px;
+}
+
+.a-stat span {
+  font-family: "EB Garamond", serif;
+  font-size: 2rem;
+  color: var(--aeh-navy);
+  font-weight: 500;
+}
+
+/* Faculty and Mission Detail */
+.faculties-wrap h4 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  color: var(--aeh-dark-blue);
+}
+
+.faculty-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 12px 20px;
+  margin-bottom: 40px;
+}
+
+.faculty-list li {
+  font-size: 0.95rem;
+  color: var(--text);
+  padding-left: 15px;
+  position: relative;
+}
+
+.faculty-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 1px;
+  background-color: var(--aeh-blue);
+}
+
+.asset-mission-box {
+  padding: 30px;
+  background-color: var(--aeh-light-back);
+  border-left: 4px solid var(--aeh-blue);
+  margin-bottom: 40px;
+}
+
+.asset-mission-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.btn-text-reveal {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--aeh-navy);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-text-reveal i {
+  margin-left: 10px;
+  transition: transform 0.3s;
+}
+.btn-text-reveal:hover {
+  color: var(--aeh-green);
+}
+.btn-text-reveal:hover i {
+  transform: translateX(5px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .asset-title {
+    font-size: 2.5rem;
+  }
+  .asset-details {
+    padding: 60px 5%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .network-asset-grid {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .asset-visual {
+    height: 400px;
+  }
+  .faculty-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* our uni netwrok end */
+
 /* --- AEH NEWS ROOM --- */
 
 .aeh-news-room {
