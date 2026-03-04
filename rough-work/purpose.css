@@ -61,11 +61,11 @@
   transform-origin: right center;
 }
 
-/* --- THE PROBLEM START --- */
+/* --- THE PROBLEM SECTION: INSTITUTIONAL MANIFESTO --- */
 
 .problem-manifesto {
-  background-color: #0a1a29; /* A deep, serious version of your dark blue */
-  padding: 20px 5%;
+  background-color: #0a1a29; /* Deep Institutional Navy */
+  padding: 40px 5%; /* Increased vertical padding for a larger, premium feel */
   color: var(--aeh-white);
 }
 
@@ -78,22 +78,28 @@
 
 /* Left Column Styling */
 .problem-statement h2 {
-  font-size: 4.5rem;
-  line-height: 1;
+  font-family: "EB Garamond", serif;
+  font-size: clamp(3.5rem, 5.5vw, 5rem); /* Responsive oversized heading */
+  line-height: 0.95; /* Dense, high-end editorial stacking */
   margin-bottom: 35px;
   color: var(--aeh-white);
   letter-spacing: -2px;
+  text-transform: none !important; /* Overriding global capitalize */
 }
 
+/* The Italicized Vision Line */
 .problem-statement h2 em {
+  display: block; /* Pushes to a new line for balance */
   color: var(--aeh-blue);
   font-style: italic;
+  font-weight: 400;
+  margin-top: 10px;
 }
 
 .problem-lead {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  color: var(--aeh-text-bright);
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #cbd5e1; /* Soft contrast for readability */
   font-weight: 300;
   max-width: 500px;
   text-transform: none !important; /* Vital for institutional feel */
@@ -108,7 +114,6 @@
 .problem-factors {
   display: flex;
   flex-direction: column;
-  gap: 0; /* Removing gaps to use borders as separators */
 }
 
 .factor-item {
@@ -116,41 +121,45 @@
   gap: 30px;
   padding: 40px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.4s ease;
+  transition: all 0.4s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
 .factor-item:first-child {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Subtle architectural hover effect */
 .factor-item:hover {
   padding-left: 20px;
   border-bottom-color: var(--aeh-green);
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .factor-num {
   font-family: "EB Garamond", serif;
   font-size: 1.8rem;
   color: var(--aeh-green);
-  opacity: 0.8;
+  line-height: 1;
 }
 
 .factor-content h4 {
-  font-size: 1.8rem;
+  font-family: "EB Garamond", serif;
+  font-size: 1.85rem;
   color: var(--aeh-white);
   margin-bottom: 10px;
   text-transform: none !important;
 }
 
 .factor-content p {
+  font-family: "Inter", sans-serif;
   font-size: 1.05rem;
   line-height: 1.6;
-  color: #cbd5e1; /* Soft grey-blue for readability */
+  color: #94a3b8; /* Muted slate for detail text */
   text-transform: none !important;
-  max-width: 450px;
+  max-width: 480px;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE ADJUSTMENTS */
 @media (max-width: 1100px) {
   .problem-grid {
     grid-template-columns: 1fr;
@@ -159,10 +168,15 @@
   .problem-statement h2 {
     font-size: 3.5rem;
   }
+  .problem-manifesto {
+    padding: 80px 5%;
+  }
   .factor-item:hover {
     padding-left: 0;
   }
 }
+
+/* --- THE PROBLEM END --- */
 
 /* --- THE OPPORTUNITY SHOWCASE --- */
 
