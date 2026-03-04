@@ -1,0 +1,712 @@
+/* --- TALENT HERO  */
+.talent-hero {
+  padding: 0;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background: var(--white);
+  overflow: hidden;
+}
+
+.hero-split-talent {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  width: 100%;
+  align-items: center;
+}
+
+.talent-text-content {
+  padding-left: 12%;
+  padding-right: 80px;
+}
+
+.talent-text-content h1 {
+  font-size: clamp(3.5rem, 5.5vw, 5.5rem);
+  line-height: 1.05;
+  margin-bottom: 25px;
+}
+
+.hero-lead {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  max-width: 550px;
+}
+
+.talent-visual-frame {
+  position: relative;
+  height: 85vh;
+}
+
+.talent-visual-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Consistent slant with Pilot page */
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+  position: relative;
+  z-index: 2;
+}
+
+.slant-accent-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--aeh-blue);
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+  z-index: 1;
+  transform: scaleX(1.02);
+  transform-origin: right center;
+}
+
+/* --- THE PROBLEM START --- */
+
+.problem-manifesto {
+  background-color: #0a1a29; /* A deep, serious version of your dark blue */
+  padding: 20px 5%;
+  color: var(--aeh-white);
+}
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 100px;
+  align-items: flex-start;
+}
+
+/* Left Column Styling */
+.problem-statement h2 {
+  font-size: 4.5rem;
+  line-height: 1;
+  margin-bottom: 35px;
+  color: var(--aeh-white);
+  letter-spacing: -2px;
+}
+
+.problem-statement h2 em {
+  color: var(--aeh-blue);
+  font-style: italic;
+}
+
+.problem-lead {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--aeh-text-bright);
+  font-weight: 300;
+  max-width: 500px;
+  text-transform: none !important; /* Vital for institutional feel */
+}
+
+.problem-lead strong {
+  color: var(--aeh-green);
+  font-weight: 600;
+}
+
+/* Right Column (Factors) Styling */
+.problem-factors {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* Removing gaps to use borders as separators */
+}
+
+.factor-item {
+  display: flex;
+  gap: 30px;
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+}
+
+.factor-item:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.factor-item:hover {
+  padding-left: 20px;
+  border-bottom-color: var(--aeh-green);
+}
+
+.factor-num {
+  font-family: "EB Garamond", serif;
+  font-size: 1.8rem;
+  color: var(--aeh-green);
+  opacity: 0.8;
+}
+
+.factor-content h4 {
+  font-size: 1.8rem;
+  color: var(--aeh-white);
+  margin-bottom: 10px;
+  text-transform: none !important;
+}
+
+.factor-content p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #cbd5e1; /* Soft grey-blue for readability */
+  text-transform: none !important;
+  max-width: 450px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .problem-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .problem-statement h2 {
+    font-size: 3.5rem;
+  }
+  .factor-item:hover {
+    padding-left: 0;
+  }
+}
+
+/* --- THE OPPORTUNITY SHOWCASE --- */
+
+.opportunity-showcase {
+  padding: 20px 5%;
+  background-color: var(--aeh-white);
+}
+
+.opportunity-header {
+  margin-bottom: 20px;
+}
+
+.opportunity-header h2 {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  letter-spacing: -1.5px;
+}
+
+.opportunity-intro {
+  font-size: 1.3rem;
+  color: var(--text-muted);
+  max-width: 700px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* The Opportunity Grid */
+.opportunity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.opp-card {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s ease;
+}
+
+/* Visual Container with number overlay */
+.opp-visual {
+  position: relative;
+  height: 350px;
+  width: 100%;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.opp-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.opp-card:hover img {
+  transform: scale(1.1);
+}
+
+/* The Architectural Number Label */
+.opp-num {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--aeh-blue);
+  color: white;
+  font-family: "EB Garamond", serif;
+  font-size: 1.5rem;
+  padding: 15px 25px;
+  z-index: 2;
+}
+
+/* Content Styling */
+.opp-content h4 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--aeh-navy);
+  line-height: 1.2;
+}
+
+.opp-content p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  text-transform: none !important; /* Institutional standard */
+}
+
+/* Alternate color for the middle card to break symmetry */
+.opp-card:nth-child(2) .opp-num {
+  background-color: var(--aeh-green);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .opportunity-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .opportunity-header h2 {
+    font-size: 3rem;
+  }
+  .opp-visual {
+    height: 400px;
+  }
+}
+
+/* --- THE SOLUTION: IMMERSIVE STATEMENT --- */
+
+.solution-immersive {
+  position: relative;
+  padding: 30px 5%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background-image: url("https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000"); /* High-end architectural office/campus shot */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax effect for premium depth */
+  overflow: hidden;
+}
+
+/* Subtle Dark Overlay to make text pop and image "subtle" */
+.solution-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 26, 41, 0.95) 0%,
+    rgba(57, 152, 189, 0.7) 100%
+  );
+  z-index: 1;
+}
+
+.relative-z {
+  position: relative;
+  z-index: 2;
+}
+
+.solution-content-wrap {
+  max-width: 900px;
+}
+
+.solution-immersive h2 {
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  line-height: 1;
+  margin-bottom: 40px;
+  letter-spacing: -2px;
+}
+
+.solution-statement {
+  max-width: 650px;
+  margin-bottom: 60px;
+}
+
+.solution-statement p {
+  font-family: "EB Garamond", serif;
+  font-size: 2rem;
+  line-height: 1.4;
+  color: var(--aeh-white);
+  font-style: italic;
+  opacity: 0.9;
+  text-transform: none !important;
+}
+
+/* Outcome Pillars Styling */
+.outcome-pillars {
+  display: flex;
+  gap: 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 40px;
+}
+
+.outcome-item {
+  flex: 1;
+}
+
+.outcome-label {
+  display: block;
+  font-family: "EB Garamond", serif;
+  font-size: 1.5rem;
+  color: var(--aeh-green);
+  margin-bottom: 10px;
+}
+
+.outcome-item p {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--aeh-text-bright);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .solution-immersive {
+    padding: 100px 0;
+    background-attachment: scroll;
+  }
+  .outcome-pillars {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .solution-content-wrap {
+    text-align: center;
+  }
+  .solution-statement {
+    margin: 0 auto 40px auto;
+  }
+}
+/* THE SOLUTION END */
+
+/* --- UNIVERSAL OVERRIDES --- */
+p,
+li,
+h3,
+h4 {
+  text-transform: none !important;
+}
+
+/* --- SECTION 4: IDENTITY REFINEMENT --- */
+.identity-beliefs {
+  background-color: var(--aeh-white);
+  padding: 20px 5%;
+}
+.identity-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 100px;
+  padding: 60px 0;
+}
+
+.editorial-title {
+  font-size: 5rem;
+  line-height: 0.95;
+  margin-bottom: 30px;
+  letter-spacing: -2px;
+}
+
+.manifesto-italic {
+  font-family: "EB Garamond", serif;
+  font-size: 2.3rem;
+  font-style: italic;
+  line-height: 1.2;
+  color: var(--aeh-dark-blue);
+}
+
+.belief-entry {
+  display: flex;
+  gap: 30px;
+  padding: 35px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: flex-start;
+}
+
+.belief-entry:first-of-type {
+  border-top: 1px solid var(--border);
+}
+
+/* The Green Dash from your Screenshot */
+.belief-dash {
+  width: 30px;
+  height: 2px;
+  background-color: var(--aeh-green);
+  margin-top: 12px;
+  flex-shrink: 0;
+}
+
+.belief-entry p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+/* --- SECTION 5: THE DARK ANCHOR (Mission/Purpose) --- */
+.dark-anchor {
+  background-color: #0d2c4f; /* Forced AEH Navy */
+  padding: 40px 5%;
+}
+
+.mission-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 100px;
+}
+
+.bright-tag {
+  color: var(--aeh-green); /* Changed to Green for visibility */
+  letter-spacing: 4px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.mission-column h3 {
+  color: white !important;
+  font-size: 2.6rem;
+  line-height: 1.2;
+  font-family: "EB Garamond", serif;
+  font-weight: 400;
+}
+
+.mission-column.border-left {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding-left: 80px;
+}
+
+/* --- SECTION 6: STRATEGIC POSITION (ROI CARD) --- */
+.strategic-position {
+  padding: 40px 5%;
+  background-color: var(--aeh-white);
+}
+.strategy-split {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 120px;
+  align-items: center;
+}
+
+.strategy-lead {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 50px;
+  color: var(--text);
+}
+
+/* Outcomes Grid */
+.mini-pillar-grid {
+  display: flex;
+  gap: 60px;
+}
+
+.p-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--aeh-blue);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-transform: uppercase !important;
+}
+
+.m-pillar h4 {
+  font-size: 2rem;
+  font-family: "EB Garamond", serif;
+  color: var(--aeh-navy);
+}
+
+/* ROI Offset Card Styling */
+.strategy-roi-card-wrapper {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.roi-offset-bg {
+  position: absolute;
+  top: 40px;
+  right: -40px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--aeh-dark-background);
+  z-index: 1;
+}
+
+.roi-card-content {
+  background: white;
+  padding: 60px;
+  border: 1px solid var(--border);
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
+}
+
+.roi-card-content h3 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .identity-grid,
+  .mission-split-grid,
+  .strategy-split,
+  .mini-pillar-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .mission-column.border-left {
+    border-left: none;
+    padding-left: 0;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .roi-offset-bg {
+    display: none;
+  }
+}
+.text-white {
+  color: var(--aeh-white);
+}
+/* --- PILLARS DETAILED VIEW --- */
+
+.pillar-detail-row {
+  padding: 40px 5%; /* Increased vertical padding to give the "spill" room */
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+}
+
+.grid-pillar {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr; /* Image-heavy layout */
+  gap: 100px;
+  align-items: center;
+}
+
+.pillar-detail-row.reverse .grid-pillar {
+  grid-template-columns: 1fr 1.1fr; /* Flip ratios for reversed rows */
+}
+
+/* --- IMAGE OFFSET LOGIC (THE FIX) --- */
+
+.image-offset-wrapper {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.image-offset-wrapper img {
+  width: 100%;
+  height: 500px; /* Matching your Home Page height */
+  object-fit: cover;
+  position: relative;
+  z-index: 10; /* Ensures image is on top of the blue/green block */
+  display: block;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.image-offset-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 5; /* Sits behind the image */
+  top: 30px; /* Consistent 30px offset */
+}
+
+/* Logic for standard rows: Block spills to the LEFT */
+.pillar-detail-row:not(.reverse) .image-offset-bg {
+  left: -30px;
+}
+
+/* Logic for reversed rows: Block spills to the RIGHT */
+.pillar-detail-row.reverse .image-offset-bg {
+  right: -30px;
+}
+
+/* Color Provision */
+.bg-blue {
+  background-color: var(--aeh-blue);
+}
+.bg-green {
+  background-color: var(--aeh-green);
+}
+
+/* --- TYPOGRAPHY (UNTOUCHED) --- */
+
+.pillar-text h2 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  color: var(--aeh-navy);
+}
+
+.pillar-lead {
+  font-size: 1.35rem;
+  line-height: 1.6;
+  color: var(--aeh-dark-blue);
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  margin-bottom: 40px;
+  text-transform: none !important;
+}
+
+.pillar-sub-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.sub-item h4 {
+  font-size: 1.2rem;
+  color: var(--aeh-blue);
+  margin-bottom: 10px;
+  text-transform: none !important;
+}
+
+.sub-item p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  text-transform: none !important;
+}
+
+/* Specific Dark Mode (Pillar 04) Tweak */
+.dark-anchor .text-white {
+  color: var(--aeh-text-bright);
+}
+.dark-anchor .bright-tag {
+  color: var(--aeh-green);
+}
+.dark-anchor .sub-item h4 {
+  color: var(--aeh-blue);
+}
+.dark-anchor .sub-item p {
+  opacity: 0.8;
+}
+
+.foundation-img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  filter: brightness(0.8) sepia(20%);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .grid-pillar,
+  .pillar-detail-row.reverse .grid-pillar {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .pillar-text {
+    order: 2;
+  }
+  .pillar-visual {
+    order: 1;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .pillar-text h2 {
+    font-size: 2.8rem;
+  }
+  .image-offset-bg {
+    display: none; /* Removes the "spill" on mobile to prevent horizontal scrolling */
+  }
+}
