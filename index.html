@@ -72,7 +72,6 @@
           <a href="#">Our Purpose</a>
           <a href="#">Our Impact</a>
           <a href="#">Our Network</a>
-          <a href="">Services</a>
           <a href="#" class="nav-btn">Partner With Us</a>
         </div>
       </div>
@@ -811,12 +810,28 @@
       }, 1000);
     };
 
-    // 2. Hero Swiper (Top of page)
+    // --- Hero Swiper Initialization ---
     const heroSwiper = new Swiper(".hero-swiper", {
+      autoHeight: false,
+      direction: "horizontal",
       loop: true,
       effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      },
       speed: 1500,
-      autoplay: { delay: 5000 },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    const slides = document.querySelectorAll(".hero-swiper .swiper-slide");
+    slides.forEach((slide) => {
+      slide.classList.add("min-h-[80vh]");
     });
 
     // 3. Problem Section Interactive Logic

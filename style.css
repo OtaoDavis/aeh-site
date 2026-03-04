@@ -148,6 +148,7 @@ em,
 /* section 2 */
 .hero-editorial {
   padding: 20px 0 50px 0;
+  background: var(--aeh-white);
 }
 .hero-grid {
   display: grid;
