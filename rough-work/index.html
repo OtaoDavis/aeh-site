@@ -163,6 +163,35 @@
       </div>
     </section>
 
+    <!-- THE LEADERSHIP MANIFESTO SECTION -->
+    <section class="manifesto-video-section">
+      <div class="manifesto-bg-overlay"></div>
+      <!-- High-res background image of a founder or board room -->
+      <img
+        src="images/video-back.jpg"
+        class="manifesto-bg-img"
+        alt="AEH Leadership"
+      />
+
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="manifesto-content-center">
+          <h2 class="text-white text-6xl md:text-8xl mb-8">
+            A Vision for <em>Impact.</em>
+          </h2>
+          <p
+            class="text-white text-xl md:text-2xl max-w-3xl mx-auto mb-12 font-light"
+          >
+            "We aren't just training students; we are equipping the architects
+            of Africa's economic future. This is how we move from potential to
+            progress."
+          </p>
+          <button onclick="openVideoModal()" class="btn-video-outline">
+            WATCH THE VIDEO
+          </button>
+        </div>
+      </div>
+    </section>
+
     <!-- HERO: EDITORIAL ASYMMETRY -->
     <header class="hero-editorial">
       <div class="hero-grid">
@@ -809,6 +838,36 @@
       </div>
     </footer>
     <!-- END: Footer Section -->
+
+    <!-- THE VIDEO MODAL (Keep this at the bottom of your HTML) -->
+    <div id="videoModal" class="video-overlay" onclick="closeVideoModal()">
+      <div class="video-container" onclick="event.stopPropagation()">
+        <button class="video-close-btn" onclick="closeVideoModal()">
+          &times;
+        </button>
+        <div class="iframe-wrapper">
+          <!-- The iframe source is empty by default and filled by JS -->
+          <iframe
+            id="videoPlayer"
+            src=""
+            title="YouTube video player"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
 
@@ -816,21 +875,21 @@
   document.addEventListener("DOMContentLoaded", function () {
     const preloader = document.getElementById("aeh-loader");
 
-    // FUNCTION TO HIDE LOADER
+    // 1. Loader Logic
     const hideLoader = () => {
       setTimeout(() => {
-        preloader.classList.add("loader-finished");
+        if (preloader) preloader.classList.add("loader-finished");
         document.body.classList.remove("content-hidden");
-      }, 1000); // 1 second mandatory delay for premium feel
+      }, 1000);
     };
-    // Check if page is already loaded (handles fast refreshes/cached pages)
+
     if (document.readyState === "complete") {
       hideLoader();
     } else {
       window.addEventListener("load", hideLoader);
     }
 
-    // REDIRECTION LOGIC: Show loader when clicking internal links
+    // 2. Redirection Logic
     const internalLinks = document.querySelectorAll(
       'a[href^="index.html"], a[href^="about.html"], a[href^="talent.html"], a[href^="partnerships.html"]',
     );
@@ -840,11 +899,7 @@
         if (!link.hash && !e.metaKey && !e.ctrlKey) {
           e.preventDefault();
           const destination = link.href;
-
-          // Show loader immediately
-          preloader.classList.remove("loader-finished");
-
-          // Navigate after the fade-in effect
+          if (preloader) preloader.classList.remove("loader-finished");
           setTimeout(() => {
             window.location.href = destination;
           }, 500);
@@ -852,6 +907,7 @@
       });
     });
 
+    // 3. Swipers
     // --- Hero Swiper Initialization ---
     const heroSwiper = new Swiper(".hero-swiper", {
       autoHeight: false,
@@ -876,29 +932,20 @@
       slide.classList.add("min-h-[80vh]");
     });
 
-    // 3. PORTFOLIO SWIPER FOR THE UNIVERSITY NETWORK
     const uniPortfolio = new Swiper(".university-portfolio-swiper", {
       loop: true,
       speed: 1200,
       grabCursor: true,
-      autoplay: {
-        delay: 10000,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: ".uni-next",
-        prevEl: ".uni-prev",
-      },
+      navigation: { nextEl: ".uni-next", prevEl: ".uni-prev" },
       pagination: {
         el: ".uni-fraction",
         type: "fraction",
-        formatFractionCurrent: (number) =>
-          number < 10 ? "0" + number : number,
-        formatFractionTotal: (number) => (number < 10 ? "0" + number : number),
+        formatFractionCurrent: (n) => (n < 10 ? "0" + n : n),
+        formatFractionTotal: (n) => (n < 10 ? "0" + n : n),
       },
     });
 
-    // 6. Hamburger Menu
+    // 4. Hamburger Menu
     const btn = document.getElementById("menu-btn");
     const menu = document.getElementById("menu");
     if (btn) {
@@ -909,4 +956,30 @@
       });
     }
   });
+
+  // --- 5. GLOBAL SCOPE FUNCTIONS (Fixed) ---
+  // These must be OUTSIDE the DOMContentLoaded block so onclick="openVideoModal()" works.
+
+  function openVideoModal() {
+    const modal = document.getElementById("videoModal");
+    const player = document.getElementById("videoPlayer");
+    const videoURL = "https://www.youtube.com/embed/JMLsHI8aV0g"; // Replace with your link
+
+    if (modal && player) {
+      player.src = videoURL + "?autoplay=1";
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+  }
+
+  function closeVideoModal() {
+    const modal = document.getElementById("videoModal");
+    const player = document.getElementById("videoPlayer");
+
+    if (modal && player) {
+      player.src = "";
+      modal.classList.remove("active");
+      document.body.style.overflow = "auto";
+    }
+  }
 </script>
