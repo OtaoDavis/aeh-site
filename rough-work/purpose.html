@@ -61,9 +61,20 @@
     <!-- OVERLAY LOADER -->
     <div id="aeh-loader" class="aeh-loader-overlay">
       <div class="loader-content">
-        <img src="images/logo_trans.png" alt="AEH" class="loader-logo-pulse" />
+        <!-- Pulse effect logo -->
+        <img
+          src="images/logo_trans.png"
+          alt="AEH Loading"
+          class="loader-logo-pulse"
+        />
+        <!-- Minimalist progress line -->
+        <div class="loader-track">
+          <div class="loader-bar"></div>
+        </div>
+        <p class="loader-text">Building the future...</p>
       </div>
     </div>
+
     <!-- Dynamic Progress Nav -->
     <nav class="sticky-nav">
       <div class="nav-container">
@@ -191,11 +202,12 @@
       </div>
     </header>
 
-    <!-- THE SOLUTION: THREE PILLARS (REFINED) -->
+    <!-- THE SOLUTION: THREE PILLARS (Zebra Layout) -->
     <section id="solution" class="pillar-deep-dive section-white">
       <div class="container">
-        <!-- Section Header -->
+        <!-- Section Header with new Introduction -->
         <div class="section-header-center">
+          <p class="blue-tag">OUR SOLUTION</p>
           <h2>Reimagining Education</h2>
           <p class="section-intro-text">
             We are addressing Africa’s youth employment crisis by reimagining
@@ -212,17 +224,12 @@
             <p>
               We nurture identity, values, and essential life skills to develop
               grounded, purpose-driven graduates rooted in African culture and
-              ethical frameworks. Our approach ensures that every student
-              emerges not just with a degree, but with the leadership maturity
-              and emotional intelligence required to lead with integrity in a
-              global environment.
+              ethical frameworks.
             </p>
-            <a href="" class="pillar-link"
-              >Explore our Philosophy <i class="fa-solid fa-arrow-right"></i
-            ></a>
           </div>
           <div class="p-image-column">
             <div class="image-offset-wrapper">
+              <!-- The Blue Offset Block -->
               <div class="image-offset-bg bg-blue"></div>
               <img
                 src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&q=80&w=800"
@@ -240,17 +247,12 @@
             <p>
               Learning by doing. We emphasize real-world industry experience,
               innovation, and collaboration to foster an entrepreneurial mindset
-              through practical problem-solving. By embedding apprenticeships
-              directly into the academic curriculum, we bridge the gap between
-              theory and industry, ensuring our graduates are day-one ready for
-              the demands of the modern workforce.
+              through practical problem-solving.
             </p>
-            <a href="" class="pillar-link"
-              >See our Methodology <i class="fa-solid fa-arrow-right"></i
-            ></a>
           </div>
           <div class="p-image-column">
             <div class="image-offset-wrapper">
+              <!-- The Green Offset Block -->
               <div class="image-offset-bg bg-green"></div>
               <img
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800"
@@ -268,17 +270,12 @@
             <p>
               Connecting students to local and global opportunities, including
               remote work platforms, internships, and international innovation
-              ecosystems. We provide the digital fluency and global perspective
-              necessary for students to compete in a borderless economy,
-              ensuring they can access high-value careers and scale their impact
-              from anywhere on the continent.
+              ecosystems.
             </p>
-            <a href="" class="pillar-link"
-              >View Global Pathways <i class="fa-solid fa-arrow-right"></i
-            ></a>
           </div>
           <div class="p-image-column">
             <div class="image-offset-wrapper">
+              <!-- The Blue Offset Block -->
               <div class="image-offset-bg bg-blue"></div>
               <img
                 src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800"
@@ -332,6 +329,17 @@
             <span class="stat-num">80+</span>
             <p class="stat-label">Degree Courses</p>
           </div>
+
+          <div class="glance-card">
+            <span class="stat-num">15</span>
+            <p class="stat-label">Academic Faculties</p>
+          </div>
+        </div>
+
+        <div class="glance-footer">
+          <a href="#" class="explore-link-blue"
+            >Explore our key facts <i class="fa-solid fa-arrow-right"></i
+          ></a>
         </div>
       </div>
     </section>
@@ -409,9 +417,7 @@
                     </p>
                   </div>
 
-                  <a
-                    href="https://www.cavendish.ac.ug/admissions/admission-requirements/"
-                    class="btn-text-reveal"
+                  <a href="#" class="btn-text-reveal"
                     >Enroll Today <i class="fa-solid fa-arrow-right"></i
                   ></a>
                 </div>
@@ -470,9 +476,7 @@
                     </p>
                   </div>
 
-                  <a
-                    href="https://www.cavendishza.org/admissions/"
-                    class="btn-text-reveal"
+                  <a href="#" class="btn-text-reveal"
                     >Enroll Today <i class="fa-solid fa-arrow-right"></i
                   ></a>
                 </div>
@@ -814,43 +818,14 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const preloader = document.getElementById("aeh-loader");
-
-    // FUNCTION TO HIDE LOADER
-    const hideLoader = () => {
+    // 1. Loader Logic
+    const loaderOverlay = document.getElementById("loader-overlay");
+    window.onload = function () {
       setTimeout(() => {
-        preloader.classList.add("loader-finished");
+        if (loaderOverlay) loaderOverlay.classList.add("hidden");
         document.body.classList.remove("content-hidden");
-      }, 1000); // 1 second mandatory delay for premium feel
+      }, 1000);
     };
-    // Check if page is already loaded (handles fast refreshes/cached pages)
-    if (document.readyState === "complete") {
-      hideLoader();
-    } else {
-      window.addEventListener("load", hideLoader);
-    }
-
-    // REDIRECTION LOGIC: Show loader when clicking internal links
-    const internalLinks = document.querySelectorAll(
-      'a[href^="index.html"], a[href^="about.html"], a[href^="talent.html"], a[href^="partnerships.html"]',
-    );
-
-    internalLinks.forEach((link) => {
-      link.addEventListener("click", (e) => {
-        if (!link.hash && !e.metaKey && !e.ctrlKey) {
-          e.preventDefault();
-          const destination = link.href;
-
-          // Show loader immediately
-          preloader.classList.remove("loader-finished");
-
-          // Navigate after the fade-in effect
-          setTimeout(() => {
-            window.location.href = destination;
-          }, 500);
-        }
-      });
-    });
 
     // --- Hero Swiper Initialization ---
     const heroSwiper = new Swiper(".hero-swiper", {
@@ -876,7 +851,37 @@
       slide.classList.add("min-h-[80vh]");
     });
 
-    // 3. PORTFOLIO SWIPER FOR THE UNIVERSITY NETWORK
+    // 3. Problem Section Interactive Logic
+    const problemCards = document.querySelectorAll(".problem-card");
+    const problemTitle = document.getElementById("problem-title");
+    const problemContent = document.getElementById("problem-content");
+    const resetButton = document.getElementById("reset-problem-btn");
+
+    if (problemCards.length > 0 && problemTitle) {
+      const initialTitle = problemTitle.textContent;
+      const initialContent = problemContent.textContent;
+
+      problemCards.forEach((card) => {
+        card.addEventListener("click", function () {
+          problemCards.forEach((c) => c.classList.remove("active-card"));
+          this.classList.add("active-card");
+          problemTitle.textContent = this.dataset.title;
+          problemContent.textContent = this.dataset.content;
+          resetButton.style.display = "inline-flex";
+        });
+      });
+
+      resetButton.addEventListener("click", function () {
+        problemCards.forEach((c) => c.classList.remove("active-card"));
+        problemCards[0].classList.add("active-card");
+        problemTitle.textContent = initialTitle;
+        problemContent.textContent = initialContent;
+        this.style.display = "none";
+      });
+    }
+
+    // 4. THE PORTFOLIO SWIPER (The section that wasn't working)
+    // Renamed to 'uniPortfolio' to avoid conflict with 'universitySwiper'
     const uniPortfolio = new Swiper(".university-portfolio-swiper", {
       loop: true,
       speed: 1200,
