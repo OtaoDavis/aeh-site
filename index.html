@@ -3,15 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Africa Education Holding | Pioneering the Future of African Higher Ed
-    </title>
+    <meta
+      name="description"
+      content="Africa Education Holdings empowers Africa’s youth through accessible, market-relevant tertiary education. Explore top universities in Uganda, Zambia, Senegal, and Mali, innovative learning programs, and pathways to global employment and entrepreneurship."
+    />
+    <title>Maarifa Home</title>
+
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="home.css" />
+    <link rel="icon" href="images/favicon.ico" sizes="any" />
     <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;600&display=swap"
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
     <!-- font awesome     -->
     <link
       rel="stylesheet"
@@ -36,20 +56,107 @@
       defer
     ></script>
   </head>
-  <body>
+
+  <body class="bg-gray-50">
+    <!-- Dynamic Progress Nav -->
     <nav class="sticky-nav">
-      <div class="container nav-container">
-        <a href="index.html" class="logo"
-          ><img src="images/aeh_logo.png" alt="AEH Logo" class="logo-img"
-        /></a>
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <img
+            src="images/logo_trans.png"
+            alt="Africa Education Holdings"
+            class="logo-img"
+          />
+        </a>
         <div class="nav-links">
-          <a href="#purpose">Our Purpose</a>
-          <a href="#solution">The Solution</a>
-          <a href="#network">University Network</a>
-          <a href="investors.html" class="nav-btn">Partner With Us</a>
+          <a href="#">Our Purpose</a>
+          <a href="#">Our Impact</a>
+          <a href="#">Our Network</a>
+          <a href="">Services</a>
+          <a href="#" class="nav-btn">Partner With Us</a>
         </div>
       </div>
     </nav>
+
+    <section class="relative">
+      <div class="swiper hero-swiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div
+            class="swiper-slide bg-cover bg-center"
+            style="background-image: url(&quot;images/home1.jpg&quot;)"
+          >
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="text-content-container">
+              <h1 class="text-xl md:text-6xl font-bold mb-4 text-[#FFFFFF]">
+                Shaping the Future <br />
+                of Education Across Africa
+              </h1>
+              <p class="text-m md:text-l max-w-2xl mb-8">
+                Education is the key to Africa’s future <br />
+                and at Africa Education Holdings, we are committed to opening
+                that door for all.
+              </p>
+              <a
+                href="#impact"
+                class="bg-[#3998BD] text-white font-bold py-3 px-8 rounded-full hover:bg-[#8EC86F] transition-colors duration-300"
+                >Learn More About our Impact</a
+              >
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div
+            class="swiper-slide bg-cover bg-center"
+            style="background-image: url(&quot;images/home2.jpg&quot;)"
+          >
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="text-content-container">
+              <h1 class="text-4xl md:text-6xl font-bold mb-4 text-[#FFFFFF]">
+                Pioneering a New <br />
+                Model for African Higher Education
+              </h1>
+              <p class="text-lg md:text-xl max-w-4xl mb-8">
+                We reimagine education through a scalable, <br />
+                student-centered university model, driving gainful employment
+                and entrepreneurship.
+              </p>
+              <a
+                href="#solution"
+                class="bg-[#3998BD] text-white font-bold py-3 px-8 rounded-full hover:bg-[#8EC86F] transition-colors duration-300"
+                >Explore Our Approach</a
+              >
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div
+            class="swiper-slide bg-cover bg-center"
+            style="background-image: url(&quot;images/home4.jpg&quot;)"
+          >
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="text-content-container">
+              <h1 class="text-4xl md:text-6xl font-bold mb-4 text-[#FFFFFF]">
+                A Growing Network <br />
+                of Transformative Universities
+              </h1>
+              <p class="text-lg md:text-xl max-w-4xl mb-8">
+                Through our diverse network of universities, we deliver <br />
+                accessible and market-relevant education across Uganda, Zambia,
+                Senegal, and Mali.
+              </p>
+              <a
+                href="#universities"
+                class="bg-[#3998BD] text-white font-bold py-3 px-8 rounded-full hover:bg-[#8EC86F] transition-colors duration-300"
+                >Find a University</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- <div class="swiper-button-next" style="color:#3998BD;"></div>
+            <div class="swiper-button-prev" style="color:#3998BD;"></div> -->
+      </div>
+    </section>
 
     <!-- HERO: EDITORIAL ASYMMETRY -->
     <header class="hero-editorial">
@@ -63,7 +170,7 @@
             entrepreneurship on a global scale.
           </p>
           <div class="cta-wrap">
-            <a href="#solution" class="btn-solid">Explore the Model</a>
+            <a href="#" class="btn-solid">Our Purpose</a>
           </div>
         </div>
         <div class="hero-image-stack">
@@ -72,47 +179,28 @@
             <img src="images/cz4.JPG" alt="African Students" />
           </div>
           <div class="floating-stat">
-            <span class="stat-num">14,500+</span>
+            <span class="stat-num" style="color: white">14,500+</span>
             <p>Students Enrolled</p>
           </div>
         </div>
       </div>
     </header>
 
-    <!-- MISSION MANIFESTO (Navy Anchor) -->
-    <section id="purpose" class="dark-anchor">
-      <div class="container">
-        <div class="manifesto-split">
-          <div class="m-left">
-            <p class="green-tag">THE CHALLENGE</p>
-            <h2>
-              The core challenge is <em>access</em> to gainful employment.
-            </h2>
-          </div>
-          <div class="m-right">
-            <p class="large-garamond">
-              Africa’s youth employment crisis is not a lack of talent—it is a
-              legacy of constrained models. We address this by reimagining the
-              student-centered university.
-            </p>
-            <p>
-              Through our holding of premier institutions in Uganda, Zambia,
-              Senegal, and Mali, we inculcate ethical leadership and
-              employability skills from admission to graduation.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- THE SOLUTION: THREE PILLARS (Zebra Layout) -->
-    <section id="solution" class="pillar-deep-dive">
+    <section id="solution" class="pillar-deep-dive section-white">
       <div class="container">
-        <div class="section-title-center">
+        <!-- Section Header with new Introduction -->
+        <div class="section-header-center">
           <p class="blue-tag">OUR SOLUTION</p>
           <h2>Reimagining Education</h2>
+          <p class="section-intro-text">
+            We are addressing Africa’s youth employment crisis by reimagining
+            higher education through a scalable, student-centered university
+            model built on three strategic pillars.
+          </p>
         </div>
 
+        <!-- Pillar 01 -->
         <div class="pillar-row">
           <div class="p-content">
             <span class="p-num">01</span>
@@ -123,327 +211,372 @@
               ethical frameworks.
             </p>
           </div>
-          <div class="p-image">
-            <img
-              src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&q=80&w=800"
-            />
+          <div class="p-image-column">
+            <div class="image-offset-wrapper">
+              <!-- The Blue Offset Block -->
+              <div class="image-offset-bg bg-blue"></div>
+              <img
+                src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&q=80&w=800"
+                alt="Holistic Education"
+              />
+            </div>
           </div>
         </div>
 
+        <!-- Pillar 02: Reverse -->
         <div class="pillar-row reverse">
           <div class="p-content">
             <span class="p-num">02</span>
             <h3>Apprenticeship-Driven</h3>
             <p>
               Learning by doing. We emphasize real-world industry experience,
-              innovation, and collaboration to foster an entrepreneurial
-              mindset.
+              innovation, and collaboration to foster an entrepreneurial mindset
+              through practical problem-solving.
             </p>
           </div>
-          <div class="p-image">
-            <img
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800"
-            />
+          <div class="p-image-column">
+            <div class="image-offset-wrapper">
+              <!-- The Green Offset Block -->
+              <div class="image-offset-bg bg-green"></div>
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800"
+                alt="Apprenticeship Learning"
+              />
+            </div>
           </div>
         </div>
 
+        <!-- Pillar 03 -->
         <div class="pillar-row">
           <div class="p-content">
             <span class="p-num">03</span>
             <h3>Global Pathways</h3>
             <p>
               Connecting students to local and global opportunities, including
-              remote work platforms and international innovation ecosystems.
+              remote work platforms, internships, and international innovation
+              ecosystems.
             </p>
           </div>
-          <div class="p-image">
-            <img
-              src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800"
-            />
+          <div class="p-image-column">
+            <div class="image-offset-wrapper">
+              <!-- The Blue Offset Block -->
+              <div class="image-offset-bg bg-blue"></div>
+              <img
+                src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800"
+                alt="Global Pathways"
+              />
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- INVESTOR -->
-    <section class="investor-cta" style="padding: 0">
-      <div class="cta-box">
-        <div class="cta-text">
-          <p class="blue-tag">PARTNERSHIP</p>
-          <h2>Scaling Impact <br />Across the Continent.</h2>
+    <!-- AFRICA EDUCATION HOLDINGS AT A GLANCE -->
+    <section class="at-a-glance">
+      <div class="container">
+        <div class="glance-header">
+          <div class="eyebrow-wrap">
+            <div class="accent-line"></div>
+            <p class="blue-tag">Scale & Impact</p>
+          </div>
+          <h2>AEH at a <em>Glance.</em></h2>
+        </div>
+
+        <div class="glance-grid">
+          <!-- Large Focus Stat -->
+          <div class="glance-card high-impact">
+            <span class="stat-num">25,000+</span>
+            <p class="stat-label">Graduands Since 2014</p>
+            <div class="card-bg-icon">
+              <i class="fa-solid fa-user-graduate"></i>
+            </div>
+          </div>
+
+          <!-- Medium Stats -->
+          <div class="glance-card">
+            <span class="stat-num">02</span>
+            <p class="stat-label">Premier Institutions</p>
+          </div>
+
+          <div class="glance-card border-green">
+            <span class="stat-num">06</span>
+            <p class="stat-label">Regional Campuses</p>
+          </div>
+
+          <!-- Small Detail Stats -->
+          <div class="glance-card">
+            <span class="stat-num">50+</span>
+            <p class="stat-label">Nationalities Represented</p>
+          </div>
+
+          <div class="glance-card border-green">
+            <span class="stat-num">80+</span>
+            <p class="stat-label">Degree Courses</p>
+          </div>
+
+          <div class="glance-card">
+            <span class="stat-num">15</span>
+            <p class="stat-label">Academic Faculties</p>
+          </div>
+        </div>
+
+        <div class="glance-footer">
+          <a href="#" class="explore-link-blue"
+            >Explore our key facts <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE AEH IMPACT SECTION: THE NEW MODEL -->
+    <section class="aeh-impact">
+      <div class="container">
+        <div class="impact-grid">
+          <!-- Left Side: Immersive Visual -->
+          <div class="impact-visual">
+            <div class="visual-wrapper">
+              <!-- The subtle blue offset frame -->
+              <div class="visual-accent-border"></div>
+
+              <!-- Main image (Slide 1/Deck Style) -->
+              <img
+                src="images/cz4.JPG"
+                alt="AEH Students in the Field"
+                class="impact-img"
+              />
+
+              <!-- Immersive Overlay mirroring your BIG reference -->
+              <div class="visual-overlay-content">
+                <div class="play-trigger" title="Experience the Mission">
+                  <i class="fa-solid fa-play"></i>
+                </div>
+                <h2 class="overlay-text">IMPACT <br />AT SCALE.</h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side: Content (Unique AEH Messaging) -->
+          <div class="impact-text-area">
+            <p class="green-tag">THE ALLIANCE IN ACTION</p>
+            <h2 class="impact-heading">
+              Engineering the Path to <em>Gainful Employment.</em>
+            </h2>
+
+            <div class="impact-description">
+              <p>
+                Across our network of Universities, Africa Education Holdings is
+                addressing the continent's youth employment crisis by
+                reimagining the student journey.
+              </p>
+
+              <p>
+                The AEH Academic Alliance transforms traditional tertiary
+                learning into a high-octane launchpad. By integrating real-world
+                industry apprenticeship with ethical leadership, we ensure our
+                14,500 students move beyond the classroom to drive Africa’s vast
+                economic potential.
+              </p>
+            </div>
+
+            <div class="impact-cta-footer">
+              <a href="partnerships.html" class="explore-link"
+                >Explore the Alliance <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section Footer Link -->
+        <div class="impact-sub-caption">
           <p>
-            AEH is actively expanding its portfolio of transformative
-            institutions. Join us in building the infrastructure for Africa’s
-            economic future.
+            Future Built Here |
+            <em>Redefining the African university for the global economy.</em>
           </p>
-          <a href="#" class="btn-solid">Inquire for Partnership</a>
-        </div>
-
-        <!-- Updated Visual Area with Image -->
-        <div class="cta-visual">
-          <!-- Using a professional architectural/education image -->
-          <img
-            src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1920&auto=format&fit=crop"
-            alt="Campus Architecture"
-            class="cta-full-img"
-          />
-          <div class="cta-overlay-tint"></div>
         </div>
       </div>
     </section>
-
-    <section class="py-4 wwa" id="universities">
-      <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center text-dark">
-          Our Universities
-        </h2>
-        <br />
-        <p class="text-center text-dark">
-          AEH owns and operates four private universities in Uganda and Zambia
-        </p>
-        <p class="text-center text-dark">
-          (Anglophone) and Senegal and Mali (Francophone) with a combined Total
-        </p>
-        <p class="text-center text-dark">Enrolment of 14,500 students</p>
-      </div>
-    </section>
-
-    <!-- START: University Carousel Section -->
-    <section
-      class="university-carousel-section bg-light-back"
-      style="padding: 0"
-    >
-      <!-- Swiper -->
-      <div class="swiper university-swiper">
-        <div class="swiper-wrapper">
-          <!-- Slide 1: Cavendish Universities -->
-          <div class="swiper-slide">
-            <div class="university-split-container">
-              <!-- Left Half: Cavendish University Uganda -->
-              <div class="university-half" id="cuu-half">
-                <div class="half-overlay"></div>
-                <div class="half-content">
-                  <h2 class="university-title text-center text-light">
-                    Cavendish University Uganda (CUU)
-                  </h2>
-                  <div class="top-content-wrapper">
-                    <div class="details-grid">
-                      <p><strong>Founded:</strong> 2008, Kampala, Uganda</p>
-                      <p><strong>Students:</strong> 4,700</p>
-                      <p><strong>Gender Ratio:</strong> 34:66 Female to Male</p>
-                      <p>
-                        <strong>International Students:</strong> 54% (39
-                        nationalities)
-                      </p>
-                      <p><strong>Campuses:</strong> Three</p>
-                      <p><strong>Flagship:</strong> Law School</p>
-                    </div>
-                    <div class="faculties">
-                      <h3>Faculties & Programs:</h3>
-                      <ul>
-                        <li>Science and Technology</li>
-                        <li>Business and Management</li>
-                        <li>Socio-Economic Sciences</li>
-                        <li>Law</li>
-                        <li>School of Post Graduate Studies</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="mission text-center">
-                    <h3>MISSION</h3>
-                    <p>
-                      To transform and inspire students to reach their full
-                      potential in employment, entrepreneurship, and ethical
-                      leadership.
-                    </p>
-                  </div>
-                  <a href="universities/cuu.html" class="learn-more-btn"
-                    >Learn More</a
-                  >
-                </div>
-              </div>
-              <!-- Right Half: Cavendish University Zambia -->
-              <div class="university-half" id="cuz-half">
-                <div class="half-overlay"></div>
-                <div class="half-content">
-                  <h2 class="university-title text-light text-center">
-                    Cavendish University Zambia (CUZ)
-                  </h2>
-                  <div class="top-content-wrapper">
-                    <div class="details-grid">
-                      <p><strong>Founded:</strong> 2004, Lusaka, Zambia</p>
-                      <p><strong>Students:</strong> 7,300</p>
-                      <p><strong>Gender Ratio:</strong> 52:48 Female to Male</p>
-                      <p><strong>International Students:</strong> 19%</p>
-                      <p><strong>Campuses:</strong> Two</p>
-                      <p><strong>Flagship:</strong> Medical School</p>
-                    </div>
-                    <div class="faculties">
-                      <h3>Faculties & Programs:</h3>
-                      <ul>
-                        <li>Business & Management</li>
-                        <li>Law</li>
-                        <li>Arts, Education & Social Sciences</li>
-                        <li>Medicine and Health Sciences</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="mission text-center">
-                    <h3>MISSION</h3>
-                    <p>
-                      To increase access to high-quality education that
-                      transforms students into responsible, educated,
-                      employable, and entrepreneurial citizens.
-                    </p>
-                  </div>
-                  <a href="universities/cuz.html" class="learn-more-btn"
-                    >Learn More</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 2: IAM Universities -->
-          <div class="swiper-slide">
-            <div class="university-split-container">
-              <!-- Left Half: IAM University Senegal -->
-              <div class="university-half" id="iam-senegal-half">
-                <div class="half-overlay"></div>
-                <div class="half-content">
-                  <h2 class="university-title text-light text-center">
-                    IAM University, Senegal
-                  </h2>
-                  <div class="top-content-wrapper">
-                    <div class="details-grid">
-                      <p><strong>Founded:</strong> 1996, Dakar, Senegal</p>
-                      <p><strong>Students:</strong> 1,600</p>
-                      <p><strong>Gender Ratio:</strong> 61:39 Female to Male</p>
-                      <p><strong>International Students:</strong> 3%</p>
-                      <p><strong>Campuses:</strong> One</p>
-                      <p><strong>Flagship:</strong> Business School</p>
-                    </div>
-                    <div class="faculties">
-                      <h3>Key Programs:</h3>
-                      <ul>
-                        <li>Management</li>
-                        <li>Finance & Accounting</li>
-                        <li>Marketing & Communications</li>
-                        <li>IT & Digital Management</li>
-                        <li>Human Resources</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="mission text-center">
-                    <h3>MISSION</h3>
-                    <p>
-                      To train a new generation of African leaders who are open
-                      to the world and equipped to meet the challenges of
-                      globalization and development.
-                    </p>
-                  </div>
-                  <a href="universities/iam-senegal.html" class="learn-more-btn"
-                    >Learn More</a
-                  >
-                </div>
-              </div>
-              <!-- Right Half: IAM University Bamako -->
-              <div class="university-half" id="iam-bamako-half">
-                <div class="half-overlay"></div>
-                <div class="half-content">
-                  <h2 class="university-title text-bright text-center">
-                    IAM University, Mali
-                  </h2>
-                  <div class="top-content-wrapper">
-                    <div class="details-grid">
-                      <p><strong>Founded:</strong> 2005, Bamako, Mali</p>
-                      <p><strong>Students:</strong> 970</p>
-                      <p><strong>Gender Ratio:</strong> 57:43 Female to Male</p>
-                      <p><strong>International Students:</strong> 2%</p>
-                      <p><strong>Campuses:</strong> One</p>
-                      <p><strong>Flagship:</strong> Business School</p>
-                    </div>
-                    <div class="faculties">
-                      <h3>Key Programs:</h3>
-                      <ul>
-                        <li>Business Administration</li>
-                        <li>Transport & Logistics</li>
-                        <li>Banking & Finance</li>
-                        <li>Marketing</li>
-                        <li>Project Management</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="mission text-center">
-                    <h3>MISSION</h3>
-                    <p>
-                      To provide managers with the skills and cross-cultural
-                      perspectives needed to foster development and
-                      competitiveness in the region.
-                    </p>
-                  </div>
-                  <a href="universities/iam-mali.html" class="learn-more-btn"
-                    >Learn More</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-pagination university-pagination"></div>
-      </div>
-    </section>
-    <!-- END: University Carousel Section -->
-
-    <!-- START: Investor Section -->
-    <section class="investor-section" style="padding: 20px 0">
-      <div class="container mx-auto px-6">
+    <!-- AEH INSIGHTS & NEWS SECTION -->
+    <section class="aeh-news-room section-white">
+      <div class="container">
         <!-- Section Header -->
-        <div class="investor-header">
-          <h2 class="investor-main-title">Our Investors</h2>
+        <div class="news-header">
+          <h2>AEH <em>News</em></h2>
+          <a href="#" class="btn-outline-news">Visit AEH Newsroom</a>
         </div>
 
-        <!-- Investor Grid -->
-        <div class="investor-grid">
-          <!-- Left Column: Text -->
-          <div class="investor-text">
-            <h3 class="investor-name">FinnFund</h3>
-            <p>
-              Finnfund is a Finnish Development Finance Institution (DFI) which
-              builds a sustainable world by investing in responsible and
-              profitable businesses that drive sustainable developments in
-              developing countries.
-            </p>
-            <p>
-              FinnFund provides businesses operating in developing countries
-              with risk capital, long-term investment loans, mezzanine financing
-              and expertise on how to invest in the developing markets. FinnFund
-              has invested approximately EUR 557 million primarily in clean
-              energy, sustainable forestry, financial institutions, and
-              agriculture. Maarifa is Finnfund’s first investment in the
-              education sector.
-            </p>
+        <div class="news-grid">
+          <!-- Main Featured Story -->
+          <div class="news-featured">
+            <div class="news-img-wrap">
+              <img src="images/home2.jpg" alt="Students Collaborating" />
+            </div>
+            <div class="news-content">
+              <p class="category-tag blue">ALLIANCE NEWS</p>
+              <h3>
+                <a href="#"
+                  >‘The Future is Digital’: AEH Launches Remote Work
+                  Specialization Across all Network Universities</a
+                >
+              </h3>
+              <p class="news-snippet">
+                The new skills-based short course is designed to prepare
+                students to access global digital workforce opportunities,
+                providing a solid foundation for the remote economy.
+              </p>
+              <p class="news-date">MARCH 4, 2024</p>
+            </div>
           </div>
 
-          <!-- Right Column: Logo -->
-          <div class="investor-logo-wrapper">
-            <img
-              src="images/finnfund.png"
-              alt="FinnFund Logo"
-              class="investor-logo"
-            />
+          <!-- Sidebar Stories -->
+          <div class="news-sidebar">
+            <!-- Sidebar Item 1 -->
+            <article class="sidebar-item">
+              <div class="sidebar-text">
+                <p class="category-tag green">IMPACT</p>
+                <h4>
+                  <a href="#"
+                    >Scaling Medical Excellence: CUZ Zambia’s Flagship School
+                    expands regional reach</a
+                  >
+                </h4>
+                <p class="news-date">FEB 27, 2024</p>
+              </div>
+              <div class="sidebar-thumb">
+                <img src="images/home1.jpg" />
+              </div>
+            </article>
+
+            <!-- Sidebar Item 2 -->
+            <article class="sidebar-item">
+              <div class="sidebar-text">
+                <p class="category-tag blue">PARTNERSHIP</p>
+                <h4>
+                  <a href="#"
+                    >AEH and Riipen partner to provide experiential learning
+                    platforms to West African students</a
+                  >
+                </h4>
+                <p class="news-date">FEB 20, 2024</p>
+              </div>
+              <div class="sidebar-thumb">
+                <img
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=400"
+                />
+              </div>
+            </article>
+
+            <!-- Sidebar Item 3 -->
+            <article class="sidebar-item">
+              <div class="sidebar-text">
+                <p class="category-tag navy">UNIVERSITY NETWORK</p>
+                <h4>
+                  <a href="#"
+                    >Two campuses, one vision: IAM Mali marks its 5th year
+                    within the AEH holding portfolio</a
+                  >
+                </h4>
+                <p class="news-date">FEB 12, 2024</p>
+              </div>
+              <div class="sidebar-thumb">
+                <img
+                  src="https://images.unsplash.com/photo-1523050335102-c32509542360?auto=format&fit=crop&q=80&w=400"
+                />
+              </div>
+            </article>
           </div>
         </div>
       </div>
     </section>
-    <!-- END: Investor Section -->
+
+    <!-- THE CONTACT SECTION: START THE DIALOGUE -->
+    <section id="contact" class="aeh-contact section-slate">
+      <div class="container">
+        <div class="contact-split-grid">
+          <!-- Left Side: Continental Context -->
+          <div class="contact-context">
+            <p class="blue-tag">STRATEGIC PARTNERSHIP</p>
+            <h2 class="contact-title">Start the <em>Dialogue.</em></h2>
+            <p class="contact-lead">
+              We are building the infrastructure of opportunity across Africa’s
+              Anglophone and Francophone corridors. Whether you are looking to
+              invest, partner, or expand, our leadership team is ready to
+              engage.
+            </p>
+
+            <div class="direct-contact">
+              <p class="contact-method">
+                <span>General Inquiries:</span> info@africaeducationholdings.com
+              </p>
+              <p class="contact-method">
+                <span>Network Development:</span> (+254) 732 188 413
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Side: The Minimalist Form -->
+          <div class="contact-form-wrapper">
+            <div class="form-decorative-element"></div>
+            <!-- Subtle blue circle flare -->
+            <form class="aeh-premium-form">
+              <div class="form-row">
+                <div class="field-group">
+                  <label>Full Name</label>
+                  <input
+                    type="text"
+                    placeholder="e.g. Jean-Pierre Mensah"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row split">
+                <div class="field-group">
+                  <label>Organization</label>
+                  <input
+                    type="text"
+                    placeholder="Institutional / Private Equity"
+                    required
+                  />
+                </div>
+                <div class="field-group">
+                  <label>Email Address</label>
+                  <input type="email" placeholder="name@company.com" required />
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label>Nature of Inquiry</label>
+                <select>
+                  <option>Network Partnership</option>
+                  <option>Investment Inquiry</option>
+                  <option>University Collaboration</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="field-group">
+                <label>Message</label>
+                <textarea
+                  rows="4"
+                  placeholder="How can we align our missions?"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-initiate">
+                Initiate Dialogue <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- START: Footer Section -->
     <footer class="site-footer">
       <div class="container mx-auto px-6 py-12">
         <div class="footer-grid">
           <!-- Column 1: Logo and About -->
-          <div class="footer-col">
+          <div class="footer-col" style="margin-left: -80px">
             <img
               src="images/logo_trans.png"
               alt="AEH Logo"
@@ -521,3 +654,154 @@
     <!-- END: Footer Section -->
   </body>
 </html>
+
+<script>
+  const loaderOverlay = document.getElementById("loader-overlay");
+
+  window.onload = function () {
+    // Check if the URL has a hash
+    if (window.location.hash) {
+      const targetElement = document.querySelector(window.location.hash);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    setTimeout(() => {
+      // Fade out the loader
+      if (loaderOverlay) {
+        loaderOverlay.classList.add("hidden");
+      }
+      // Fade in the page content
+      document.body.classList.remove("content-hidden");
+    }, 1000); // 1s delay
+  };
+
+  // Fallback to hide loader if page takes too long
+  setTimeout(() => {
+    if (loaderOverlay && !loaderOverlay.classList.contains("hidden")) {
+      loaderOverlay.classList.add("hidden");
+      document.body.classList.remove("content-hidden");
+    }
+  }, 3000);
+  document.addEventListener("DOMContentLoaded", function () {
+    // --- Hero Swiper Initialization ---
+    const heroSwiper = new Swiper(".hero-swiper", {
+      autoHeight: false,
+      direction: "horizontal",
+      loop: true,
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      },
+      speed: 1500,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    const slides = document.querySelectorAll(".hero-swiper .swiper-slide");
+    slides.forEach((slide) => {
+      slide.classList.add("min-h-[80vh]");
+    });
+    // --- Interactive Problem Section Logic ---
+    const problemCards = document.querySelectorAll(".problem-card");
+    const problemTitle = document.getElementById("problem-title");
+    const problemContent = document.getElementById("problem-content");
+    const resetButton = document.getElementById("reset-problem-btn");
+
+    if (
+      problemCards.length > 0 &&
+      problemTitle &&
+      problemContent &&
+      resetButton
+    ) {
+      const initialTitle = problemTitle.textContent;
+      const initialContent = problemContent.textContent;
+
+      problemCards.forEach((card) => {
+        card.addEventListener("click", function () {
+          // Remove active class from all cards
+          problemCards.forEach((c) => c.classList.remove("active-card"));
+          // Add active class to the clicked card
+          this.classList.add("active-card");
+
+          // Get new content from data attributes
+          const newTitle = this.dataset.title;
+          const newContent = this.dataset.content;
+
+          // Update the display area
+          problemTitle.textContent = newTitle;
+          problemContent.textContent = newContent;
+
+          // Show the reset button
+          resetButton.style.display = "inline-flex";
+        });
+      });
+
+      // Add click event for the reset button
+      resetButton.addEventListener("click", function () {
+        problemCards.forEach((c) => c.classList.remove("active-card"));
+        // Set the first card as active again
+        problemCards[0].classList.add("active-card");
+
+        // Reset to initial content
+        problemTitle.textContent = initialTitle;
+        problemContent.textContent = initialContent;
+
+        // Hide the reset button
+        resetButton.style.display = "none";
+      });
+    }
+    // --- University Swiper ---
+    const universitySwiper = new Swiper(".university-swiper", {
+      loop: true,
+      autoplay: {
+        delay: 10000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".university-pagination",
+        clickable: true,
+      },
+    });
+    // --- Hamburger Menu for small screens ---
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      btn.classList.toggle("open");
+      menu.classList.toggle("hidden");
+    });
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target) && !btn.contains(e.target)) {
+        btn.classList.remove("open");
+        menu.classList.add("hidden");
+      }
+    });
+
+    function handleSmoothScrollOnLoad() {
+      // Check if the URL has a hash (e.g., #universities)
+      if (window.location.hash) {
+        const hash = window.location.hash;
+        const targetElement = document.querySelector(hash);
+
+        // If the element exists on the current page
+        if (targetElement) {
+          // We use a small timeout to ensure the page has fully rendered
+          // before we try to scroll. This makes it more reliable.
+          setTimeout(() => {
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+            });
+          }, 100);
+        }
+      }
+    }
+
+    handleSmoothScrollOnLoad();
+  });
+</script>
