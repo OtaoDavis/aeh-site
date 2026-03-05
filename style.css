@@ -15,6 +15,7 @@ html {
 :root {
   --aeh-blue: #3998bd;
   --aeh-green: #8ec86f;
+  --aeh-navy: #0d2c4f;
   --aeh-dark-blue: #3a5f7d;
   --aeh-dark-background: #d6e9ec;
   --aeh-light-back: #f5f9fb;
@@ -232,6 +233,32 @@ em,
 
 .pillar-row.reverse .image-offset-bg {
   right: -30px; /* Offsets to the right for reversed rows */
+}
+
+.pillar-link {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  color: var(--aeh-blue);
+  text-decoration: none;
+  transition: 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pillar-link i {
+  transition: transform 0.3s ease;
+}
+
+.pillar-link:hover {
+  color: var(--aeh-green);
+}
+
+.pillar-link:hover i {
+  transform: translateX(5px);
 }
 
 /* RESPONSIVE */

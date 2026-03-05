@@ -533,12 +533,12 @@ h4 {
 
 .roi-offset-bg {
   position: absolute;
-  top: 40px;
-  right: -40px;
   width: 100%;
   height: 100%;
-  background-color: var(--aeh-dark-background);
   z-index: 1;
+  top: 10px;
+  left: 50px;
+  background: var(--aeh-dark-background);
 }
 
 .roi-card-content {

@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Africa Education Holdings empowers Africa’s youth through accessible, market-relevant tertiary education. Explore top universities in Uganda, Zambia, Senegal, and Mali, innovative learning programs, and pathways to global employment and entrepreneurship."
+    />
+    <title>Maarifa Home</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="network.css" />
+    <link rel="icon" href="images/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome     -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- SwiperJS CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- SwiperJS Script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
+  </head>
+
+  <body class="bg-gray-50 content-hidden">
+    <!-- OVERLAY LOADER (Same as before) -->
+    <div id="aeh-loader" class="aeh-loader-overlay">
+      <div class="loader-content">
+        <img src="images/logo_trans.png" alt="AEH" class="loader-logo-pulse" />
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky-nav">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <img src="images/logo_trans.png" alt="AEH" class="logo-img" />
+        </a>
+        <div class="nav-links">
+          <a href="purpose.html">Our Purpose</a>
+          <a href="network.html">Our Network</a>
+          <a href="#" class="nav-btn">Partner With Us</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- THE PORTAL WRAPPER -->
+    <main class="network-portal">
+      <!-- LEFT SIDEBAR: NAVIGATION -->
+      <aside class="portal-sidebar">
+        <div class="sidebar-header">
+          <p class="green-tag">Our Universities</p>
+        </div>
+
+        <nav class="portal-nav">
+          <!-- Asset 01 -->
+          <button class="portal-link active" data-target="uganda">
+            <span class="factor-num">01.</span>
+            <div class="factor-content">
+              <h4>Uganda Portfolio</h4>
+              <p>Cavendish University Uganda</p>
+            </div>
+          </button>
+
+          <!-- Asset 02 -->
+          <button class="portal-link" data-target="zambia">
+            <span class="factor-num">02.</span>
+            <div class="factor-content">
+              <h4>Zambia Portfolio</h4>
+              <p>Cavendish University Zambia</p>
+            </div>
+          </button>
+
+          <!-- Asset 03 -->
+          <button class="portal-link" data-target="standard">
+            <span class="factor-num">03.</span>
+            <div class="factor-content">
+              <h4>The AEH Standard</h4>
+              <p>Network Governance</p>
+            </div>
+          </button>
+        </nav>
+      </aside>
+
+      <!-- RIGHT SIDE: THE CONTENT STAGE -->
+      <div class="portal-stage">
+        <!-- UGANDA SECTION (Visible by Default) -->
+        <section id="uganda" class="asset-view active">
+          <div class="asset-header">
+            <p class="green-tag">EAST AFRICA HUB</p>
+            <h2 class="asset-display-title">
+              Cavendish University <br /><em>Uganda.</em>
+            </h2>
+          </div>
+
+          <div class="glance-50-50">
+            <div class="map-visual">
+              <img
+                src="images/map-uganda.jpg"
+                alt="Uganda"
+                class="portal-map"
+              />
+            </div>
+            <div class="glance-facts">
+              <h3>University at a Glance</h3>
+              <div class="glance-line"></div>
+              <ul class="portal-facts-list">
+                <li><strong>Location:</strong> Kampala, Uganda</li>
+                <li><strong>Founded:</strong> 2008</li>
+                <li><strong>Student Body:</strong> 4,700+</li>
+                <li><strong>Flagship:</strong> Faculty of Law</li>
+                <li>
+                  <strong>Core Focus:</strong> Ethical Leadership and Innovation
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- UGANDA FACULTIES: COMPLETE DATA -->
+          <div class="portal-faculties-area">
+            <div class="faculties-header">
+              <p class="blue-tag">ACADEMICS</p>
+              <h3>Faculties & <em>Programs.</em></h3>
+            </div>
+
+            <div class="faculties-interactive-wrapper">
+              <!-- Sidebar Tabs -->
+              <ul class="faculty-tabs">
+                <li class="faculty-tab active" data-target="law-ug">
+                  Faculty of Law
+                </li>
+                <li class="faculty-tab" data-target="bus-ug">
+                  Business & Management
+                </li>
+                <li class="faculty-tab" data-target="sci-ug">
+                  Science & Technology
+                </li>
+                <li class="faculty-tab" data-target="soc-ug">
+                  Socio-Economic Sciences
+                </li>
+                <li class="faculty-tab" data-target="pg-ug">
+                  Post Graduate Studies
+                </li>
+              </ul>
+
+              <!-- Content Panel -->
+              <div class="faculty-display-panel">
+                <!-- Law -->
+                <div id="law-ug" class="faculty-programs active">
+                  <h4>Law Programs</h4>
+                  <ul class="program-list">
+                    <li>Bachelor of Laws</li>
+                    <li>Diploma in Law</li>
+                    <li>Master of Laws (Commercial Law)</li>
+                  </ul>
+                  <a
+                    href="https://www.cavendish.ac.ug/faculties/faculty-of-law/"
+                    class="pillar-link"
+                    >Official Faculty Page
+                    <i class="fa-solid fa-arrow-right"></i
+                  ></a>
+                </div>
+
+                <!-- Business -->
+                <div id="bus-ug" class="faculty-programs">
+                  <h4>Business & Management</h4>
+                  <ul class="program-list">
+                    <li>Master of Business Administration (MBA)</li>
+                    <li>Bachelor of Business Administration</li>
+                    <li>Bachelor of Procurement & Logistics Management</li>
+                    <li>Bachelor of Arts in Economics</li>
+                  </ul>
+                  <a
+                    href="https://www.cavendish.ac.ug/faculties/faculty-of-business-and-management/"
+                    class="pillar-link"
+                    >Official Faculty Page
+                    <i class="fa-solid fa-arrow-right"></i
+                  ></a>
+                </div>
+
+                <!-- Science -->
+                <div id="sci-ug" class="faculty-programs">
+                  <h4>Science & Technology</h4>
+                  <ul class="program-list">
+                    <li>Bachelor of Science in Computer Science</li>
+                    <li>Bachelor of Information Technology</li>
+                    <li>Bachelor of Science in Public Health</li>
+                    <li>Bachelor of Environmental Health Science</li>
+                  </ul>
+                  <a
+                    href="https://www.cavendish.ac.ug/faculties/faculty-of-science-and-technology/"
+                    class="pillar-link"
+                    >Official Faculty Page
+                    <i class="fa-solid fa-arrow-right"></i
+                  ></a>
+                </div>
+
+                <!-- Social -->
+                <div id="soc-ug" class="faculty-programs">
+                  <h4>Socio-Economic Sciences</h4>
+                  <ul class="program-list">
+                    <li>
+                      Bachelor of Arts in International Relations & Diplomacy
+                    </li>
+                    <li>
+                      Bachelor of Arts in Journalism & Communication Studies
+                    </li>
+                    <li>Bachelor of Social Work & Social Administration</li>
+                    <li>
+                      Master of Arts in Public Administration and Management
+                    </li>
+                  </ul>
+                  <a
+                    href="https://www.cavendish.ac.ug/faculties/faculty-of-socio-economic-sciences/"
+                    class="pillar-link"
+                    >Official Faculty Page
+                    <i class="fa-solid fa-arrow-right"></i
+                  ></a>
+                </div>
+
+                <!-- PG -->
+                <div id="pg-ug" class="faculty-programs">
+                  <h4>Post Graduate Studies</h4>
+                  <ul class="program-list scrollable-list">
+                    <li>Master of Information Technology</li>
+                    <li>Master of Education in Educational Management</li>
+                    <li>Master of Security Studies</li>
+                    <li>Master of Science in Project Management</li>
+                    <li>Master of Arts in International Relations</li>
+                    <li>Master of Laws (LLM)</li>
+                    <li>Master of Public Health</li>
+                    <li>MBA – Accounting & Finance</li>
+                    <li>MBA – Entrepreneurship</li>
+                  </ul>
+                  <a
+                    href="https://www.cavendish.ac.ug/faculties/school-of-post-graduate-studies-and-research"
+                    class="pillar-link"
+                    >Official Faculty Page
+                    <i class="fa-solid fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="high-contrast-context">
+            <div class="context-card bg-blue">
+              <h4>Market Position</h4>
+              <p>
+                Ranked for high graduate employability through digital learning
+                infrastructure.
+              </p>
+            </div>
+            <div class="context-card bg-green">
+              <h4>Strategic Impact</h4>
+              <p>
+                produces ethical leaders reshaping the socio-economic landscapes
+                of East Africa.
+              </p>
+            </div>
+          </div>
+
+          <!-- UGANDA LEADERSHIP -->
+          <div class="institutional-leadership-area">
+            <div class="lead-header">
+              <p class="blue-tag">GOVERNANCE</p>
+              <h2 class="section-main-title">University <em>Leadership</em></h2>
+            </div>
+
+            <!-- 3-Column Grid (No Swiper needed for 3 leaders, looks more stable) -->
+            <div class="leadership-grid">
+              <!-- Leader 01 -->
+              <div class="team-card">
+                <div class="team-card-visual">
+                  <!-- Replace with actual images -->
+                  <img src="images/team.jpg" alt="Prof. Olubayi Olubayi" />
+                  <div class="visual-overlay"></div>
+                </div>
+                <div class="team-card-info">
+                  <p class="team-member-title">Chancellor</p>
+                  <h3 class="team-member-name">Prof. Olubayi Olubayi</h3>
+                  <div class="title-line"></div>
+                  <p class="team-member-bio">
+                    A distinguished scientist and educator, providing strategic
+                    academic oversight and vision for the university's growth.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Leader 02 -->
+              <div class="team-card">
+                <div class="team-card-visual">
+                  <img src="images/team.jpg" alt="Prof. John F. Mugisha" />
+                  <div class="visual-overlay"></div>
+                </div>
+                <div class="team-card-info">
+                  <p class="team-member-title">Vice Chancellor</p>
+                  <h3 class="team-member-name">Prof. John F. Mugisha</h3>
+                  <div class="title-line"></div>
+                  <p class="team-member-bio">
+                    Responsible for the overall academic leadership, ensuring
+                    the highest standards of education and research integrity.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Leader 03 -->
+              <div class="team-card">
+                <div class="team-card-visual">
+                  <img src="images/team.jpg" alt="David Nama" />
+                  <div class="visual-overlay"></div>
+                </div>
+                <div class="team-card-info">
+                  <p class="team-member-title">Executive Director</p>
+                  <h3 class="team-member-name">David Nama</h3>
+                  <div class="title-line"></div>
+                  <p class="team-member-bio">
+                    Leads operational management, focusing on institutional
+                    excellence and sustainable student success.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Uganda leadership end -->
+        </section>
+
+        <!-- ZAMBIA SECTION (Hidden by Default) -->
+        <section id="zambia" class="asset-view">
+          <div class="asset-header">
+            <p class="green-tag">SOUTHERN AFRICA HUB</p>
+            <h2 class="asset-display-title">
+              Cavendish University <br /><em>Zambia.</em>
+            </h2>
+          </div>
+
+          <div class="glance-50-50">
+            <div class="map-visual">
+              <img
+                src="images/map-zambia.jpg"
+                alt="Zambia"
+                class="portal-map"
+              />
+            </div>
+            <div class="glance-facts">
+              <h3>University at a Glance</h3>
+              <div class="glance-line"></div>
+              <ul class="portal-facts-list">
+                <li><strong>Location:</strong> Lusaka, Zambia</li>
+                <li><strong>Founded:</strong> 2004</li>
+                <li><strong>Student Body:</strong> 7,300+</li>
+                <li>
+                  <strong>Flagship:</strong> School of Medicine and Health
+                  Sciences
+                </li>
+                <li>
+                  <strong>Core Focus:</strong> Employability and
+                  Entrepreneurship
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ZAMBIA FACULTIES -->
+          <div class="portal-faculties-area">
+            <div class="faculties-header">
+              <p class="blue-tag">ACADEMICS</p>
+              <h3>Faculties & <em>Programs.</em></h3>
+            </div>
+
+            <div class="faculties-interactive-wrapper">
+              <ul class="faculty-tabs">
+                <li class="faculty-tab active" data-target="med-zm">
+                  Medicine & Health Sciences
+                </li>
+                <li class="faculty-tab" data-target="bus-zm">
+                  Business & Management
+                </li>
+                <li class="faculty-tab" data-target="law-zm">School of Law</li>
+                <li class="faculty-tab" data-target="arts-zm">
+                  Arts & Social Sciences
+                </li>
+              </ul>
+
+              <div class="faculty-display-panel">
+                <!-- Medicine -->
+                <div id="med-zm" class="faculty-programs active">
+                  <h4>Medicine & Health Sciences</h4>
+                  <ul class="program-list">
+                    <li>
+                      Bachelor of Medicine and Bachelor of Surgery (MBChB)
+                    </li>
+                    <li>Bachelor of Science in Nursing & Midwifery</li>
+                    <li>Bachelor of Science in Public Health</li>
+                    <li>Diploma in Clinical Medicine</li>
+                  </ul>
+                  <a
+                    href="https://www.cavendishza.org/faculties-schools/school-of-medicine/"
+                    class="pillar-link"
+                    >Official Faculty Page
+                    <i class="fa-solid fa-arrow-right"></i
+                  ></a>
+                </div>
+
+                <!-- Business -->
+                <div id="bus-zm" class="faculty-programs">
+                  <h4>Business & Management Studies</h4>
+                  <ul class="program-list">
+                    <li>Master of Business Administration (MBA)</li>
+                    <li>Bachelor of Business Administration</li>
+                    <li>Bachelor of Science in Accounting and Finance</li>
+                    <li>Bachelor of Project Management</li>
+                  </ul>
+                  <a
+                    href="https://www.cavendishza.org/faculties-schools/school-of-business-and-information-technology-school-of-b-i-t/"
+                    class="pillar-link"
+                    >Official Faculty Page
+                    <i class="fa-solid fa-arrow-right"></i
+                  ></a>
+                </div>
+
+                <!-- Law -->
+                <div id="law-zm" class="faculty-programs">
+                  <h4>School of Law</h4>
+                  <ul class="program-list">
+                    <li>Bachelor of Laws (LLB)</li>
+                    <li>Diploma in Law</li>
+                    <li>Certificate in Paralegal Studies</li>
+                  </ul>
+                  <a
+                    href="https://www.cavendishza.org/faculties-schools/school-of-law/"
+                    class="pillar-link"
+                    >Official Faculty Page
+                    <i class="fa-solid fa-arrow-right"></i
+                  ></a>
+                </div>
+
+                <!-- Arts -->
+                <div id="arts-zm" class="faculty-programs">
+                  <h4>Arts, Education & Social Sciences</h4>
+                  <ul class="program-list">
+                    <li>Bachelor of Arts in Social Work</li>
+                    <li>Bachelor of Arts in Development Studies</li>
+                    <li>Bachelor of Mass Communication and Public Relations</li>
+                    <li>Bachelor of Education in Early Childhood Education</li>
+                  </ul>
+                  <a
+                    href="https://www.cavendishza.org/faculties-schools/school-of-arts-education-and-social-sciences/"
+                    class="pillar-link"
+                    >Official Faculty Page
+                    <i class="fa-solid fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="high-contrast-context">
+            <div class="context-card bg-green">
+              <h4>Medical Excellence</h4>
+              <p>
+                CUZ operates a prestigious medical school, ensuring day-one
+                readiness for clinicians.
+              </p>
+            </div>
+            <div class="context-card bg-blue">
+              <h4>Economic Engine</h4>
+              <p>
+                Produces highly employable graduates for Africa's booming
+                healthcare sectors.
+              </p>
+            </div>
+          </div>
+
+          <!-- leadership part -->
+          <div class="institutional-leadership-area">
+            <div class="lead-header">
+              <p class="blue-tag">GOVERNANCE</p>
+              <h2 class="section-main-title">University <em>Leadership</em></h2>
+            </div>
+
+            <div class="leadership-grid">
+              <!-- Leader 01 -->
+              <div class="team-card">
+                <div class="team-card-visual">
+                  <img src="images/team.jpg" alt="H.E. Kenneth Kaunda" />
+                  <div class="visual-overlay"></div>
+                </div>
+                <div class="team-card-info">
+                  <p class="team-member-title">Chancellor (Posthumous)</p>
+                  <h3 class="team-member-name">H.E. Kenneth Kaunda</h3>
+                  <div class="title-line"></div>
+                  <p class="team-member-bio">
+                    The first President of Zambia, serving as a guiding
+                    inspiration and foundational figure for the university's
+                    vision.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Leader 02 -->
+              <div class="team-card">
+                <div class="team-card-visual">
+                  <img src="images/team.jpg" alt="Dr. Alice Nkore" />
+                  <div class="visual-overlay"></div>
+                </div>
+                <div class="team-card-info">
+                  <p class="team-member-title">Vice Chancellor</p>
+                  <h3 class="team-member-name">Dr. Alice Nkore</h3>
+                  <div class="title-line"></div>
+                  <p class="team-member-bio">
+                    Dr. Nkore brings a wealth of academic and administrative
+                    experience, driving the vision and growth of the university.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Leader 03 -->
+              <div class="team-card">
+                <div class="team-card-visual">
+                  <img src="images/team.jpg" alt="Reginald Rainey" />
+                  <div class="visual-overlay"></div>
+                </div>
+                <div class="team-card-info">
+                  <p class="team-member-title">Executive Director</p>
+                  <h3 class="team-member-name">Reginald Rainey</h3>
+                  <div class="title-line"></div>
+                  <p class="team-member-bio">
+                    Oversees the operational excellence and strategic direction,
+                    ensuring a world-class experience for students and staff.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- leadership part end -->
+        </section>
+
+        <!-- STANDARDS SECTION (Hidden by Default) -->
+        <section id="standard" class="asset-view">
+          <div class="asset-header">
+            <p class="blue-tag">NETWORK GOVERNANCE</p>
+            <h2 class="asset-display-title">
+              The framework of <br /><em>Standardized Quality.</em>
+            </h2>
+          </div>
+          <div class="standards-full-card bg-navy">
+            <div class="s-grid">
+              <div class="s-pillar">
+                <h5>Governance</h5>
+                <p>
+                  Centralized financial oversight ensuring institutional
+                  stability.
+                </p>
+              </div>
+              <div class="s-pillar">
+                <h5>Pedagogy</h5>
+                <p>
+                  Modernized, student-centered curriculum for market relevance.
+                </p>
+              </div>
+              <div class="s-pillar">
+                <h5>Reach</h5>
+                <p>Borderless Pan-African academic and faculty exchange.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const preloader = document.getElementById("aeh-loader");
+
+    // 1. Loader Logic (Hides preloader after 1s)
+    const hideLoader = () => {
+      setTimeout(() => {
+        if (preloader) preloader.classList.add("loader-finished");
+        document.body.classList.remove("content-hidden");
+      }, 1000);
+    };
+
+    if (document.readyState === "complete") {
+      hideLoader();
+    } else {
+      window.addEventListener("load", hideLoader);
+    }
+
+    // 2. Redirection Logic (Shows loader when leaving page)
+    const internalLinks = document.querySelectorAll(
+      'a[href^="index.html"], a[href^="about.html"], a[href^="talent.html"], a[href^="partnerships.html"], a[href^="network.html"]',
+    );
+
+    internalLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        // Don't trigger for hash links like #contact
+        if (!link.hash && !e.metaKey && !e.ctrlKey) {
+          e.preventDefault();
+          const destination = link.href;
+          if (preloader) preloader.classList.remove("loader-finished");
+          setTimeout(() => {
+            window.location.href = destination;
+          }, 500);
+        }
+      });
+    });
+
+    // 3. Hamburger Menu (Mobile Navigation)
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+    if (btn && menu) {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        btn.classList.toggle("open");
+        menu.classList.toggle("hidden");
+      });
+    }
+
+    // 4. Portal Switcher Logic (Left Sidebar: Uganda vs Zambia)
+    const portalLinks = document.querySelectorAll(".portal-link");
+    const assetViews = document.querySelectorAll(".asset-view");
+
+    portalLinks.forEach((button) => {
+      button.addEventListener("click", () => {
+        const targetId = button.dataset.target;
+
+        // Update Sidebar Active Class
+        portalLinks.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        // Update Content Stage (Hide all sections, show target)
+        assetViews.forEach((section) => section.classList.remove("active"));
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.classList.add("active");
+        }
+
+        // Smooth scroll stage back to top
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    });
+
+    // 5. Interactive Faculty Tabs Logic (Inside each University View)
+    const facultyTabs = document.querySelectorAll(".faculty-tab");
+
+    facultyTabs.forEach((tab) => {
+      tab.addEventListener("click", function () {
+        // Scope search to the current university wrapper only
+        const wrapper = this.closest(".faculties-interactive-wrapper");
+        const targetId = this.dataset.target;
+        const targetContent = document.getElementById(targetId);
+
+        // Deactivate tabs in this specific university section
+        wrapper
+          .querySelectorAll(".faculty-tab")
+          .forEach((t) => t.classList.remove("active"));
+        // Deactivate program panels in this specific university section
+        wrapper
+          .querySelectorAll(".faculty-programs")
+          .forEach((p) => p.classList.remove("active"));
+
+        // Activate the clicked tab and content
+        this.classList.add("active");
+        if (targetContent) {
+          targetContent.classList.add("active");
+        }
+      });
+    });
+
+    // 6. Smooth Scroll on Page Load (Handles links from Home page like #uganda)
+    if (window.location.hash) {
+      const hash = window.location.hash.substring(1);
+      const targetButton = document.querySelector(`[data-target="${hash}"]`);
+      if (targetButton) {
+        targetButton.click(); // Automatically "clicks" the sidebar link
+      }
+    }
+  });
+</script>
