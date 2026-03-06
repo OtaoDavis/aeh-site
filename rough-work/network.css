@@ -207,22 +207,25 @@
 /* Tabs Styling */
 .faculty-tabs {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.5rem;
 }
 
 .faculty-tab {
-  padding: 20px 25px;
-  background: transparent;
-  border-left: 3px solid var(--border);
-  font-family: "Inter", sans-serif;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  border-left: 4px solid #e5e7eb;
+  background-color: transparent;
+  font-family: "Playfair Display", serif;
   font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  letter-spacing: 1px;
-  color: var(--text-muted);
+  font-size: 1.1rem;
+  color: #374151;
   cursor: pointer;
+  text-align: left;
   transition: all 0.3s ease;
 }
 
@@ -232,9 +235,11 @@
 }
 
 .faculty-tab.active {
-  background-color: var(--aeh-light-back);
+  background-color: white;
   color: var(--aeh-blue);
-  border-left-color: var(--aeh-blue);
+  border-color: #e5e7eb;
+  border-left: 4px solid var(--aeh-blue);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
 }
 
 /* Content Panel Styling */
