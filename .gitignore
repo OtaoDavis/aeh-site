@@ -1,0 +1,26 @@
+# --- OS Metadata ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editor / IDE Folders ---
+.vscode/
+.idea/
+*.swp
+*.sublime-project
+*.sublime-workspace
+
+# --- Node / Dependencies) ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Environment & Secrets ---
+.env
+.env.local
+secrets.txt
+
+# --- CUSTOM FOLDERS TO IGNORE ---
+rough-work/
+Content For Website/

@@ -1,0 +1,312 @@
+/* --- LEADERSHIP PAGE DESIGN --- */
+
+.team-hero {
+  padding: 20px 0 20px;
+  text-align: center;
+}
+
+.hero-content-center h1 {
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.hero-lead {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* --- SWIPER SECTION --- */
+.leadership-carousel-section {
+  padding: 20px 5%;
+  background-color: var(--aeh-light-back); /* #f5f9fb */
+}
+
+.section-header-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+
+.institutional-title {
+  font-size: 3.5rem;
+  color: var(--aeh-navy);
+}
+
+.swiper-controls {
+  display: flex;
+  gap: 15px;
+}
+
+.team-prev,
+.team-next {
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+  color: var(--aeh-navy);
+}
+
+.team-prev:hover,
+.team-next:hover {
+  background-color: var(--aeh-blue);
+  border-color: var(--aeh-blue);
+  color: white;
+}
+
+.swiper-wrapper {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+/* --- TEAM CARDS --- */
+.team-card {
+  background-color: var(--aeh-white);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px -5px rgba(13, 44, 79, 0.08);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(57, 152, 189, 0.15);
+  transition:
+    transform 0.4s cubic-bezier(0.2, 1, 0.3, 1),
+    box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.team-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px -12px rgba(13, 44, 79, 0.15);
+  border-color: var(--aeh-blue);
+}
+
+.team-card-image {
+  height: 380px;
+  width: 100%;
+  background-color: #f1f5f9;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%; /* Perfect head framing */
+  display: block;
+}
+
+.card-icon-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--aeh-light-back);
+}
+
+.card-icon-placeholder i {
+  font-size: 5rem;
+  color: var(--aeh-blue);
+  opacity: 0.2;
+}
+
+.team-card-info {
+  padding: 30px 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-member-role {
+  font-family: "Inter", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--aeh-green);
+  text-transform: uppercase !important;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.team-member-name {
+  font-family: "EB Garamond", serif;
+  font-size: 1.7rem;
+  color: var(--aeh-navy);
+  line-height: 1.2;
+  margin-bottom: 25px;
+  text-transform: none !important;
+}
+
+.card-footer-flex {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.read-more-link {
+  font-family: "Inter", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--aeh-blue);
+  text-transform: uppercase !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.5s;
+}
+
+.read-more-link:hover {
+  transform: scale(1.1);
+  color: var(--aeh-green);
+}
+
+.linkedin-card-link {
+  color: var(--aeh-navy);
+  font-size: 1rem;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.linkedin-card-link:hover {
+  opacity: 1;
+  color: var(--aeh-green);
+  transform: scale(1.5);
+}
+
+/* --- MODAL --- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 44, 79, 0.98);
+  z-index: 3000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-card {
+  background: white;
+  width: 100%;
+  max-width: 1000px;
+  height: 75vh;
+  display: flex;
+  position: relative;
+  animation: modalIn 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-flex {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.modal-image-side {
+  flex: 1;
+  background: var(--aeh-light-back);
+  position: relative;
+}
+.modal-image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.modal-content-side {
+  flex: 1.3;
+  padding: 60px;
+  overflow-y: auto;
+}
+
+.modal-content-side h2 {
+  font-size: 3.5rem;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.modal-content-side h5 {
+  font-size: 0.9rem;
+  color: var(--aeh-blue);
+  text-transform: uppercase !important;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+.modal-divider {
+  width: 40px;
+  height: 3px;
+  background: var(--aeh-green);
+  margin-bottom: 30px;
+}
+.bio-scroll-area {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text);
+}
+.bio-scroll-area p {
+  margin-bottom: 20px;
+  text-transform: none !important;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--aeh-navy);
+  z-index: 10;
+}
+
+.modal-icon-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8rem;
+  color: rgba(0, 0, 0, 0.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .modal-flex {
+    flex-direction: column;
+  }
+  .modal-image-side {
+    height: 250px;
+    flex: none;
+  }
+  .modal-card {
+    height: 95vh;
+  }
+  .institutional-title {
+    font-size: 2.5rem;
+  }
+  .hero-content-center h1 {
+    font-size: 3rem;
+  }
+}

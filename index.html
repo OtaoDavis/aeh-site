@@ -77,8 +77,9 @@
         </a>
         <div class="nav-links">
           <a href="purpose.html">Our Purpose</a>
-          <a href="impact.html">Our Impact</a>
-          <a href="network.html">Our Network</a>
+          <a href="impact.html">Impact</a>
+          <a href="network.html">Network</a>
+          <a href="team.html">Leadership</a>
           <a href="#" class="nav-btn">Partner With Us</a>
         </div>
       </div>
@@ -872,6 +873,7 @@
   </body>
 </html>
 
+<script src="js/script.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const preloader = document.getElementById("aeh-loader");
@@ -891,21 +893,24 @@
     }
 
     // 2. Redirection Logic
-    const internalLinks = document.querySelectorAll(
-      'a[href^="index.html"], a[href^="about.html"], a[href^="talent.html"], a[href^="partnerships.html"]',
-    );
+    const currentUrl = window.location.pathname.split("/").pop();
+    const navLinks = document.querySelectorAll(".nav-links a");
 
-    internalLinks.forEach((link) => {
-      link.addEventListener("click", (e) => {
-        if (!link.hash && !e.metaKey && !e.ctrlKey) {
-          e.preventDefault();
-          const destination = link.href;
-          if (preloader) preloader.classList.remove("loader-finished");
-          setTimeout(() => {
-            window.location.href = destination;
-          }, 500);
-        }
-      });
+    navLinks.forEach((link) => {
+      const linkHref = link.getAttribute("href");
+
+      // Highlight if filename matches
+      if (currentUrl === linkHref) {
+        link.classList.add("active-link");
+      }
+
+      // Special case for Home: if at root or index.html
+      if (
+        (currentUrl === "" || currentUrl === "index.html") &&
+        linkHref === "index.html"
+      ) {
+        link.classList.add("active-link");
+      }
     });
 
     // 3. Swipers

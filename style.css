@@ -73,7 +73,7 @@ em,
 }
 
 .loader-logo-pulse {
-  height: 80px; /* Slightly larger since there is no bar */
+  height: 80px;
   width: auto;
   animation: aehPulse 2s infinite ease-in-out;
 }
@@ -171,6 +171,20 @@ em,
 .nav-btn:hover {
   background: var(--aeh-green);
   transform: translateY(-2px);
+}
+
+.nav-links a.active-link {
+  color: var(--aeh-green) !important;
+}
+
+.nav-links a.active-link::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 2px;
+  background-color: var(--aeh-green);
+  margin: 4px auto 0;
+  border-radius: 2px;
 }
 /* nav end */
 
