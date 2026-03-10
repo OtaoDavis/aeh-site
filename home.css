@@ -18,17 +18,90 @@
 }
 
 /* --- MANIFESTO VIDEO SECTION --- */
-.manifesto-video-section {
+/* .manifesto-video-section {
   position: relative;
-  height: 100vh; /* Full screen impact */
+  height: 100vh; 
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   overflow: hidden;
+} */
+
+/* .manifesto-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+} */
+
+/* .manifesto-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(13, 44, 79, 0.7),
+    rgba(13, 44, 79, 0.4)
+  );
+  z-index: 2;
+} */
+
+/* --- THE VISION STRIP --- */
+.vision-strip {
+  padding: 40px 0;
+  background-color: var(--aeh-light-back);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
 }
 
-.manifesto-bg-img {
+.institutional-quote {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.4;
+  color: var(--aeh-navy);
+  max-width: 1000px;
+  margin: 0 auto 20px auto;
+  text-transform: none !important;
+}
+
+.institutional-quote em {
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  color: var(--aeh-blue);
+}
+
+.quote-attribution {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.7rem;
+  color: var(--aeh-green);
+}
+
+/* --- REFINED VIDEO SECTION --- */
+.video-manifesto-refined {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--aeh-navy);
+}
+
+.video-manifesto-refined img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  object-position: center 15%; /* Perfect head framing */
+}
+
+.manifesto-bg-v2 {
   position: absolute;
   top: 0;
   left: 0;
@@ -38,15 +111,75 @@
   z-index: 1;
 }
 
-.manifesto-bg-overlay {
+.manifesto-overlay-v2 {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(13, 44, 79, 0.7),
-    rgba(13, 44, 79, 0.4)
+  background: radial-gradient(
+    circle,
+    rgba(13, 44, 79, 0.4) 0%,
+    rgba(13, 44, 79, 0.85) 100%
   );
   z-index: 2;
+}
+
+/* Premium Play Button Logic */
+.play-trigger-btn {
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.play-icon-wrap {
+  width: 90px;
+  height: 90px;
+  background-color: var(--aeh-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 15px 30px rgba(142, 200, 111, 0.3);
+}
+
+.play-text {
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.75rem;
+  transition: 0.3s;
+}
+
+.play-trigger-btn:hover .play-icon-wrap {
+  transform: scale(1.1);
+  background-color: var(--aeh-blue);
+  box-shadow: 0 20px 40px rgba(57, 152, 189, 0.4);
+}
+
+.play-trigger-btn:hover .play-text {
+  letter-spacing: 6px; /* Subtle high-end expansion */
+  color: var(--aeh-green);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .video-manifesto-refined {
+    height: 50vh;
+  }
+  .institutional-quote {
+    font-size: 1.5rem;
+  }
+  .play-icon-wrap {
+    width: 70px;
+    height: 70px;
+  }
 }
 
 .manifesto-content-center h2 {

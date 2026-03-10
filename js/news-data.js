@@ -34,6 +34,24 @@ function createSnippet(text, wordLimit = 35) {
 }
 
 /**
+ * Extract unique categories and fill the <select>
+ */
+function renderCategoryFilter(news) {
+  const filterSelect = document.getElementById("topicFilter");
+  if (!filterSelect) return;
+
+  const categories = [...new Set(news.map((item) => item.category))].filter(
+    Boolean,
+  );
+
+  let options = '<option value="all">All Insights</option>';
+  categories.forEach((cat) => {
+    options += `<option value="${cat}">${cat}</option>`;
+  });
+  filterSelect.innerHTML = options;
+}
+
+/**
  * Fetch All Articles for news.html
  */
 async function getNewsList() {
@@ -64,24 +82,6 @@ async function getNewsList() {
     console.error("Contentful Error:", error);
     return [];
   }
-}
-
-/**
- * Extract unique categories and fill the <select>
- */
-function renderCategoryFilter(news) {
-  const filterSelect = document.getElementById("topicFilter");
-  if (!filterSelect) return;
-
-  const categories = [...new Set(news.map((item) => item.category))].filter(
-    Boolean,
-  );
-
-  let options = '<option value="all">All Insights</option>';
-  categories.forEach((cat) => {
-    options += `<option value="${cat}">${cat}</option>`;
-  });
-  filterSelect.innerHTML = options;
 }
 
 /**

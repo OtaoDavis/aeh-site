@@ -116,50 +116,69 @@
           </div>
 
           <!-- Slide 2 -->
-          <div
-            class="swiper-slide bg-cover bg-center"
-            style="background-image: url(&quot;images/home2.jpg&quot;)"
-          >
-            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-            <div class="text-content-container">
+          <div class="swiper-slide relative overflow-hidden">
+            <!-- THE IMAGE: Replaces the background-image style -->
+            <!-- object-cover ensures it fills the area. 
+         object-top (or a percentage like 50% 20%) stops heads from being cut off. -->
+            <img
+              src="images/home6.jpg"
+              alt="AEH Model"
+              class="absolute inset-0 w-full h-full object-cover object-top z-0"
+            />
+
+            <!-- THE OVERLAY: Darkens the image so text is readable -->
+            <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+
+            <!-- THE CONTENT: Must have relative and a higher z-index to sit on top -->
+            <div class="text-content-container relative z-20">
               <h1 class="text-4xl md:text-6xl font-bold mb-4 text-[#FFFFFF]">
                 Pioneering a New <br />
                 Model for African Higher Education
               </h1>
-              <p class="text-lg md:text-xl max-w-4xl mb-8">
+              <p
+                class="text-lg md:text-xl max-w-4xl mb-8 text-white opacity-90"
+              >
                 We reimagine education through a scalable, <br />
                 student-centered university model, driving gainful employment
                 and entrepreneurship.
               </p>
               <a
                 href="#solution"
-                class="bg-[#3998BD] text-white font-bold py-3 px-8 rounded-full hover:bg-[#8EC86F] transition-colors duration-300"
-                >Explore Our Approach</a
+                class="bg-[#3998BD] text-white font-bold py-3 px-8 rounded-full hover:bg-[#8EC86F] transition-colors duration-300 inline-block"
               >
+                Explore Our Approach
+              </a>
             </div>
           </div>
 
           <!-- Slide 3 -->
-          <div
-            class="swiper-slide bg-cover bg-center"
-            style="background-image: url(&quot;images/home4.jpg&quot;)"
-          >
-            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-            <div class="text-content-container">
+          <div class="swiper-slide relative overflow-hidden">
+            <img
+              src="images/home7.jpg"
+              alt="AEH University Network"
+              class="absolute inset-0 w-full h-full object-cover object-center z-0"
+            />
+
+            <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+
+            <div class="text-content-container relative z-20">
               <h1 class="text-4xl md:text-6xl font-bold mb-4 text-[#FFFFFF]">
                 A Growing Network <br />
                 of Transformative Universities
               </h1>
-              <p class="text-lg md:text-xl max-w-4xl mb-8">
-                Through our diverse network of universities, we deliver <br />
-                accessible and market-relevant education across Uganda, Zambia,
-                Senegal, and Mali.
+              <p
+                class="text-lg md:text-xl max-w-4xl mb-8 text-white opacity-90"
+              >
+                Scaling impact through local roots and global standards. Our
+                Pan-African alliance provides the high-integrity academic
+                environments needed to shape the architects of Africa's future.
               </p>
               <a
-                href="#universities"
-                class="bg-[#3998BD] text-white font-bold py-3 px-8 rounded-full hover:bg-[#8EC86F] transition-colors duration-300"
-                >Find a University</a
+                href="#network"
+                class="bg-[#3998BD] text-white font-bold py-3 px-8 rounded-full hover:bg-[#8EC86F] transition-colors duration-300 inline-block"
               >
+                Find a University
+              </a>
             </div>
           </div>
         </div>
@@ -168,30 +187,45 @@
       </div>
     </section>
 
-    <!-- THE LEADERSHIP MANIFESTO SECTION -->
-    <section class="manifesto-video-section">
-      <div class="manifesto-bg-overlay"></div>
-      <!-- High-res background image of a founder or board room -->
+    <section class="vision-strip section-light-back">
+      <div class="container">
+        <div class="vision-content">
+          <p class="green-tag">STRATEGIC INTENT</p>
+          <h2 class="institutional-quote">
+            "We aren't just training students; we are equipping the <br />
+            <em>architects of Africa's economic future.</em> This is how <br />
+            we move from potential to progress."
+          </h2>
+          <div class="quote-attribution">— Message from the Chairman</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. REFINED VIDEO SECTION (Action Focused) -->
+    <section class="video-manifesto-refined">
+      <!-- Immersive Background -->
+      <div class="manifesto-overlay-v2"></div>
       <img
-        src="images/video-back.jpg"
-        class="manifesto-bg-img"
-        alt="AEH Leadership"
+        src="images/video-back2.JPG"
+        class="manifesto-bg-v2"
+        alt="AEH Impact"
       />
 
-      <div class="container mx-auto px-6 relative z-10">
-        <div class="manifesto-content-center">
-          <h2 class="text-white text-6xl md:text-8xl mb-8">
+      <div class="container relative z-10 text-center">
+        <div class="video-action-content">
+          <h2 class="text-white text-5xl md:text-7xl mb-10">
             A Vision for <em>Impact.</em>
           </h2>
-          <p
-            class="text-white text-xl md:text-2xl max-w-3xl mx-auto mb-12 font-light"
+
+          <!-- The USC-Style Circular Play Button -->
+          <button
+            onclick="openVideoModal('JMLsHI8aV0g')"
+            class="play-trigger-btn"
           >
-            "We aren't just training students; we are equipping the architects
-            of Africa's economic future. This is how we move from potential to
-            progress."
-          </p>
-          <button onclick="openVideoModal()" class="btn-video-outline">
-            WATCH THE VIDEO
+            <span class="play-icon-wrap">
+              <i class="fa-solid fa-play"></i>
+            </span>
+            <span class="play-text">Experience the Mission</span>
           </button>
         </div>
       </div>
@@ -258,10 +292,7 @@
           <div class="p-image-column">
             <div class="image-offset-wrapper">
               <div class="image-offset-bg bg-blue"></div>
-              <img
-                src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&q=80&w=800"
-                alt="Holistic Education"
-              />
+              <img src="images/edu.jpg" alt="Holistic Education" />
             </div>
           </div>
         </div>
@@ -286,10 +317,7 @@
           <div class="p-image-column">
             <div class="image-offset-wrapper">
               <div class="image-offset-bg bg-green"></div>
-              <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800"
-                alt="Apprenticeship Learning"
-              />
+              <img src="images/appre.JPG" alt="Apprenticeship Learning" />
             </div>
           </div>
         </div>
@@ -314,10 +342,7 @@
           <div class="p-image-column">
             <div class="image-offset-wrapper">
               <div class="image-offset-bg bg-blue"></div>
-              <img
-                src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800"
-                alt="Global Pathways"
-              />
+              <img src="images/pic1.jpg" alt="Global Pathways" />
             </div>
           </div>
         </div>
@@ -518,7 +543,7 @@
     </section>
 
     <!-- THE AEH IMPACT SECTION -->
-    <section class="aeh-impact">
+    <section class="aeh-impact" id="impact">
       <div class="container">
         <div class="impact-grid">
           <!-- Left Side: Immersive Visual -->
@@ -529,7 +554,7 @@
 
               <!-- Main image (Slide 1/Deck Style) -->
               <img
-                src="images/cz4.JPG"
+                src="images/potential2.JPG"
                 alt="AEH Students in the Field"
                 class="impact-img"
               />
@@ -568,7 +593,7 @@
             </div>
 
             <div class="impact-cta-footer">
-              <a href="partnerships.html" class="explore-link"
+              <a href="impact.html" class="explore-link"
                 >Explore the Alliance <i class="fa-solid fa-arrow-right"></i
               ></a>
             </div>
