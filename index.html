@@ -56,6 +56,9 @@
       src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
       defer
     ></script>
+
+    <!-- Custom JS -->
+    <script src="js/script.js" defer></script>
   </head>
 
   <body class="bg-gray-50">
@@ -206,7 +209,7 @@
             entrepreneurship on a global scale.
           </p>
           <div class="cta-wrap">
-            <a href="#" class="btn-solid">Our Purpose</a>
+            <a href="purpose.html" class="btn-solid">Our Purpose</a>
           </div>
         </div>
         <div class="hero-image-stack">
@@ -587,89 +590,12 @@
         <!-- Section Header -->
         <div class="news-header">
           <h2>AEH <em>News</em></h2>
-          <a href="#" class="btn-outline-news">Visit AEH Newsroom</a>
+          <a href="news.html" class="btn-outline-news">Visit AEH Newsroom</a>
         </div>
 
-        <div class="news-grid">
-          <!-- Main Featured Story -->
-          <div class="news-featured">
-            <div class="news-img-wrap">
-              <img src="images/home2.jpg" alt="Students Collaborating" />
-            </div>
-            <div class="news-content">
-              <p class="category-tag blue">ALLIANCE NEWS</p>
-              <h3>
-                <a href="#"
-                  >‘The Future is Digital’: AEH Launches Remote Work
-                  Specialization Across all Network Universities</a
-                >
-              </h3>
-              <p class="news-snippet">
-                The new skills-based short course is designed to prepare
-                students to access global digital workforce opportunities,
-                providing a solid foundation for the remote economy.
-              </p>
-              <p class="news-date">MARCH 4, 2024</p>
-            </div>
-          </div>
-
-          <!-- Sidebar Stories -->
-          <div class="news-sidebar">
-            <!-- Sidebar Item 1 -->
-            <article class="sidebar-item">
-              <div class="sidebar-text">
-                <p class="category-tag green">IMPACT</p>
-                <h4>
-                  <a href="#"
-                    >Scaling Medical Excellence: CUZ Zambia’s Flagship School
-                    expands regional reach</a
-                  >
-                </h4>
-                <p class="news-date">FEB 27, 2024</p>
-              </div>
-              <div class="sidebar-thumb">
-                <img src="images/home1.jpg" />
-              </div>
-            </article>
-
-            <!-- Sidebar Item 2 -->
-            <article class="sidebar-item">
-              <div class="sidebar-text">
-                <p class="category-tag blue">PARTNERSHIP</p>
-                <h4>
-                  <a href="#"
-                    >AEH and Riipen partner to provide experiential learning
-                    platforms to West African students</a
-                  >
-                </h4>
-                <p class="news-date">FEB 20, 2024</p>
-              </div>
-              <div class="sidebar-thumb">
-                <img
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=400"
-                />
-              </div>
-            </article>
-
-            <!-- Sidebar Item 3 -->
-            <article class="sidebar-item">
-              <div class="sidebar-text">
-                <p class="category-tag navy">UNIVERSITY NETWORK</p>
-                <h4>
-                  <a href="#"
-                    >Two campuses, one vision: IAM Mali marks its 5th year
-                    within the AEH holding portfolio</a
-                  >
-                </h4>
-                <p class="news-date">FEB 12, 2024</p>
-              </div>
-              <div class="sidebar-thumb">
-                <img
-                  src="https://images.unsplash.com/photo-1523050335102-c32509542360?auto=format&fit=crop&q=80&w=400"
-                />
-              </div>
-            </article>
-          </div>
+        <div class="news-grid" id="homeNewsContainer">
+          <!-- Loader while fetching data -->
+          <p class="loader-text">Loading latest insights...</p>
         </div>
       </div>
     </section>
@@ -870,122 +796,62 @@
         </div>
       </div>
     </div>
+
+    <script src="js/news-data.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        // 1. Fetch the news list from Contentful (Function in news-data.js)
+        const news = await getNewsList();
+        const container = document.getElementById("homeNewsContainer");
+
+        if (!news || news.length === 0) {
+          container.innerHTML = "<p>No recent news available.</p>";
+          return;
+        }
+
+        // 2. Separate the latest article from the rest
+        const featured = news[0];
+        const sidebarArticles = news.slice(1, 4); // Get the next 3
+
+        // 3. Build the HTML Structure
+        let sidebarHTML = "";
+        sidebarArticles.forEach((item) => {
+          sidebarHTML += `
+                <article class="sidebar-item">
+                    <div class="sidebar-text">
+                        <p class="category-tag green">${item.category}</p>
+                        <h4><a href="article.html?slug=${item.id}">${item.title}</a></h4>
+                        <p class="news-date">${item.date}</p>
+                    </div>
+                    <div class="sidebar-thumb">
+                        <img src="${item.image}" alt="${item.title}" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'thumb-icon\'><i class=\'fa-solid fa-book-open\'></i></div>'">
+                    </div>
+                </article>
+            `;
+        });
+
+        container.innerHTML = `
+            <!-- Main Featured Story (Latest) -->
+            <div class="news-featured">
+                <div class="news-img-wrap">
+                    <img src="${featured.image}" alt="${featured.title}" onerror="this.style.display='none';">
+                </div>
+                <div class="news-content">
+                    <p class="category-tag blue">${featured.category}</p>
+                    <h3>
+                        <a href="article.html?slug=${featured.id}">${featured.title}</a>
+                    </h3>
+                    <p class="news-snippet">${featured.summary}</p>
+                    <p class="news-date">${featured.date}</p>
+                </div>
+            </div>
+
+            <!-- Sidebar Stories (Next 3) -->
+            <div class="news-sidebar">
+                ${sidebarHTML}
+            </div>
+        `;
+      });
+    </script>
   </body>
 </html>
-
-<script src="js/script.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const preloader = document.getElementById("aeh-loader");
-
-    // 1. Loader Logic
-    const hideLoader = () => {
-      setTimeout(() => {
-        if (preloader) preloader.classList.add("loader-finished");
-        document.body.classList.remove("content-hidden");
-      }, 1000);
-    };
-
-    if (document.readyState === "complete") {
-      hideLoader();
-    } else {
-      window.addEventListener("load", hideLoader);
-    }
-
-    // 2. Redirection Logic
-    const currentUrl = window.location.pathname.split("/").pop();
-    const navLinks = document.querySelectorAll(".nav-links a");
-
-    navLinks.forEach((link) => {
-      const linkHref = link.getAttribute("href");
-
-      // Highlight if filename matches
-      if (currentUrl === linkHref) {
-        link.classList.add("active-link");
-      }
-
-      // Special case for Home: if at root or index.html
-      if (
-        (currentUrl === "" || currentUrl === "index.html") &&
-        linkHref === "index.html"
-      ) {
-        link.classList.add("active-link");
-      }
-    });
-
-    // 3. Swipers
-    // --- Hero Swiper Initialization ---
-    const heroSwiper = new Swiper(".hero-swiper", {
-      autoHeight: false,
-      direction: "horizontal",
-      loop: true,
-      effect: "fade",
-      fadeEffect: {
-        crossFade: true,
-      },
-      speed: 1500,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-    const slides = document.querySelectorAll(".hero-swiper .swiper-slide");
-    slides.forEach((slide) => {
-      slide.classList.add("min-h-[80vh]");
-    });
-
-    const uniPortfolio = new Swiper(".university-portfolio-swiper", {
-      loop: true,
-      speed: 1200,
-      grabCursor: true,
-      navigation: { nextEl: ".uni-next", prevEl: ".uni-prev" },
-      pagination: {
-        el: ".uni-fraction",
-        type: "fraction",
-        formatFractionCurrent: (n) => (n < 10 ? "0" + n : n),
-        formatFractionTotal: (n) => (n < 10 ? "0" + n : n),
-      },
-    });
-
-    // 4. Hamburger Menu
-    const btn = document.getElementById("menu-btn");
-    const menu = document.getElementById("menu");
-    if (btn) {
-      btn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        btn.classList.toggle("open");
-        menu.classList.toggle("hidden");
-      });
-    }
-  });
-
-  // --- 5. GLOBAL SCOPE FUNCTIONS (Fixed) ---
-  // These must be OUTSIDE the DOMContentLoaded block so onclick="openVideoModal()" works.
-
-  function openVideoModal() {
-    const modal = document.getElementById("videoModal");
-    const player = document.getElementById("videoPlayer");
-    const videoURL = "https://www.youtube.com/embed/JMLsHI8aV0g"; // Replace with your link
-
-    if (modal && player) {
-      player.src = videoURL + "?autoplay=1";
-      modal.classList.add("active");
-      document.body.style.overflow = "hidden";
-    }
-  }
-
-  function closeVideoModal() {
-    const modal = document.getElementById("videoModal");
-    const player = document.getElementById("videoPlayer");
-
-    if (modal && player) {
-      player.src = "";
-      modal.classList.remove("active");
-      document.body.style.overflow = "auto";
-    }
-  }
-</script>

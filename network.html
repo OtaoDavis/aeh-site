@@ -11,7 +11,11 @@
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="network.css" />
-    <link rel="icon" href="images/favicon.ico" sizes="any" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -24,6 +28,7 @@
       sizes="16x16"
       href="images/favicon-16x16.png"
     />
+    <link rel="manifest" href="images/site.webmanifest" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -58,7 +63,7 @@
     ></script>
   </head>
 
-  <body class="bg-gray-50 content-hidden">
+  <body class="bg-gray-50">
     <!-- OVERLAY LOADER (Same as before) -->
     <div id="aeh-loader" class="aeh-loader-overlay">
       <div class="loader-content">
@@ -154,7 +159,7 @@
             </div>
           </div>
 
-          <!-- UGANDA FACULTIES: COMPLETE DATA -->
+          <!-- UGANDA FACULTIES -->
           <div class="portal-faculties-area">
             <div class="faculties-header">
               <p class="blue-tag">ACADEMICS</p>
@@ -194,6 +199,7 @@
                   <a
                     href="https://www.cavendish.ac.ug/faculties/faculty-of-law/"
                     class="pillar-link"
+                    target="_blank"
                     >Official Faculty Page
                     <i class="fa-solid fa-arrow-right"></i
                   ></a>
@@ -211,6 +217,7 @@
                   <a
                     href="https://www.cavendish.ac.ug/faculties/faculty-of-business-and-management/"
                     class="pillar-link"
+                    target="_blank"
                     >Official Faculty Page
                     <i class="fa-solid fa-arrow-right"></i
                   ></a>
@@ -228,6 +235,7 @@
                   <a
                     href="https://www.cavendish.ac.ug/faculties/faculty-of-science-and-technology/"
                     class="pillar-link"
+                    target="_blank"
                     >Official Faculty Page
                     <i class="fa-solid fa-arrow-right"></i
                   ></a>
@@ -251,6 +259,7 @@
                   <a
                     href="https://www.cavendish.ac.ug/faculties/faculty-of-socio-economic-sciences/"
                     class="pillar-link"
+                    target="_blank"
                     >Official Faculty Page
                     <i class="fa-solid fa-arrow-right"></i
                   ></a>
@@ -273,6 +282,7 @@
                   <a
                     href="https://www.cavendish.ac.ug/faculties/school-of-post-graduate-studies-and-research"
                     class="pillar-link"
+                    target="_blank"
                     >Official Faculty Page
                     <i class="fa-solid fa-arrow-right"></i
                   ></a>
@@ -305,22 +315,25 @@
               <h2 class="section-main-title">University <em>Leadership</em></h2>
             </div>
 
-            <!-- 3-Column Grid (No Swiper needed for 3 leaders, looks more stable) -->
+            <!-- 3-Column Grid for leadership -->
             <div class="leadership-grid">
               <!-- Leader 01 -->
               <div class="team-card">
                 <div class="team-card-visual">
-                  <!-- Replace with actual images -->
-                  <img src="images/team.jpg" alt="Prof. Olubayi Olubayi" />
+                  <img
+                    src="images/chancellor-cuu.jpg"
+                    alt="H.E. Dr. Goodluck Jonathan"
+                  />
                   <div class="visual-overlay"></div>
                 </div>
                 <div class="team-card-info">
                   <p class="team-member-title">Chancellor</p>
-                  <h3 class="team-member-name">Prof. Olubayi Olubayi</h3>
+                  <h3 class="team-member-name">Dr. Goodluck Jonathan</h3>
                   <div class="title-line"></div>
                   <p class="team-member-bio">
-                    A distinguished scientist and educator, providing strategic
-                    academic oversight and vision for the university's growth.
+                    A distinguished scholar and former academic lecturer holding
+                    a PhD in Zoology. Dr. Jonathan oversees the strategic and
+                    ethical direction of CUU’s academic mission.
                   </p>
                 </div>
               </div>
@@ -328,16 +341,21 @@
               <!-- Leader 02 -->
               <div class="team-card">
                 <div class="team-card-visual">
-                  <img src="images/team.jpg" alt="Prof. John F. Mugisha" />
+                  <img
+                    src="images/vice-chancellor-cuu.jpg"
+                    alt="Dr. Olive Sabiiti"
+                  />
                   <div class="visual-overlay"></div>
                 </div>
                 <div class="team-card-info">
                   <p class="team-member-title">Vice Chancellor</p>
-                  <h3 class="team-member-name">Prof. John F. Mugisha</h3>
+                  <h3 class="team-member-name">Dr. Olive Sabiiti</h3>
                   <div class="title-line"></div>
                   <p class="team-member-bio">
-                    Responsible for the overall academic leadership, ensuring
-                    the highest standards of education and research integrity.
+                    A distinguished legal scholar and Commonwealth Scholar with
+                    a PhD from the University of Manchester. Dr. Sabiiti
+                    provides expert academic and administrative leadership to
+                    CUU.
                   </p>
                 </div>
               </div>
@@ -345,16 +363,20 @@
               <!-- Leader 03 -->
               <div class="team-card">
                 <div class="team-card-visual">
-                  <img src="images/team.jpg" alt="David Nama" />
+                  <img
+                    src="images/executive-director-cuu.jpg"
+                    alt="Mr. David Mutabanura"
+                  />
                   <div class="visual-overlay"></div>
                 </div>
                 <div class="team-card-info">
                   <p class="team-member-title">Executive Director</p>
-                  <h3 class="team-member-name">David Nama</h3>
+                  <h3 class="team-member-name">Mr. David Mutabanura</h3>
                   <div class="title-line"></div>
                   <p class="team-member-bio">
-                    Leads operational management, focusing on institutional
-                    excellence and sustainable student success.
+                    An operational strategist with over 20 years of commercial
+                    experience. Mr. Mutabanura directs the financial and
+                    administrative functions of CUU with institutional rigor.
                   </p>
                 </div>
               </div>
@@ -521,17 +543,22 @@
               <!-- Leader 01 -->
               <div class="team-card">
                 <div class="team-card-visual">
-                  <img src="images/team.jpg" alt="H.E. Kenneth Kaunda" />
+                  <img
+                    src="images/vice-chancellor-cuz.jpg"
+                    alt="Prof. Welani Chilengwe"
+                  />
                   <div class="visual-overlay"></div>
                 </div>
                 <div class="team-card-info">
-                  <p class="team-member-title">Chancellor (Posthumous)</p>
-                  <h3 class="team-member-name">H.E. Kenneth Kaunda</h3>
+                  <p class="team-member-title">Vice Chancellor</p>
+                  <h3 class="team-member-name">Prof. Welani Chilengwe</h3>
                   <div class="title-line"></div>
                   <p class="team-member-bio">
-                    The first President of Zambia, serving as a guiding
-                    inspiration and foundational figure for the university's
-                    vision.
+                    A seasoned academic leader and retired military officer,
+                    Prof. Chilengwe drives Cavendish University's mission of
+                    providing market-relevant education. He focuses on fostering
+                    international academic partnerships and advancing CUZ's
+                    status as a premier Tier 1 institution in Zambia.
                   </p>
                 </div>
               </div>
@@ -539,16 +566,20 @@
               <!-- Leader 02 -->
               <div class="team-card">
                 <div class="team-card-visual">
-                  <img src="images/team.jpg" alt="Dr. Alice Nkore" />
+                  <img src="images/dp-vc-cuz.webp" alt="Prof. Donald Chungu" />
                   <div class="visual-overlay"></div>
                 </div>
                 <div class="team-card-info">
-                  <p class="team-member-title">Vice Chancellor</p>
-                  <h3 class="team-member-name">Dr. Alice Nkore</h3>
+                  <p class="team-member-title">Deputy Vice Chancellor</p>
+                  <h3 class="team-member-name">Prof. Donald Chungu</h3>
                   <div class="title-line"></div>
                   <p class="team-member-bio">
-                    Dr. Nkore brings a wealth of academic and administrative
-                    experience, driving the vision and growth of the university.
+                    A distinguished academic and research specialist with
+                    extensive experience in higher education leadership. Prof.
+                    Chungu oversees the university's academic administration,
+                    curriculum development, and quality assurance, ensuring CUZ
+                    maintains its prestigious Tier 1 status while fostering
+                    international research collaborations.
                   </p>
                 </div>
               </div>
@@ -556,16 +587,23 @@
               <!-- Leader 03 -->
               <div class="team-card">
                 <div class="team-card-visual">
-                  <img src="images/team.jpg" alt="Reginald Rainey" />
+                  <img
+                    src="images/Reggie.jpg"
+                    alt="Mr. Reginald Rainey"
+                    style="object-position: center 15%"
+                  />
                   <div class="visual-overlay"></div>
                 </div>
                 <div class="team-card-info">
                   <p class="team-member-title">Executive Director</p>
-                  <h3 class="team-member-name">Reginald Rainey</h3>
+                  <h3 class="team-member-name">Mr. Reginald Rainey</h3>
                   <div class="title-line"></div>
                   <p class="team-member-bio">
-                    Oversees the operational excellence and strategic direction,
-                    ensuring a world-class experience for students and staff.
+                    An experienced executive leader with over 25 years of
+                    expertise in university operations and admissions. Mr.
+                    Rainey oversees the strategic and operational functions of
+                    CUZ, focusing on digital innovation and fostering global
+                    education partnerships to empower African youth
                   </p>
                 </div>
               </div>

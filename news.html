@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newsroom | Africa Education Holdings</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="news.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/site.webmanifest" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- OVERLAY LOADER -->
+    <div id="aeh-loader" class="aeh-loader-overlay">
+      <div class="loader-content">
+        <img src="images/logo_trans.png" alt="AEH" class="loader-logo-pulse" />
+      </div>
+    </div>
+    <!-- Dynamic Progress Nav -->
+    <nav class="sticky-nav">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <img
+            src="images/logo_trans.png"
+            alt="Africa Education Holdings"
+            class="logo-img"
+          />
+        </a>
+        <div class="nav-links">
+          <a href="purpose.html">Our Purpose</a>
+          <a href="impact.html">Impact</a>
+          <a href="network.html">Network</a>
+          <a href="team.html">Leadership</a>
+          <a href="#" class="nav-btn">Partner With Us</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="news-simple-hero">
+      <div class="container hero-flex-layout">
+        <!-- Left Side: Title & Tag -->
+        <div class="hero-title-area">
+          <p class="green-tag">INSIGHTS & UPDATES</p>
+          <h1>AEH <em>Newsroom.</em></h1>
+        </div>
+
+        <!-- Right Side: The Filter Strip -->
+        <div class="hero-filter-strip">
+          <div class="filter-inner">
+            <label>Filter By Topic</label>
+            <div class="select-container">
+              <select id="topicFilter">
+                <option value="all">All Insights</option>
+                <!-- Categories populated by JS -->
+              </select>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <p id="articleCount">Showing all stories</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="news-feed-section">
+      <div class="container" id="newsGrid">
+        <!-- Content injected here -->
+        <p class="loader-text">Fetching latest insights...</p>
+      </div>
+    </section>
+
+    <!-- START: Footer Section -->
+    <footer class="site-footer">
+      <div class="container mx-auto px-6 py-12">
+        <div class="footer-grid">
+          <!-- Column 1: Logo and About -->
+          <div class="footer-col">
+            <img
+              src="images/logo_trans.png"
+              alt="AEH Logo"
+              class="footer-logo mb-4"
+            />
+            <p class="text-gray-400">
+              Pioneering transformative and accessible education to unlock the
+              potential of Africa's youth.
+            </p>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="footer-col">
+            <h3 class="footer-title">Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="partnerships.html">Partnerships</a></li>
+              <li><a href="index.html#universities">Universities</a></li>
+              <!-- <li><a href="#blog">Blog</a></li> -->
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact Us -->
+          <div class="footer-col">
+            <h3 class="footer-title">Contact Us</h3>
+            <ul class="contact-info">
+              <li class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <span style="text-transform: none"
+                  >info@africaeducationholdings.com</span
+                >
+              </li>
+              <li class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>(+254) 732 188 413</span>
+              </li>
+              <li class="contact-item">
+                <i class="fa-solid fa-map-marker-alt"></i>
+                <span>Nairobi, Kenya</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Network Development -->
+          <div class="footer-col">
+            <h3 class="footer-title">AEH Network Development</h3>
+            <p class="text-gray-400">
+              AEH is actively looking to add institutions to its portfolio. If
+              you are interested in discussing possible partnerships, please
+              contact us.
+            </p>
+          </div>
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="footer-bottom">
+          <p class="copyright-text">
+            &copy; <span id="copyright-year"></span> Africa Education Holdings.
+            All Rights Reserved.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END: Footer Section -->
+
+    <script src="js/news-data.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        const news = await getNewsList();
+        const grid = document.getElementById("newsGrid");
+
+        if (news.length === 0) {
+          grid.innerHTML = "<p>No articles found.</p>";
+          return;
+        }
+
+        grid.innerHTML = news
+          .map(
+            (item) => `
+        <article class="news-listing-row">
+            <div class="n-text">
+                <p class="green-tag">${item.category}</p>
+                <h3><a href="article.html?slug=${item.id}">${item.title}</a></h3>
+                <p class="n-summary">${item.summary}</p>
+                <div class="n-footer">
+                    <span class="n-date">${item.date}</span>
+                    <a href="article.html?slug=${item.id}" class="pillar-link">
+                        Read Story <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="n-visual">
+                <div class="image-offset-wrapper">
+                    <!-- The Blue Architectural Block -->
+                    <div class="image-offset-bg bg-blue"></div>
+                    <div class="img-container">
+                        <img src="${item.image}" alt="${item.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="placeholder-icon" style="display:none;"><i class="fa-solid fa-book-open"></i></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    `,
+          )
+          .join("");
+      });
+    </script>
+  </body>
+</html>

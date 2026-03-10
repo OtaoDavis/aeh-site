@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News | Africa Education Holdings</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="news.css" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/site.webmanifest" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- NEW: Markdown Parser (Essential for Contentful Body text) -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </head>
+  <body class="bg-white">
+    <!-- Preloader handles the 'content-hidden' class -->
+    <div id="aeh-loader" class="aeh-loader-overlay">
+      <div class="loader-content">
+        <img src="images/logo_trans.png" class="loader-logo-pulse" />
+      </div>
+    </div>
+
+    <!-- Dynamic Progress Nav -->
+    <nav class="sticky-nav">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <img
+            src="images/logo_trans.png"
+            alt="Africa Education Holdings"
+            class="logo-img"
+          />
+        </a>
+        <div class="nav-links">
+          <a href="purpose.html">Our Purpose</a>
+          <a href="impact.html">Impact</a>
+          <a href="network.html">Network</a>
+          <a href="team.html">Leadership</a>
+          <a href="#" class="nav-btn">Partner With Us</a>
+        </div>
+      </div>
+    </nav>
+
+    <main id="articleApp">
+      <header class="article-hero-navy">
+        <div class="container">
+          <p class="green-tag" id="artCategory">Loading Category...</p>
+          <h1 id="artTitle">Loading Article...</h1>
+          <p id="artDate" class="text-bright-tag"></p>
+        </div>
+      </header>
+
+      <section class="article-body-section">
+        <div class="container article-split-grid">
+          <!-- LEFT SIDE: STICKY IMAGE -->
+          <div class="art-visual-side">
+            <div class="sticky-box">
+              <div class="img-container">
+                <!-- Image initially hidden until JS confirms it exists -->
+                <img id="artImg" src="" alt="" style="display: none" />
+                <!-- Placeholder shown by default, hidden by JS if image loads -->
+                <div id="artIcon" class="placeholder-icon">
+                  <i class="fa-solid fa-book-open"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE: SCROLLING CONTENT -->
+          <div class="art-content-side">
+            <div id="artContent" class="markdown-body">
+              <!-- Contentful Body Injected Here -->
+            </div>
+            <a href="news.html" class="back-link"
+              ><i class="fa-solid fa-arrow-left"></i> Back to Newsroom</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/news-data.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        const params = new URLSearchParams(window.location.search);
+        const slug = params.get("slug");
+
+        if (!slug) {
+          window.location.href = "news.html";
+          return;
+        }
+
+        const article = await getArticleBySlug(slug);
+
+        if (article) {
+          // 1. Text Content
+          document.title = `${article.title} | AEH News`;
+          document.getElementById("artTitle").innerText = article.title;
+          document.getElementById("artCategory").innerText = article.category;
+          document.getElementById("artDate").innerText = article.date;
+
+          // 2. Body Content (Parsing Markdown to HTML)
+          if (typeof marked !== "undefined") {
+            document.getElementById("artContent").innerHTML = marked.parse(
+              article.content,
+            );
+          } else {
+            document.getElementById("artContent").innerText = article.content;
+          }
+
+          // 3. Image Handling
+          const imgEl = document.getElementById("artImg");
+          const iconEl = document.getElementById("artIcon");
+
+          if (article.image && article.image !== "") {
+            imgEl.src = article.image;
+            imgEl.style.display = "block";
+            iconEl.style.display = "none";
+          } else {
+            imgEl.style.display = "none";
+            iconEl.style.display = "flex";
+          }
+        } else {
+          document.getElementById("artTitle").innerText = "Article not found.";
+        }
+      });
+    </script>
+  </body>
+</html>

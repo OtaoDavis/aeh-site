@@ -15,7 +15,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
   </head>
-  <body class="bg-gray-50 content-hidden">
+  <body class="bg-gray-50">
     <!-- OVERLAY LOADER -->
     <div id="aeh-loader" class="aeh-loader-overlay">
       <div class="loader-content">
@@ -438,5 +438,15 @@
     <!-- END: Footer Section -->
 
     <script src="js/script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const preloader = document.getElementById("aeh-loader");
+        setTimeout(() => {
+          if (preloader) preloader.classList.add("loader-finished");
+          document.body.classList.remove("content-hidden");
+        }, 1000);
+      });
+    </script>
   </body>
 </html>

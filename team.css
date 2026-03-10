@@ -22,7 +22,7 @@
 /* --- SWIPER SECTION --- */
 .leadership-carousel-section {
   padding: 20px 5%;
-  background-color: var(--aeh-light-back); /* #f5f9fb */
+  background-color: var(--aeh-dark-background);
 }
 
 .section-header-between {
