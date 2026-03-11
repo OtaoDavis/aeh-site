@@ -1,0 +1,425 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+:root {
+  --blue-col: #3998bd;
+  --green-col: #8ec86f;
+  --dark-background: #d6e9ec;
+  --light-back: #f5f9fb;
+  --white: #fff;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
+
+/* --- START: Partnerships Page Styles --- */
+
+/* Hero Section for Partnerships Page */
+.partnerships-hero-section {
+  height: 50vh; /* A shorter, impactful hero */
+}
+
+/* Styling for each partnership type section (Universities, K-12, etc.) */
+.partnership-type-section {
+  padding: 6rem 1.5rem;
+}
+
+.partnership-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Stack on mobile */
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .partnership-grid {
+    grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+    gap: 4rem;
+  }
+  /* Alternating layout: image on the left for even-numbered sections */
+  .partnership-type-section:nth-child(even) .partnership-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .partnership-type-section:nth-child(even)
+    .partnership-grid
+    .partnership-image {
+    grid-row: 1;
+  }
+}
+
+.partnership-text h2 {
+  font-size: 2.5rem;
+  color: #0d2c4f;
+  margin-bottom: 1.5rem;
+}
+
+.partnership-text p {
+  color: #5a6a7b;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.partnership-text ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+
+.partnership-text ul li {
+  color: #5a6a7b;
+  padding-left: 2rem;
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+/* Custom checkmark icon for list items */
+.partnership-text ul li::before {
+  content: "\f00c"; /* Font Awesome checkmark unicode */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: var(--green-col);
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+
+.partnership-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.partnership-contact-btn {
+  display: inline-block;
+  background-color: var(--blue-col);
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+}
+
+.partnership-contact-btn:hover {
+  background-color: var(--green-col);
+  transform: translateY(-2px);
+}
+
+/* --- END: Partnerships Page Styles --- */
+
+/* --- START: Get In Touch Section Styles --- */
+
+.contact-section {
+  background-color: var(--dark-background);
+  padding: 2rem 1.5rem;
+}
+
+.contact-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+.contact-main-title {
+  font-size: 2.5rem;
+  color: #0d2c4f;
+  margin-bottom: 1rem;
+}
+
+.contact-intro {
+  font-size: 1.1rem;
+  color: #5a6a7b;
+  line-height: 1.7;
+}
+
+.contact-form {
+  background-color: white;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: 1.5rem;
+}
+
+/* Ensure inputs match your institutional style */
+.form-input,
+.form-select,
+.form-textarea {
+  border-bottom: 1px solid rgba(13, 44, 79, 0.2) !important;
+  text-transform: none !important; /* Emails and names shouldn't be auto-capitalized */
+}
+
+/* Two columns for larger screens */
+@media (min-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Makes an item span the full width of the grid */
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-label {
+  color: #5a6a7b;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-family: "Merriweather", serif;
+  font-size: 1rem;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #9ca3af;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--blue-col);
+  box-shadow: 0 0 0 3px rgba(57, 152, 189, 0.2);
+}
+
+.form-textarea {
+  resize: vertical; /* Allows vertical resizing only */
+}
+
+.button-wrapper {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.submit-button {
+  background-color: var(--blue-col);
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.8rem 2.5rem;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+}
+
+.submit-button:hover {
+  background-color: var(--green-col);
+  transform: translateY(-2px);
+}
+
+/* --- END: Get In Touch Section Styles --- */
+
+/* --- START: Footer Section Styles --- */
+
+.site-footer {
+  background-color: #0d2c4f; /* A dark, professional blue */
+  color: #a0aec0; /* Light gray text for readability */
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+/* Responsive grid for tablets and desktops */
+@media (min-width: 640px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer-logo {
+  height: 4rem; /* 64px */
+  filter: brightness(0) invert(1); /* Makes the logo white */
+}
+
+.footer-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.25rem;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: #a0aec0;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--green-col);
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.contact-item i {
+  color: var(--green-col);
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #2d3748; /* Darker separator line */
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column; /* Stack on mobile */
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row; /* Side-by-side on larger screens */
+    justify-content: space-between;
+  }
+}
+
+.copyright-text {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.25rem;
+  transition:
+    color 0.3s,
+    transform 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--green-col);
+  transform: translateY(-2px);
+}
+
+/* --- END: Footer Section Styles --- */
+
+/* --- START: Form Select (Dropdown) Styles --- */
+
+.form-select {
+  /* Base styles copied from .form-input for consistency */
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-family: "Merriweather", serif;
+  font-size: 1rem;
+  background-color: white;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+
+  /* Remove default browser appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Add custom dropdown arrow */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem; /* Add space for the arrow */
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: var(--blue-col);
+  box-shadow: 0 0 0 3px rgba(57, 152, 189, 0.2);
+}
+
+/* --- END: Form Select (Dropdown) Styles --- */
+
+@media (min-width: 768px) {
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Changed to 3 columns */
+    gap: 2rem;
+  }
+
+  /* Make Subject and Message span full width to keep the top row clean */
+  #subject,
+  .form-group:nth-child(4),
+  .full-width {
+    grid-column: span 3;
+  }
+}

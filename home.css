@@ -50,20 +50,46 @@
 } */
 
 /* --- THE VISION STRIP --- */
+
 .vision-strip {
-  padding: 40px 0;
-  background-color: var(--aeh-light-back);
+  padding: 20px 0;
+  background-color: var(--aeh-light-back); /* #f5f9fb */
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+
+  /* 1. Ensure the whole section behaves as a centered flex box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.vision-strip .container {
+  /* 2. Force the container to center its children regardless of its width */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.vision-content {
+  /* 3. Restricted width for readability, but margin auto to keep it centered */
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+
+  /* 4. Align all items (tag, h2, attribution) to the center */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
 .institutional-quote {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  /* clamp makes the font size fluid so it won't break on small screens */
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
   line-height: 1.4;
   color: var(--aeh-navy);
-  max-width: 1000px;
-  margin: 0 auto 20px auto;
+  margin: 20px 0;
   text-transform: none !important;
 }
 
@@ -73,6 +99,12 @@
   color: var(--aeh-blue);
 }
 
+.green-tag {
+  /* Force centering of the tag */
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .quote-attribution {
   font-family: "Inter", sans-serif;
   font-weight: 700;
@@ -80,6 +112,17 @@
   letter-spacing: 3px;
   font-size: 0.7rem;
   color: var(--aeh-green);
+  margin-top: 10px;
+}
+
+/* RESPONSIVE TWEAK */
+@media (max-width: 768px) {
+  .vision-strip {
+    padding: 60px 0;
+  }
+  .institutional-quote {
+    max-width: 100%; /* Use full width on mobile */
+  }
 }
 
 /* --- REFINED VIDEO SECTION --- */
