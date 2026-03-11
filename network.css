@@ -504,13 +504,34 @@ path {
   margin-bottom: 10px;
 }
 
+/* --- FIXED: PREVENTS NAME LINE BREAKS --- */
 .team-member-name {
   font-family: "EB Garamond", serif;
-  font-size: 1.8rem;
+
+  /* 1. Fluid Font Size: Scales between 1.4rem and 1.7rem based on screen width */
+  font-size: clamp(1.4rem, 2vw, 1.7rem);
+
   color: var(--aeh-navy);
   line-height: 1.2;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   text-transform: none !important;
+
+  /* 2. Force to a single line */
+  white-space: nowrap;
+
+  /* 3. Letter spacing: A tiny negative value tightens the name for a premium look */
+  letter-spacing: -0.02em;
+
+  /* 4. Safety: If the name is STILL too long, it will hide the overflow 
+     instead of breaking the card's height */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds '...' if it ever hits the edge */
+}
+
+/* Optional: If you want to give the name even more room, 
+   reduce the side padding of the info box slightly */
+.team-card-info {
+  padding: 30px 20px; /* Reduced from 25px or 30px to give text more width */
 }
 
 .title-line {
