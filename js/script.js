@@ -67,12 +67,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // --- 4. MOBILE MENU LOGIC ---
-  if (btn && menu) {
-    btn.addEventListener("click", (e) => {
+  // --- 4. HAMBURGER MENU LOGIC ---
+  const hamburgerBtn = document.querySelector('.hamburger');
+  const navLinksEl = document.querySelector('.nav-links');
+
+  if (hamburgerBtn && navLinksEl) {
+    hamburgerBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      btn.classList.toggle("open");
-      menu.classList.toggle("hidden");
+      document.body.classList.toggle('nav-open');
+    });
+
+    // Close menu when a nav link is clicked
+    navLinksEl.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        document.body.classList.remove('nav-open');
+      });
+    });
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      if (document.body.classList.contains('nav-open') &&
+          !navLinksEl.contains(e.target) &&
+          !hamburgerBtn.contains(e.target)) {
+        document.body.classList.remove('nav-open');
+      }
     });
   }
 
@@ -116,10 +134,6 @@ document.addEventListener("DOMContentLoaded", () => {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-  });
-  const slides = document.querySelectorAll(".hero-swiper .swiper-slide");
-  slides.forEach((slide) => {
-    slide.classList.add("min-h-[80vh]");
   });
 
   const uniPortfolio = new Swiper(".university-portfolio-swiper", {

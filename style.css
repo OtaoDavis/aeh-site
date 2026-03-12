@@ -647,3 +647,256 @@ em,
 }
 
 /* --- END: Footer Section Styles --- */
+
+/* ============================================
+   TAILWIND REPLACEMENT UTILITIES
+   (Replacing cdn.tailwindcss.com)
+   ============================================ */
+.bg-gray-50 { background-color: #f9fafb; }
+.bg-white { background-color: #fff; }
+.bg-black { background-color: #000; }
+.bg-cover { background-size: cover; }
+.bg-center { background-position: center; }
+.bg-opacity-50 { opacity: 0.5; }
+.text-white { color: #fff !important; }
+.text-gray-400 { color: #9ca3af; }
+.font-bold { font-weight: 700; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+.z-0 { z-index: 0; }
+.z-10 { z-index: 10; }
+.z-20 { z-index: 20; }
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.text-center { text-align: center; }
+.h-full { height: 100%; }
+.w-full { width: 100%; }
+.overflow-hidden { overflow: hidden; }
+.object-cover { object-fit: cover; }
+.object-top { object-position: top; }
+.object-center { object-position: center; }
+.inline-block { display: inline-block; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-5 { margin-bottom: 1.25rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mb-10 { margin-bottom: 2.5rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.px-8 { padding-left: 2rem; padding-right: 2rem; }
+.p-6 { padding: 1.5rem; }
+.max-w-2xl { max-width: 42rem; }
+.max-w-3xl { max-width: 48rem; }
+.max-w-4xl { max-width: 56rem; }
+.rounded-full { border-radius: 9999px; }
+.transition-colors { transition: color 0.3s; }
+.duration-300 { transition-duration: 0.3s; }
+.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+.text-5xl { font-size: 3rem; line-height: 1; }
+.text-7xl { font-size: 4.5rem; line-height: 1; }
+.opacity-90 { opacity: 0.9; }
+
+/* Responsive text utilities */
+@media (min-width: 768px) {
+  .md\:text-6xl { font-size: 3.75rem; line-height: 1; }
+  .md\:text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+  .md\:text-7xl { font-size: 4.5rem; line-height: 1; }
+  .md\:text-l { font-size: 1.125rem; }
+}
+
+/* ============================================
+   HAMBURGER MENU
+   ============================================ */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+  position: relative;
+}
+.hamburger .bar {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: var(--aeh-navy);
+  margin: 6px 0;
+  transition: all 0.35s cubic-bezier(0.77, 0.2, 0.05, 1);
+  border-radius: 2px;
+}
+/* Animated X on open */
+body.nav-open .hamburger .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+body.nav-open .hamburger .bar:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+body.nav-open .hamburger .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* Desktop: hamburger hidden, nav-links flex */
+/* Mobile: hamburger visible, nav-links become fullscreen overlay */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  body.nav-open .nav-links {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+  .nav-links a {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+  }
+  .nav-btn {
+    margin-top: 10px;
+  }
+  .sticky-nav {
+    padding: 15px 0;
+  }
+}
+
+/* ============================================
+   ENHANCED RESPONSIVE: SMALL SCREENS
+   ============================================ */
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px;
+    text-align: center;
+    padding: 0 5%;
+  }
+  .hero-text h1 {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+  }
+  .hero-lead {
+    font-size: 1.1rem;
+    max-width: 100%;
+  }
+  .cta-wrap {
+    display: flex;
+    justify-content: center;
+  }
+  .hero-image-stack {
+    max-width: 100%;
+  }
+  .img-large img {
+    height: 350px;
+  }
+  .floating-stat {
+    right: 0;
+    bottom: -20px;
+    padding: 25px;
+  }
+  .floating-stat .stat-num {
+    font-size: 2rem;
+  }
+  .section-header-center h2 {
+    font-size: 2.2rem;
+  }
+  .section-intro-text {
+    font-size: 1rem;
+  }
+  .p-content h3 {
+    font-size: 2rem;
+  }
+  .p-content p {
+    font-size: 1rem;
+  }
+  .glance-header h2 {
+    font-size: 2rem;
+  }
+  .impact-heading {
+    font-size: 2rem;
+  }
+  .impact-description p {
+    font-size: 1rem;
+  }
+  .overlay-text {
+    font-size: 2.5rem;
+  }
+  .contact-title {
+    font-size: 2.5rem;
+  }
+  .contact-lead {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  .contact-form-wrapper {
+    padding: 30px 20px;
+  }
+  .btn-initiate {
+    align-self: stretch;
+    text-align: center;
+  }
+  .section-header-between {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .institutional-heading {
+    font-size: 2rem;
+  }
+  .asset-title {
+    font-size: 1.8rem;
+  }
+  .news-header h2 {
+    font-size: 2.5rem;
+  }
+  .footer-grid {
+    text-align: center;
+  }
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-item {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-swiper .text-content-container {
+    padding: 2rem 1rem;
+  }
+  .hero-swiper .text-content-container h1 {
+    font-size: 1.5rem !important;
+  }
+  .hero-swiper .text-content-container p {
+    font-size: 0.9rem;
+  }
+  .hero-swiper .text-content-container a {
+    font-size: 0.75rem;
+    padding: 10px 20px;
+  }
+}
