@@ -74,7 +74,7 @@ em,
 }
 
 .loader-logo-pulse {
-  height: 80px;
+  height: 100px;
   width: auto;
   animation: aehPulse 2s infinite ease-in-out;
 }
@@ -119,27 +119,37 @@ em,
   padding: 0 5%;
 }
 
+.nav-container,
+.site-footer .container {
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Container for the logo */
 .logo {
   display: flex;
   align-items: center;
   text-decoration: none;
-  flex: 1;
+  flex: 0 0 auto;
 }
 
 .sticky-nav .logo-img {
-  height: 60px;
+  height: 85px;
   width: auto;
   display: block;
   margin-top: -35px;
   margin-bottom: -35px;
-  margin-left: -35px;
-  transform: scale(1.1);
-  transform-origin: left center;
+  transform: none;
+  object-fit: contain;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
 }
+
 .sticky-nav .logo-img:hover {
-  transform: scale(1.15);
-  transition: transform 0.8s ease;
-  filter: grayscale(50%);
+  transform: scale(1.05);
+  filter: grayscale(30%);
 }
 .nav-links {
   display: flex;
@@ -184,6 +194,22 @@ em,
   width: 10px;
   height: 2px;
   background-color: var(--aeh-green);
+  margin: 4px auto 0;
+  border-radius: 2px;
+}
+
+/* Partnerships nav */
+.nav-links a.nav-btn.active-link {
+  color: #ffffff !important;
+}
+
+/* 2. Ensure the green underline still appears below the button */
+.nav-links a.nav-btn.active-link::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 2px;
+  background-color: var(--aeh-white);
   margin: 4px auto 0;
   border-radius: 2px;
 }
@@ -565,8 +591,19 @@ em,
 }
 
 .footer-logo {
-  height: 70px; /* 64px */
-  filter: brightness(0) invert(1); /* Makes the logo white */
+  /* Match the height of the nav logo exactly */
+  height: 85px;
+  width: auto;
+  display: block;
+
+  /* Keeps it aligned to the left of its container */
+  margin-left: 0;
+  margin-bottom: 1.5rem;
+
+  /* Makes the logo white for the dark footer */
+  filter: brightness(0) invert(1);
+
+  object-fit: contain;
 }
 
 .footer-title {
