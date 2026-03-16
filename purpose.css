@@ -334,7 +334,7 @@
 
 .solution-statement p {
   font-family: "EB Garamond", serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.4;
   color: var(--aeh-white);
   font-style: italic;
@@ -504,25 +504,62 @@ h4 {
   color: var(--text);
 }
 
-/* Outcomes Grid */
-.mini-pillar-grid {
-  display: flex;
-  gap: 60px;
+/* --- STUDENT OUTCOMES GROUPING --- */
+
+.outcomes-group-container {
+  margin-top: 50px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border); /* Separates outcomes from the lead text */
+  max-width: 600px;
 }
 
-.p-label {
+.p-label-group {
   font-size: 0.7rem;
   font-weight: 800;
+  text-transform: uppercase !important;
   color: var(--aeh-blue);
   letter-spacing: 2px;
-  margin-bottom: 10px;
-  text-transform: uppercase !important;
+  margin-bottom: 25px;
+  display: block;
+}
+
+.mini-pillar-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .m-pillar h4 {
-  font-size: 2rem;
   font-family: "EB Garamond", serif;
+  font-size: 1.8rem;
   color: var(--aeh-navy);
+  margin: 0;
+  text-transform: none !important;
+}
+
+/* The Architectural Divider between words */
+.pillar-divider {
+  width: 1px;
+  height: 30px;
+  background-color: var(--border-dark);
+}
+
+/* RESPONSIVE FIX */
+@media (max-width: 768px) {
+  .mini-pillar-grid {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .pillar-divider {
+    display: none; /* Hide vertical lines on mobile stack */
+  }
+
+  .m-pillar h4 {
+    font-size: 1.5rem;
+  }
 }
 
 /* ROI Offset Card Styling */

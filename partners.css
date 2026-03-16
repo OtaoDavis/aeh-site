@@ -9,7 +9,7 @@ html {
   outline: none;
   border: none;
   text-decoration: none;
-  text-transform: capitalize;
+  text-transform: none;
   transition: 0.2s linear;
 }
 :root {
@@ -261,117 +261,6 @@ h6 {
 }
 
 /* --- END: Get In Touch Section Styles --- */
-
-/* --- START: Footer Section Styles --- */
-
-.site-footer {
-  background-color: #0d2c4f; /* A dark, professional blue */
-  color: #a0aec0; /* Light gray text for readability */
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1fr; /* Single column on mobile */
-  gap: 2.5rem;
-  padding-bottom: 3rem;
-}
-
-/* Responsive grid for tablets and desktops */
-@media (min-width: 640px) {
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 1024px) {
-  .footer-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-.footer-logo {
-  height: 4rem; /* 64px */
-  filter: brightness(0) invert(1); /* Makes the logo white */
-}
-
-.footer-title {
-  font-family: "Playfair Display", serif;
-  font-size: 1.25rem;
-  color: white;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-}
-
-.footer-links li {
-  margin-bottom: 0.75rem;
-}
-
-.footer-links a {
-  color: #a0aec0;
-  transition: color 0.3s;
-}
-
-.footer-links a:hover {
-  color: var(--green-col);
-}
-
-.contact-info {
-  list-style: none;
-  padding: 0;
-}
-
-.contact-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-}
-
-.contact-item i {
-  color: var(--green-col);
-  font-size: 1rem;
-  margin-top: 5px;
-}
-
-.footer-bottom {
-  border-top: 1px solid #2d3748; /* Darker separator line */
-  padding-top: 2rem;
-  display: flex;
-  flex-direction: column; /* Stack on mobile */
-  align-items: center;
-  gap: 1rem;
-}
-
-@media (min-width: 768px) {
-  .footer-bottom {
-    flex-direction: row; /* Side-by-side on larger screens */
-    justify-content: space-between;
-  }
-}
-
-.copyright-text {
-  font-size: 0.9rem;
-  text-align: center;
-}
-
-.social-links {
-  display: flex;
-  gap: 1rem;
-}
-
-.social-links a {
-  color: white;
-  font-size: 1.25rem;
-  transition:
-    color 0.3s,
-    transform 0.3s;
-}
-
-.social-links a:hover {
-  color: var(--green-col);
-  transform: translateY(-2px);
-}
-
-/* --- END: Footer Section Styles --- */
 
 /* --- START: Form Select (Dropdown) Styles --- */
 
