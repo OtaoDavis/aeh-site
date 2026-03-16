@@ -22,7 +22,8 @@
 
 .vision-strip {
   padding: 20px 0;
-  background-color: var(--aeh-light-back); /* #f5f9fb */
+  background-color: var(--aeh-light-back);
+  /* #f5f9fb */
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 
@@ -89,15 +90,17 @@
   .vision-strip {
     padding: 60px 0;
   }
+
   .institutional-quote {
-    max-width: 100%; /* Use full width on mobile */
+    max-width: 100%;
+    /* Use full width on mobile */
   }
 }
 
 /* --- REFINED VIDEO SECTION --- */
 .video-manifesto-refined {
   position: relative;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,7 +113,8 @@
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  object-position: center 15%; /* Perfect head framing */
+  object-position: center 15%;
+  /* Perfect head framing */
 }
 
 .manifesto-bg-v2 {
@@ -126,11 +130,9 @@
 .manifesto-overlay-v2 {
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    circle,
-    rgba(13, 44, 79, 0.4) 0%,
-    rgba(13, 44, 79, 0.85) 100%
-  );
+  background: radial-gradient(circle,
+      rgba(13, 44, 79, 0.4) 0%,
+      rgba(13, 44, 79, 0.85) 100%);
   z-index: 2;
 }
 
@@ -176,7 +178,8 @@
 }
 
 .play-trigger-btn:hover .play-text {
-  letter-spacing: 6px; /* Subtle high-end expansion */
+  letter-spacing: 6px;
+  /* Subtle high-end expansion */
   color: var(--aeh-green);
 }
 
@@ -185,9 +188,11 @@
   .video-manifesto-refined {
     height: 50vh;
   }
+
   .institutional-quote {
     font-size: 1.5rem;
   }
+
   .play-icon-wrap {
     width: 70px;
     height: 70px;
@@ -199,9 +204,11 @@
 .video-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(13, 44, 79, 0.95); /* Deep navy tint */
+  background: rgba(13, 44, 79, 0.95);
+  /* Deep navy tint */
   z-index: 9999;
-  display: none; /* Hidden until clicked */
+  display: none;
+  /* Hidden until clicked */
   align-items: center;
   justify-content: center;
   padding: 20px;
@@ -222,7 +229,8 @@
 
 .iframe-wrapper {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  padding-bottom: 56.25%;
+  /* 16:9 Aspect Ratio */
   height: 0;
 }
 
@@ -254,6 +262,7 @@
   padding: 20px 0 50px 0;
   background: var(--aeh-white);
 }
+
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -263,11 +272,13 @@
   margin: 0 auto;
   padding: 0% 5%;
 }
+
 .hero-text h1 {
   font-size: clamp(3rem, 6vw, 6rem);
   line-height: 1;
   margin-bottom: 30px;
 }
+
 .hero-lead {
   font-size: 1.4rem;
   font-weight: 300;
@@ -279,6 +290,7 @@
 .hero-image-stack {
   position: relative;
 }
+
 .img-large img {
   width: 100%;
   height: 570px;
@@ -294,12 +306,14 @@
   padding: 40px;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
 }
+
 .stat-num {
   display: block;
   font-family: "EB Garamond";
   font-size: 3rem;
   line-height: 1;
 }
+
 .floating-stat p {
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -307,6 +321,7 @@
   font-weight: 700;
   margin-top: 5px;
 }
+
 /* section 2 end */
 
 /* --- Our solution section --- */
@@ -378,6 +393,11 @@
   max-width: 95%;
 }
 
+.p-content p.pillar-body-sm {
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
 .pillar-link {
   font-family: "Inter", sans-serif;
   font-weight: 700;
@@ -403,6 +423,7 @@
 .pillar-link:hover i {
   transform: translateX(5px);
 }
+
 /* our solutions section end */
 
 /* --- AEH AT A GLANCE SECTION --- */
@@ -456,7 +477,8 @@
   justify-content: flex-end;
   position: relative;
   overflow: hidden;
-  border-left: 1px solid var(--aeh-blue); /* Subtle institutional line */
+  border-left: 1px solid var(--aeh-blue);
+  /* Subtle institutional line */
   transition: all 0.4s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
@@ -509,7 +531,8 @@
 }
 
 .glance-card.high-impact:hover {
-  background-color: #2a475e; /* Slightly lighter navy */
+  background-color: #2a475e;
+  /* Slightly lighter navy */
 }
 
 /* Subtle Background Icon for the large card */
@@ -528,11 +551,13 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
   }
+
   .glance-card.high-impact {
     grid-column: span 2;
     grid-row: span 1;
     padding: 60px 40px;
   }
+
   .glance-card.high-impact .stat-num {
     font-size: 4rem;
   }
@@ -542,22 +567,26 @@
   .glance-grid {
     grid-template-columns: 1fr;
   }
+
   .glance-card.high-impact {
     grid-column: span 1;
   }
+
   .glance-header h2 {
     font-size: 2.5rem;
   }
 }
+
 /* AEH at a Glance section end */
 .aeh-impact {
-  padding: 20px 5%;
+  padding: 50px 5%;
   background-color: var(--aeh-dark-blue);
 }
 
 .impact-grid {
   display: grid;
-  grid-template-columns: 1.25fr 1fr; /* Asymmetrical grid favoring the image */
+  grid-template-columns: 1.25fr 1fr;
+  /* Asymmetrical grid favoring the image */
   gap: 100px;
   align-items: center;
 }
@@ -566,7 +595,8 @@
 .visual-wrapper {
   position: relative;
   width: 100%;
-  height: 650px; /* Institutional height */
+  height: 650px;
+  /* Institutional height */
   overflow: visible;
 }
 
@@ -577,7 +607,8 @@
   display: block;
   position: relative;
   z-index: 2;
-  filter: brightness(0.85); /* Darkens image slightly to make white text pop */
+  filter: brightness(0.85);
+  /* Darkens image slightly to make white text pop */
 }
 
 /* Branded Offset Border */
@@ -600,7 +631,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(13, 44, 79, 0.2); /* AEH Navy tint */
+  background: rgba(13, 44, 79, 0.2);
+  /* AEH Navy tint */
 }
 
 .play-trigger {
@@ -652,25 +684,12 @@
   font-weight: 600;
 }
 
-/* Caption Footer */
-.impact-sub-caption {
-  margin-top: 20px;
-  text-align: center;
-  border-top: 1px solid var(--border);
-  padding-top: 40px;
-}
-
-.impact-sub-caption p {
-  font-family: "EB Garamond", serif;
-  font-size: 1.4rem;
-  color: var(--aeh-dark-blue);
-}
-
 /* RESPONSIVE */
 @media (max-width: 1200px) {
   .impact-grid {
     gap: 60px;
   }
+
   .overlay-text {
     font-size: 3.5rem;
   }
@@ -680,13 +699,16 @@
   .impact-grid {
     grid-template-columns: 1fr;
   }
+
   .visual-wrapper {
     height: 450px;
   }
+
   .visual-accent-border {
     left: 0;
     top: 20px;
   }
+
   .impact-heading {
     font-size: 2.8rem;
   }
@@ -751,7 +773,8 @@
   grid-template-columns: 1fr 1fr;
   width: 100%;
   /* CALCULATED HEIGHT: Viewport minus Nav height (assuming 80px) and Header height */
-  min-height: 600px; /* Safety fallback for small screens */
+  min-height: 600px;
+  /* Safety fallback for small screens */
   border-top: 1px solid var(--aeh-dark-blue);
 }
 
@@ -895,9 +918,11 @@
   margin-left: 10px;
   transition: transform 0.3s;
 }
+
 .btn-text-reveal:hover {
   color: var(--aeh-green);
 }
+
 .btn-text-reveal:hover i {
   transform: translateX(5px);
 }
@@ -907,6 +932,7 @@
   .asset-title {
     font-size: 2.5rem;
   }
+
   .asset-details {
     padding: 60px 5%;
   }
@@ -917,9 +943,11 @@
     grid-template-columns: 1fr;
     min-height: auto;
   }
+
   .asset-visual {
     height: 400px;
   }
+
   .faculty-list {
     grid-template-columns: 1fr;
   }
@@ -966,7 +994,8 @@
 /* The Layout Grid */
 .news-grid {
   display: grid;
-  grid-template-columns: 1.6fr 1fr; /* Featured takes more width */
+  grid-template-columns: 1.6fr 1fr;
+  /* Featured takes more width */
   gap: 60px;
 }
 
@@ -978,12 +1007,15 @@
   letter-spacing: 1.5px;
   margin-bottom: 15px;
 }
+
 .category-tag.blue {
   color: var(--aeh-blue);
 }
+
 .category-tag.green {
   color: var(--aeh-green);
 }
+
 .category-tag.navy {
   color: var(--aeh-dark-blue);
 }
@@ -1011,11 +1043,13 @@
   line-height: 1.1;
   margin-bottom: 20px;
 }
+
 .news-featured h3 a {
   text-decoration: none;
   color: inherit;
   transition: color 0.3s;
 }
+
 .news-featured h3 a:hover {
   color: var(--aeh-blue);
 }
@@ -1026,6 +1060,7 @@
   margin-bottom: 20px;
   max-width: 90%;
 }
+
 .news-date {
   font-size: 0.8rem;
   font-weight: 700;
@@ -1055,16 +1090,19 @@
 .sidebar-text {
   flex: 1;
 }
+
 .sidebar-text h4 {
   font-size: 1.35rem;
   line-height: 1.25;
   margin-bottom: 10px;
 }
+
 .sidebar-text h4 a {
   text-decoration: none;
   color: inherit;
   transition: color 0.3s;
 }
+
 .sidebar-text h4 a:hover {
   color: var(--aeh-blue);
 }
@@ -1092,11 +1130,13 @@
   .news-grid {
     grid-template-columns: 1fr;
   }
+
   .news-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
   }
+
   .news-featured .news-img-wrap {
     height: 300px;
   }
@@ -1106,10 +1146,12 @@
   .sidebar-item {
     flex-direction: column-reverse;
   }
+
   .sidebar-thumb {
     width: 100%;
     height: 200px;
   }
+
   .news-featured h3 {
     font-size: 1.8rem;
   }

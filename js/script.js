@@ -177,12 +177,9 @@ function openVideoModal(videoID) {
 
   if (!modal || !player || !videoID) return;
 
-  // 1. Get the current site origin (prevents Error 153)
-  const origin = window.location.origin;
-
-  // 2. Construct the dynamic URL
-  // rel=0 prevents showing related videos from other channels
-  const videoURL = `https://www.youtube.com/embed/${videoID}?autoplay=1&rel=0&enablejsapi=1&origin=${origin}`;
+  // 1. Construct the embed URL
+  // autoplay=1 starts the video, rel=0 prevents unrelated video suggestions
+  const videoURL = `https://www.youtube.com/embed/${videoID}?autoplay=1&rel=0`;
 
   // 3. Set source and show modal
   player.src = videoURL;
