@@ -406,7 +406,7 @@ h4 {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 100px;
-  padding: 60px 0;
+  padding: 20px 0;
 }
 
 .editorial-title {
@@ -453,8 +453,8 @@ h4 {
 
 /* --- SECTION 5: THE DARK ANCHOR (Mission/Purpose) --- */
 .dark-anchor {
-  background-color: #0d2c4f; /* Forced AEH Navy */
-  padding: 40px 5%;
+  background-color: #0d2c4f;
+  padding: 50px 5%;
 }
 
 .mission-split-grid {
@@ -464,7 +464,7 @@ h4 {
 }
 
 .bright-tag {
-  color: var(--aeh-green); /* Changed to Green for visibility */
+  color: var(--aeh-green);
   letter-spacing: 4px;
   font-weight: 700;
   font-size: 0.75rem;
@@ -474,7 +474,7 @@ h4 {
 
 .mission-column h3 {
   color: white !important;
-  font-size: 2.6rem;
+  font-size: 2rem;
   line-height: 1.2;
   font-family: "EB Garamond", serif;
   font-weight: 400;
