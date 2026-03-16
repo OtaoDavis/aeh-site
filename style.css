@@ -82,7 +82,7 @@ em,
 }
 
 .loader-logo-pulse {
-  height: 100px;
+  height: 150px;
   width: auto;
   animation: aehPulse 2s infinite ease-in-out;
 }
@@ -119,7 +119,7 @@ em,
   z-index: 1000;
   background: rgba(255, 255, 255, 0.95);
   border-bottom: 1px solid #eee;
-  padding: 30px 0;
+  padding: 20px 0;
   overflow: hidden;
 }
 
@@ -146,10 +146,10 @@ em,
 }
 
 .sticky-nav .logo-img {
-  height: 85px;
+  height: 120px;
   width: auto;
   display: block;
-  margin-top: -35px;
+  margin-top: -30px;
   margin-bottom: -35px;
   transform: none;
   object-fit: contain;
@@ -230,9 +230,9 @@ em,
 
 .blue-tag {
   color: var(--aeh-blue);
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   font-weight: 700;
-  font-size: 0.7rem;
+  font-size: 1rem;
   text-transform: uppercase;
   margin-bottom: 20px;
   display: block;
@@ -240,9 +240,9 @@ em,
 
 .green-tag {
   color: var(--aeh-green);
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   font-weight: 700;
-  font-size: 0.7rem;
+  font-size: 1rem;
   text-transform: uppercase;
   margin-bottom: 20px;
   display: block;

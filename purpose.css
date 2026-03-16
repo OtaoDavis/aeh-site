@@ -329,7 +329,7 @@
 
 .solution-statement {
   max-width: 650px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .solution-statement p {
@@ -507,7 +507,7 @@ h4 {
 /* --- STUDENT OUTCOMES GROUPING --- */
 
 .outcomes-group-container {
-  margin-top: 50px;
+  margin-top: 20px;
   padding-top: 10px;
   border-top: 1px solid var(--border); /* Separates outcomes from the lead text */
   max-width: 600px;
@@ -519,7 +519,7 @@ h4 {
   text-transform: uppercase !important;
   color: var(--aeh-blue);
   letter-spacing: 2px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   display: block;
 }
 
@@ -678,7 +678,7 @@ h4 {
   background-color: var(--aeh-green);
 }
 
-/* --- TYPOGRAPHY (UNTOUCHED) --- */
+/* --- TYPOGRAPHY */
 
 .pillar-text h2 {
   font-size: 3.5rem;
@@ -748,6 +748,7 @@ h4 {
   }
   .pillar-text {
     order: 2;
+    font-size: 2.5rem;
   }
   .pillar-visual {
     order: 1;
